@@ -8,6 +8,21 @@ This is a **[DepthRangers](https://github.com/BajaInnoTech/depthrangers) RPG Sys
 
 It requires minimal setup, but provides variety within dungeon layouts and quest objectives & dynamics; blending some aspects of board gaming with RPG style character customization, progression and inventory.
 
+## How to Play?
+
+To play:
+
+* [First download the booklet PDFs](https://github.com/BajaInnoTech/treasure_of_aural_hall/tree/master/Booklets).
+* [Then download the Character Templates](https://github.com/BajaInnoTech/treasure_of_aural_hall/tree/master/Character%20Templates)
+
+Start with the first booklet: the Beginner Adventurer's Guide. It guides you through the process of getting started. Explaining as you play and telling you when and how to make use of the other material.
+
+Alternatively, if you find this confusing consider [visiting us on Itch.io](https://bitmysteries.itch.io/the-hunt-for-the-treasure-of-aural-hall).
+
+Also consider [hopping onto our Discord Server to have a good time rolling dice](https://discord.gg/wwRY2vEBK).
+
+*For security reasons, we do not ask anyone to install any software. Please report anyone who does this including us. Thanks!*
+
 ## Who created this?
 
 This is a **[BIT Mysteries](https://bajainnotech.github.io/bit-mysteries/) product**. The system was created by Eduardo del Corral, Ehira Lira & Hyunjin Oh.
