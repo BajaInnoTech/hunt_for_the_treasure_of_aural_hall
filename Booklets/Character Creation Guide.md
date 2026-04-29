@@ -126,7 +126,7 @@ While saves generally require a roll of 4 or greater, some races have bonuses an
 
 ### Money
 
-The currency of this game is gold, and "g" is the unit. Your character starts out with *1d6\*20*g and will gain more gold from completing quests and selling items. You'll use this to purchase items, use services and even bribe receptive monsters into giving you information.
+The currency of this game is gold, and "*g*" is the unit. Your character starts out with *1d6\*20*g and will gain more gold from completing quests and selling items. You'll use this to purchase items, use services and even bribe receptive monsters into giving you information.
 
 ### Inventory
 
@@ -195,11 +195,11 @@ Humans can expend one of their *re-roll* dice to cure any status ailment.
 
 #### Human Special Feature - Human Perseverance
 
-When a human character's HP goes down to 0, and they have remaining *re-roll* dice, they can expend one re-roll dice and recover *1d6* HP to keep going. They can choose to expend additional *re-roll* dice and recover additional *d6* HP during this process of recovery.
+When a human character's HP goes down to *0*, and they have remaining *re-roll* dice, they can expend one re-roll dice and recover *1d6* HP to keep going. They can choose to expend additional *re-roll* dice and recover additional *d6* HP during this process of recovery.
 
 #### Human Special Feature - Human Intuition
 
-When a human makes a save roll of 6, they have a +1 to saves of that nature until the encounter or event is over.
+When a human makes a save roll of *6*, they have a *+1* to saves of that nature until the encounter or event is over.
 
 #### Human Special Feature - Inspiring Determination
 
@@ -218,7 +218,7 @@ Dextrous and magically inclined but not as resilient as humans.
 
 #### Elf Saves
 
-Elves have a fragile body, hence they start with *+2HP* instead of *+3HP* and gain a *+1* penalty to their *body saves* (meaning you must roll 5 or higher to succeed on a body save). However they have unusual dexterity and magical attunement, and gain a *-1* boon on *dex saves* and  also another *-1* boon on *magic saves* (meaning rolling a 3 or higher is a successful dex or magic save).
+Elves have a fragile body, hence they start with *+2HP* instead of *+3HP* and gain a *+1* penalty to their *body saves* (meaning you must roll *5* or higher to succeed on a body save). However they have unusual dexterity and magical attunement, and gain a *-1* boon on *dex saves* and  also another *-1* boon on *magic saves* (meaning rolling a *3* or higher is a successful dex or magic save).
 
 #### Elf Classes
 
@@ -234,7 +234,7 @@ This magical affinity also makes them immune to magical compulsion and mental ma
 
 #### Elf Special Feature - Keen Senses
 
-Elven keen senses give them an edge when detecting secrets, gaining a *+1* to searching (particularly useful when detecting secret doors).
+Elven keen senses give them an edge when detecting secrets. Elves get a *+1* to search rolls.
 
 #### Elf Special Feature - Keen Marksmanship
 
@@ -253,7 +253,7 @@ Dwarfs are hardier than their peers, but not as dexterous.
 
 #### Dwarf Saves
 
-Their resilient body grants them a *-2* boon to body saves (meaning they rolling a 2 or greater is a successful body save), but their stubby limbs impose on them a *+1* penalty to dex (meaning you must roll 5 or higher to succeed on a *dex save*).
+Their resilient body grants them a *-2* boon to body saves (meaning that rolling a *2* or greater is considered a successful body save), but their stubby limbs impose on them a *+1* penalty to dex (meaning you must roll *5* or higher to succeed on a *dex save*).
 
 #### Dwarf Gear
 
@@ -445,6 +445,10 @@ Healers can combine the positive attributes of two bottles into a single bottle,
 
 Healers are the only ones who can freely use curative items on others in the middle of battle.
 
+#### Healer Boon - Knowledge Of Anesthetics
+
+Upon reaching level 3, a Healer has mastered sleeping potions and can use them as a localized anesthetic, relieving some of the burden of fatigue. A healer can use a sleeping potion to restore a fatigued slot *(character_level)* times.
+
 #### Healer Spell List
 
 - **Heal party**: Heals all members *(character_level+1)d6/2* HP in a room.
@@ -468,7 +472,7 @@ Rogues are able to use anything they find except for plate armor.
 
 #### Rogue Boon - Expert Explorer
 
-Rogues get a *+1* to rolls when searching, dealing with traps and picking locks.
+Rogues get a *+1* to search, trap and lock picking rolls.
 
 #### Rogue Boon - Sneak Attack
 

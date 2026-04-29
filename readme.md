@@ -4,7 +4,7 @@ Will you survive your next venture into the depths of the underground structure?
 
 ## What is this?
 
-This is a **[DepthRangers](https://github.com/BajaInnoTech/depthrangers) RPG System Campaign**. Players must complete a series of quests that take place insinde a dungeon. The layout is designed procedurally by means of a series of random dice rolls.
+This is a **[DepthRangers](https://github.com/BajaInnoTech/depthrangers) RPG System Campaign**. Players must complete a series of quests that take place inside a dungeon. The layout is designed procedurally by means of a series of random dice rolls.
 
 It requires minimal setup, but provides variety within dungeon layouts and quest objectives & dynamics; blending some aspects of board gaming with RPG style character customization, progression and inventory.
 
@@ -57,7 +57,7 @@ The end result being a somewhat rules light RPG system that is leaner than somet
 
 ## Release Version of This Campaign
 
-**The Hunt For The Treasure Of Aural Hall** is v0.2, and it uses **DepthRangers** system **v1.0**.
+**The Hunt For The Treasure Of Aural Hall** is v0.2.1, and it uses **DepthRangers** system **v1.1.1**.
 
 ## License and legal
 
