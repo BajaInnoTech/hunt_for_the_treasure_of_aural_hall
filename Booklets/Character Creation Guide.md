@@ -491,3 +491,9 @@ Revive scrolls require 2 consecutive successful *magic saves* to succeed.
 #### Rogue Boon - Rogue Reconnaissance
 
 Rogues always peer into the room they're entering, looking for signs of trouble. Hence when a Rogue is the first in the room, Monsters have a tougher time catching them unprepared for combat.
+
+#### Rogue Boon - Finishing Blow
+
+On a critical attack Rogues can deliver a deadly blow capable of finishing an opponent on a single strike. When landing a critical attack, roll against *(monster_hp_dice - character_level)*, if the attack succeeds, you have defeated your opponent. If it fails, it will still inflict normal damage.
+
+This attack does not affect bosses.

@@ -72,7 +72,7 @@ The end result being a somewhat rules light RPG system that is leaner than somet
 
 ## Release Version of This Campaign
 
-**The Hunt For The Treasure Of Aural Hall** is v0.2.1, and it uses **DepthRangers** system **v1.1.1**.
+**The Hunt For The Treasure  Of Aural Hall** is v0.2.2, and it uses **DepthRangers** system **v1.1.1**.
 
 ## License and legal
 
