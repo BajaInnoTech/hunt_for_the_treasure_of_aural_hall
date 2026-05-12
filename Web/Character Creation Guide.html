@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <title>Character Creation Guide.md</title>
 <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
@@ -453,6 +453,123 @@ em, figcaption {
 <h1 id="character-creation-guide">Character Creation Guide</h1>
 <p>This reference guide provides an explanation on how to create your characters without need for the provided character sheets.</p>
 <p>All characters combine their species with their profession, something the great sage Gigax calls Races &amp; Classes.</p>
+<div class="page"/>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#base-stats">Base stats</a>
+<ul>
+<li><a href="#hp">HP</a></li>
+<li><a href="#armor-class">Armor Class</a></li>
+<li><a href="#saves">Saves</a></li>
+<li><a href="#money">Money</a></li>
+<li><a href="#inventory">Inventory</a></li>
+<li><a href="#starting-gear">Starting Gear</a></li>
+</ul>
+</li>
+<li><a href="#races">Races</a>
+<ul>
+<li><a href="#human">Human</a>
+<ul>
+<li><a href="#human-saves">Human Saves</a></li>
+<li><a href="#human-classes">Human Classes</a></li>
+<li><a href="#human-gear">Human Gear</a></li>
+<li><a href="#human-special-feature---manifestation-of-will-power">Human Special Feature - Manifestation Of Will Power</a>
+<ul>
+<li><a href="#re-roll-dice">Re-Roll Dice</a></li>
+</ul>
+</li>
+<li><a href="#human-special-feature---mind-over-body">Human Special Feature - Mind Over Body</a></li>
+<li><a href="#human-special-feature---human-perseverance">Human Special Feature - Human Perseverance</a></li>
+<li><a href="#human-special-feature---human-intuition">Human Special Feature - Human Intuition</a></li>
+<li><a href="#human-special-feature---inspiring-determination">Human Special Feature - Inspiring Determination</a></li>
+</ul>
+</li>
+<li><a href="#elf">Elf</a>
+<ul>
+<li><a href="#elf-saves">Elf Saves</a></li>
+<li><a href="#elf-classes">Elf Classes</a></li>
+<li><a href="#elf-gear">Elf Gear</a></li>
+<li><a href="#elf-special-feature---resist-mental-manipulation">Elf Special Feature - Resist Mental Manipulation</a></li>
+<li><a href="#elf-special-feature---keen-senses">Elf Special Feature - Keen Senses</a></li>
+<li><a href="#elf-special-feature---keen-marksmanship">Elf Special Feature - Keen Marksmanship</a></li>
+</ul>
+</li>
+<li><a href="#dwarf">Dwarf</a>
+<ul>
+<li><a href="#dwarf-saves">Dwarf Saves</a></li>
+<li><a href="#dwarf-gear">Dwarf Gear</a></li>
+<li><a href="#dwarf-classes">Dwarf Classes</a></li>
+<li><a href="#dwarf-special-feature---poison-immunity">Dwarf Special Feature - Poison Immunity</a></li>
+<li><a href="#dwarf-special-feature---dwarven-resilience">Dwarf Special Feature - Dwarven Resilience</a></li>
+<li><a href="#dwarf-special-feature---see-in-the-dark">Dwarf Special Feature - See In The Dark</a></li>
+</ul>
+</li>
+<li><a href="#brownie">Brownie</a>
+<ul>
+<li><a href="#brownie-saves">Brownie Saves</a></li>
+<li><a href="#brownie-classes">Brownie Classes</a></li>
+<li><a href="#brownie-gear">Brownie Gear</a></li>
+<li><a href="#brownie-special-feature---lock-picking">Brownie Special Feature - Lock Picking</a></li>
+<li><a href="#brownie-special-feature---talk-to-animals">Brownie Special Feature - Talk To Animals</a></li>
+<li><a href="#brownie-special-feature---frail-body">Brownie Special Feature - Frail Body</a></li>
+<li><a href="#brownie-special-feature---hard-to-hit">Brownie Special Feature - Hard To Hit</a>
+<ul>
+<li><a href="#brownie-special-feature---attack-at-a-distance">Brownie Special Feature - Attack At A Distance</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#classes">Classes</a>
+<ul>
+<li><a href="#fighter">Fighter</a>
+<ul>
+<li><a href="#fighter-gear">Fighter Gear</a></li>
+<li><a href="#fighter-boon---enhanced-swordsmanship">Fighter Boon - Enhanced Swordsmanship</a></li>
+<li><a href="#fighter-boon---deadlier-combat">Fighter Boon - Deadlier Combat</a></li>
+<li><a href="#fighter-boon---attack-frenzy">Fighter Boon - Attack Frenzy</a></li>
+<li><a href="#fighter-boon---battlefield-resilience">Fighter Boon - Battlefield Resilience</a></li>
+<li><a href="#fighter-boon---overwhelming-tactics">Fighter Boon - Overwhelming Tactics</a></li>
+</ul>
+</li>
+<li><a href="#mage">Mage</a>
+<ul>
+<li><a href="#mage-gear">Mage Gear</a></li>
+<li><a href="#mage-boon---universal-scroll--wand-casting">Mage Boon - Universal Scroll &amp; Wand Casting</a></li>
+<li><a href="#mage-boon---magic-scholar">Mage Boon - Magic Scholar</a></li>
+<li><a href="#mage-boon---magical-attunement">Mage Boon - Magical Attunement</a></li>
+<li><a href="#mage-spell-list">Mage Spell List</a></li>
+</ul>
+</li>
+<li><a href="#healer">Healer</a>
+<ul>
+<li><a href="#healer-gear">Healer Gear</a></li>
+<li><a href="#healer-boon---innate-use-of-magic">Healer Boon - Innate Use Of Magic</a></li>
+<li><a href="#healer-boon---party-focused-scroll--wand-casting">Healer Boon - Party Focused Scroll &amp; Wand Casting</a></li>
+<li><a href="#healer-boon---improved-mending">Healer Boon - Improved Mending</a></li>
+<li><a href="#healer-boon---enhanced-antibodies">Healer Boon - Enhanced Antibodies</a></li>
+<li><a href="#healer-boon---potion-mixer">Healer Boon - Potion Mixer</a></li>
+<li><a href="#healer-boon---expert-field-medic">Healer Boon - Expert Field Medic</a></li>
+<li><a href="#healer-boon---knowledge-of-anesthetics">Healer Boon - Knowledge Of Anesthetics</a></li>
+<li><a href="#healer-spell-list">Healer Spell List</a></li>
+</ul>
+</li>
+<li><a href="#rogue">Rogue</a>
+<ul>
+<li><a href="#rogue-gear">Rogue Gear</a></li>
+<li><a href="#rogue-boon---expert-explorer">Rogue Boon - Expert Explorer</a></li>
+<li><a href="#rogue-boon---sneak-attack">Rogue Boon - Sneak Attack</a></li>
+<li><a href="#rogue-boon---deadly-sniper">Rogue Boon - Deadly Sniper</a></li>
+<li><a href="#rogue-boon---magical-item-use">Rogue Boon - Magical Item Use</a></li>
+<li><a href="#rogue-boon---rogue-reconnaissance">Rogue Boon - Rogue Reconnaissance</a></li>
+<li><a href="#rogue-boon---finishing-blow">Rogue Boon - Finishing Blow</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="page"/>
 <h2 id="base-stats">Base stats</h2>
 <p>These generic stats are what you use when creating different characters, some <a href="#races">races</a> &amp; <a href="#classes">classes</a> will require adjusting these values.</p>
 <h3 id="hp">HP</h3>
@@ -513,6 +630,7 @@ em, figcaption {
 <li><em>resting</em>: recovers 1 spent <em>re-roll</em> dice.</li>
 <li><em>leaving the dungeon</em>: returning to the surface recovers all spent dice.</li>
 </ul>
+<div class="page"/>
 <h4 id="human-special-feature---mind-over-body">Human Special Feature - Mind Over Body</h4>
 <p>Humans can expend one of their <em>re-roll</em> dice to cure any status ailment.</p>
 <h4 id="human-special-feature---human-perseverance">Human Special Feature - Human Perseverance</h4>
@@ -521,6 +639,7 @@ em, figcaption {
 <p>When a human makes a save roll of <em>6</em>, they have a <em>+1</em> to saves of that nature until the encounter or event is over.</p>
 <h4 id="human-special-feature---inspiring-determination">Human Special Feature - Inspiring Determination</h4>
 <p>When a human lands a <a href="#critical-attack">critical attack</a>, for the rest of round other characters add a +1 to (character_level) die they roll.</p>
+<div class="page"/>
 <h3 id="elf">Elf</h3>
 <figure>
   <center><img src="../Images/elf.png" height="400" alt="An inquisitive Elf waits eagerly."></center>
@@ -539,6 +658,7 @@ em, figcaption {
 <p>Elven keen senses give them an edge when detecting secrets. Elves get a <em>+1</em> to search rolls.</p>
 <h4 id="elf-special-feature---keen-marksmanship">Elf Special Feature - Keen Marksmanship</h4>
 <p>Elven keen senses give them an edge when wielding a ranged weapon gaining <a href="#two-handed-weapons-accuracy">an accuracy on par with two handed weapon wielders</a>.</p>
+<div class="page"/>
 <h3 id="dwarf">Dwarf</h3>
 <figure>
   <center><img src="../Images/dwarf.png" height="400" alt="A resolute dwarf."></center>
@@ -557,6 +677,7 @@ em, figcaption {
 <p>Dwarfs have <em>+1 HP</em> each level.</p>
 <h4 id="dwarf-special-feature---see-in-the-dark">Dwarf Special Feature - See In The Dark</h4>
 <p>Dwarfs don't need to use torches to see (technically a purely dwarven party would not need torches). This can have some advantages in certain unconventional situations.</p>
+<div class="page"/>
 <h3 id="brownie">Brownie</h3>
 <figure>
   <center><img src="../Images/brownie.png" height="400" alt="A brownie looks with great determination."></center>
@@ -599,6 +720,7 @@ em, figcaption {
 <p>Fighters gain an additional <em>+3 HP</em> on level 1, and an additional <em>+1 HP</em> every odd level (3, 5, etc).</p>
 <h4 id="fighter-boon---overwhelming-tactics">Fighter Boon - Overwhelming Tactics</h4>
 <p>When engaged in melee combat, and landing a critical attack. If the target is a &quot;regular sized&quot; &amp; &quot;non-undead&quot; humanoid, Fighters will overwhelm their opponent knocking them violently to the ground. The target remains stunned and inactive for one round.</p>
+<div class="page"/>
 <h3 id="mage">Mage</h3>
 <figure>
   <center><img src="../Images/mage.png" height="400" alt="An experienced mage lost in thought."></center>
