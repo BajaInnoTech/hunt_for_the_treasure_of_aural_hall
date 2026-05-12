@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>1. Beginner Adventurers Guide.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manufacturing+Consent&family=Metamorphous&family=New+Rocker&family=Uncial+Antiqua&display=swap" rel="stylesheet">
+<style>
+
+body {
+  /* font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo"; */
+  font-family: "Metamorphous", system-ui;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 1.2em;
+  background-color: hsl(34, 11%, 87%);
+  margin-left: 5rem;
+  margin-right: 5rem;
+  line-height: 2rem;
+}
+
+h1, h2, h3, h4, h5, h6, b {
+    color: #4b3a0d;
+}
+
+table {
+  border: 2px solid rgb(114, 63, 5);
+  border-collapse: collapse;
+}
+
+ul {
+  background: rgba(202, 202, 201, 0.16);
+}
+
+ul, li {
+  border-radius: 1.05rem;
+  margin:0.8em;
+}
+
+img {
+	border-radius: .45rem;
+	box-shadow: .1em .1em 1em 0.05em rgb(80, 60, 23);
+	padding: 0.2em;
+	margin:0.8em;
+}
+
+h1 {
+  text-align: center;
+}
+
+tr:nth-child(odd) {
+  background-color: hsl(40, 27%, 96%);
+}
+
+tr:nth-child(even){background-color: #d8c0ac;}
+
+tr:hover {background-color: #eed7b8;}
+
+th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #ffe3b8;
+  color: rgb(71, 40, 4);
+}
+
+strong {
+  color: rgb(202, 117, 20);
+}
+
+a:link {
+  color: rgb(187, 126, 33);
+}
+
+a:visited {
+  color: #804d00;
+}
+a:hover {
+  color: #ff9900;
+}
+a:active {
+  color: #ffd900;
+}
+
+em, figcaption {
+  color:rgb(71, 40, 4);
+}
+
+</style>
+<h1 id="the-hunt-for-the-treasure-of-aural-hall">The Hunt for the Treasure  of Aural Hall</h1>
+<center><img src="../Images/portrait.png" alt="Four DepthRangers entering the Dungeon."></center>
+<p><em><strong>A BIT-Mysteries Solo &amp; COOP RPG Campaign Powered by the DepthRangers RPG System</strong></em></p>
+<h1 id="beginner-adventurers-guide">Beginner Adventurer's Guide</h1>
+<p><strong>Authors:</strong> <em>Eduardo del Corral, Ehira Lira &amp; Hyunjin Oh</em></p>
+<p><strong>Portrait Illustration:</strong> <em>Ehira Lira</em></p>
+<p><strong>Layout Design and Digital Imaging:</strong> <em>Eduardo del Corral</em></p>
+<hr>
+<p>This short book is an instruction manual for playing <strong>The Hunt For The Treasure Of Aural Hall</strong>, which is a <strong>DepthRangers</strong> RPG System campaign. <strong>DepthRangers</strong> is an Open-Source rules-light combat heavy system that uses <em>d6</em> exclusively and focuses on fast paced action focused gameplay. This System and Campaign are licensed under <strong>CC-BY-SA</strong>.</p>
+<p>This guide contains all the information you should need to get started. We hope you enjoy this product, please share with your friends and colleagues. Thanks for Downloading!</p>
+<h2 id="introduction">Introduction</h2>
+<p><em>Citizen</em>: &quot;Welcome to the settlement traveler, you'll find people from all walks of life including merchants, Inn keepers, our own regional branch of government... But, most importantly, our explorer community guild who call themselves: <strong>DepthRangers</strong>. Sounds like that interests you... Perhaps you should talk to that adventurer over there.&quot;</p>
+<h3 id="game-overview---interview-with-an-adventurer">Game Overview - Interview With An Adventurer</h3>
+<p><em>Adventurer</em>: &quot;Hello Traveler! So you're interested in the life of an adventurer? Sure let me tell you a bit about what we do...&quot;</p>
+<p>&quot;We, the <strong>DepthRangers</strong> are a community of explorers who challenge the mysteries of the underground labyrinthine structure. Nobody knows how old, wide or deep this structure is; and that is because: on one hand it's extremely difficult to navigate, but on the other the extreme danger found within.&quot;</p>
+<p>&quot;For us <em>&quot;fame, fortune and despair&quot;</em> lie at the bottom of this structure, in the depths of what we call the Dungeon. I see a twinkle in your eye... perhaps you should head to the office to enroll in the guild. Goodbye and best of luck!&quot;</p>
+<h2 id="materials-needed-for-play">Materials needed for play</h2>
+<p><em>Clerk</em>: &quot;Welcome to the <strong>DepthRangers</strong> guild, where we handle all sorts of underground exploration requests. From a lost pet, to making contact with an unknown plane of existence. This job is its own reward, though the riches found along the way provide an extra motivation.&quot;</p>
+<p>&quot;We are always happy to receive new recruits and understand just how challenging it can be to get started, but worry not you'll soon be diving into the underground structures like the best of them.&quot;</p>
+<p>&quot;Before we get started let me make sure you have everything you need...&quot;</p>
+<h3 id="materials-needed-for-play">Materials needed for play</h3>
+<p>To play this game you will need:</p>
+<ul>
+<li>The different booklets that make up the Hunt for the Treasure  of Aural hall available at <a href="https://github.com/BajaInnoTech/treasure_of_aural_hall/">our GitHub repository</a>. Including:
+<ol>
+<li>Beginner's Adventure Guide (this)</li>
+<li><a href="./2. Quest Catalog.html" target="_blank" rel="noopener noreferrer">Quest Catalog</a></li>
+<li><a href="./3. Field Guide.html" target="_blank" rel="noopener noreferrer">Field Guide</a></li>
+<li><a href="./4. Navigation Charts.html" target="_blank" rel="noopener noreferrer">Navigation Charts</a></li>
+<li><a href="./5. Monster Almanac.html" target="_blank" rel="noopener noreferrer">Monster Almanac</a></li>
+</ol>
+</li>
+<li>At least 1d6 (six sided die); though preferably, more of these - around 3 or 4. You can use an app <a href="https://www.online-stopwatch.com/online-dice/">or website instead</a>.</li>
+<li>Sheets of paper to map your dungeon (we recommend you use graph paper for this), <a href="https://virtual-graph-paper.com/">you could consider using an app or website for this</a>.</li>
+<li>A pencil &amp; eraser per player (you can share the same one if needed)</li>
+<li>Yourself &amp; possibly even a friend or two.</li>
+</ul>
+<p><em>Clerk</em>: &quot;Check that you have everything you need and I'll gladly register you...&quot;</p>
+<h2 id="character-creation">Character creation</h2>
+<p><em>Clerk</em>: &quot;Ok one more thing before I hand out the registration sheet, lets make sure that you have a balanced party. There are multiple professions and species of adventurers. It is generally advisable to have one of each in your party. Here's an overview of the different profiles of adventurers you may wish to enroll:&quot;</p>
+<h3 id="races">Races</h3>
+<p><em>These are the different species of adventurers currently interested in exploring:</em></p>
+<ul>
+<li><em>Human</em>: Humans have no penalties or bonuses to their saves, what they have is a re-roll dice that they can apply in any context they wish (including the room or quest). They gain an additional dice every two levels, and recover one spent dice each time they rest (just one folks).</li>
+<li><em>Elf</em>: Elves are not as resilient as humans but they are more dexterous and magically inclined. Additionally their keen senses can be very handy.</li>
+<li><em>Dwarf</em>: Dwarfs are less agile than their peers, but they are hardier. Additionally, dwarfs don't need to use torches to see, so technically a purely dwarven party would not need torches.</li>
+<li><em>Brownie</em>: Slightly shorter and leaner than dwarfs, brownies are dexterous when handling locks/traps. They also have a deep bond with animals capable of communicating with them. Brownies can't be healers.</li>
+</ul>
+<h3 id="classes">Classes</h3>
+<p><em>Clerk</em>: &quot;And these are skills they tend to specialize in:&quot;</p>
+<ul>
+<li><em>Fighter</em>: A warrior is capable of using any weapon/armor they find, and produce extra attacks.</li>
+<li><em>Mage</em>: Versatile casters capable of using defensive/offensive magic as well as scrolls. They have a helpful attunement to magic but are usually fragile.</li>
+<li><em>Healer</em>: Healers are defensive magic specialists, focused mostly on keeping the party healthy though they can also use scrolls. Generally resilient.</li>
+<li><em>Rogue</em>: Capable of deadly tactical maneuvers and able to handle traps, treasure and locks.</li>
+</ul>
+<h3 id="base-character-stats">Base Character Stats</h3>
+<p><em>Clerk</em>: &quot;You should know about these since the Class and Race you choose have a direct impact on most and all of them are fundamental for survival (including money). So...&quot;</p>
+<p>These generic stats are what you use when creating different characters, some races &amp; classes will require adjusting these values.</p>
+<h4 id="hp">HP</h4>
+<p>How resilient to damage your character is. The base HP for characters is <em>(1d6+3)</em> HP on their first level plus an additional <em>1d6</em> HP each level.</p>
+<h4 id="armor-class">Armor Class</h4>
+<p>Equipping armor is vital to surviving your adventures. You subtract the damage you receive by the total amount of armor class or &quot;<em>AC</em>&quot; you have. Your maximum armor is determined by the armor you can equip yourself with. Though there are some restrictions on who can use certain gear.</p>
+<h4 id="saves">Saves</h4>
+<p>A save is thrown when an extraordinary feat must be accomplished (such as avoiding a deadly trap).</p>
+<p>All characters have 3 types of saves:</p>
+<ul>
+<li><strong>Body</strong>: Used for resisting (fort), as well as raw physical prowress (strength).</li>
+<li><strong>Dex</strong>: Dexterity saves are used for acrobatics, fine motor skills, sneaking and other skills that require fine control over the body or quick reaction.</li>
+<li><strong>Magic</strong>: Magic saves are used for magical attunement when resisting or tapping into magic as well as transcendental experiences such as spiritual, will power, intellectual, etc.</li>
+</ul>
+<p><em>The baseline for all saves is 4.</em></p>
+<p>When asked to roll for a save a <em>d6</em> is thrown, if the value is equal to or greater than the character's save the save is successful otherwise it fails.</p>
+<p>While saves generally require a roll of 4 or greater, some races have bonuses and penalties that will change this amount. So be sure to account for these bonuses and penalties in your character sheet.</p>
+<h4 id="money">Money</h4>
+<p>The currency of this game is gold, and &quot;g&quot; is the unit. Your character starts out with <em>1d6*20</em>g and will gain more gold from completing quests and selling items. You'll use this to purchase items, use services and even bribe receptive monsters into giving you information.</p>
+<h4 id="inventory">Inventory</h4>
+<p>Your cargo capacity. Each character has <em>10</em> available inventory slots, so long as they don't fatigue.</p>
+<h4 id="starting-gear">Starting Gear</h4>
+<p>You start out with 5 torches and 5 rations, be sure to assign each to a different slot in your inventory (meaning you have 8 available slots from the 10 you started with).</p>
+<h3 id="character-templates">Character Templates</h3>
+<p><em>Clerk</em>: &quot;Phew, that was a mouthful but worry not. Here are your registration forms. We tried making it as easy as possible to get started. Just take the ones that you need. Take your time, I'll be here at the desk when you're done.&quot;</p>
+<p>Once you've seen the kinds of combinations that appeal to you, we recommend that you take a look at the character templates we provide. We created a template for each combination of Race &amp; Class. Be sure to read the fine print so you know how to get started and any special details that apply to that type of character. Don't forget to perform your HP rolls, your roll for your gold, and choose your spells if that applies so you're ready for the next steps.</p>
+<p>If you want a clearer explanation, checkout the <strong>Character Creation Guide</strong>. You'll find the details of each Race and Class. While you could use this information to create your characters from scratch, using our templates makes things easier.</p>
+<h4 id="a-balanced-party">A Balanced Party</h4>
+<p>As you create your characters, make sure to have a balanced party of preferably 4. One balanced party suggestion is:</p>
+<ul>
+<li>Human - Fighter</li>
+<li>Elf - Mage</li>
+<li>Dwarf - Healer</li>
+<li>Brownie - Rogue</li>
+</ul>
+<p>This way, you gain the benefits of each... but the decision is entirely up to you!</p>
+<h2 id="gameplay-fundamentals">Gameplay Fundamentals</h2>
+<p><em>Clerk</em>: &quot;Ok, thanks for handing your personal details in. You're now officially a member!&quot;</p>
+<p>&quot;But, before you can begin your life as an adventurer we still need you to undergo a brief training session. Fortunatey, a session is just starting so if you'd please head to the room at the right...&quot;</p>
+<figure>
+  <center><img src="../Images/two-depthrangers.png" height="500" alt="Two adventurers walking towards the training room."></center>
+  <i><center><figcaption>More adventurers seem to be headed to the training room.</figcaption></center></i>
+</figure>
+<p><em>As you step into the room you're greeted by a scarred Elf who points towards a seat...</em></p>
+<p><em>Trainer</em>: &quot;Welcome, we're about to begin...&quot;</p>
+<h3 id="goal-of-the-game">Goal Of The Game</h3>
+<p>The goal of this campaign is stated in the name, to be the one who succeeds in <strong>The Hunt For The Treasure Of Aural Hall</strong>. However, know that this early release still has a fraction of the full Campaign... But worry not, there is already a lot to do here, and much more will be added soon...</p>
+<h3 id="game-progression">Game Progression</h3>
+<p>Game progression happens by successfully completing <em>Quests</em>. Each quest requires entering the <em>Dungeon</em>, completing one or more objectives, then making your way back safely. Back in town you can acquire goods and perhaps replace fallen adventurers. Each time you succeed in a quest you'll find returning to the <em>Dungeon</em> poses a greater threat as you advance in your adventuring career.</p>
+<h3 id="quests">Quests</h3>
+<p>Characters will level up by correctly completing <em>Quests</em> (though there might be a few exceptions). They must have leveled up 4 times before they can try their hand at finding <strong>The treasure of Aural Hall</strong>. These <em>Quests</em> determine the goal of the dungeon crawl and vary from one entry to another.</p>
+<p>In the hope of maintaining replay value by ensuring a wide variety of play experiences, there have been some twists applied to the quest-mechanic from one <em>Quest</em> to another. Hence there are many types of <em>Quests</em> with many iterations of each present in this release or planned for the next. No two play experiences should be the same!</p>
+<p>Some of the types of <em>Quests</em> you will find include:</p>
+<ul>
+<li>Escort/Subdue missions</li>
+<li>Clues/Preparation</li>
+<li>Retrieval/Discovery/Merchantile</li>
+<li>Time/Movement sensitive quests</li>
+</ul>
+<p>In short, expect each entry into the <em>Dungeon</em> to be a very different experience.</p>
+<h2 id="your-first-quest">Your first quest</h2>
+<p><em>Trainer</em>: &quot;Once you created your party, you should talk to the guild clerk and request a quest. The clerk will take a look at its records then assign you an objective that must be fulfilled within the Dungeon.&quot;</p>
+<p>To select your first quest, open the <strong>Quest Catalog</strong> booklet and roll a <em>d6</em>. Check the listings, and receive the quest.</p>
+<p><em>Trainer</em>: &quot;The guild will inform you what the goal of your journey into the dungeon is. Read the objective carefully. Now go and get your quest then come back here!&quot;</p>
+<h2 id="supplies">Supplies</h2>
+<p><em>Trainer</em>: &quot;Very well, have 5 torches and rations courtesy of the guild. However this is not enough to successfully complete your missions. And so, we're heading now to the market. Bring your gold as the rest of the supplies are now on you.&quot;</p>
+<p>&quot;Don't worry, I'll explain the details on the way!&quot;</p>
+<p>If you used the provided character templates, you should have already determined how much gold each character has (otherwise please review that before proceeding).</p>
+<p>Now open the <strong>Field Guide</strong> booklet, and look at the Market Wares section. Fist time users would benefit from reading the rest of the guide (before purchasing items) in order to get the things they actually need. In any case, we recommend that you purchase:</p>
+<ul>
+<li>A weapon for each, preferably mix ranged and melee weapons among your characters. But keep in mind someone will need a free hand to hold a torch (more on this later).</li>
+<li>Preferably, equip some basic armor.</li>
+<li>Purchase bandages &amp; thieves tools. You start out with 5 rations &amp; 5 torches which is indicative of how important these are (make sure to keep stock); all characters need rations to rest, and if you have a brownie in your party they're also helpful in befriending animals. Remember no thief's tools NO TREASURE and traps can't be disarmed without them either!</li>
+</ul>
+<p><em>Every trader you find, regardless of their specialty or location, will purify expired goods for 1g (per piece) as a service to explorers. This is spelled out on your Field Guide in the market place entry but it's up to the players to remember this point.</em></p>
+<h2 id="guided-tour-into-the-dungeon---heading-for-the-entrance">Guided tour into the dungeon - Heading for the entrance</h2>
+<p><em>Trainer</em>: &quot;Well, now that you have sorted out your equipment and provisions, it's time to head to the Dungeon. I'll provide the last bit of training on the way.&quot;</p>
+<h3 id="important-terminology">Important terminology</h3>
+<p>Let's just get a few things clear, you'll really need them later:</p>
+<ul>
+<li><em>dungeon_level</em></li>
+<li><em>character_level</em></li>
+<li><em>party_size</em></li>
+</ul>
+<p>Because you may choose not to print this booklet and just the others, you'll find all of these also described in the field guide.</p>
+<h4 id="dungeon-level">Dungeon Level</h4>
+<p>This is the level you're currently at in a dungeon. Dungeon levels start at 0, and increase each time you go down a flight of stairs.</p>
+<p>As you'll read later, each time you level up, you must go to a higher dungeon level to complete the next quest.</p>
+<p>You'll often see the dungeon level used for calculations, so keep this in mind.</p>
+<p>You'll see it in calculations as: <em>dungeon_level</em></p>
+<h4 id="character-level">Character Level</h4>
+<p>This is the level of your playable character. It starts at 1, and increases each time you finish a quest successfully (there might be a few exceptions).</p>
+<p>This should be the same for the entire party since they all level up at the same time.</p>
+<p>You'll see it in calculations as: <em>character_level</em></p>
+<h4 id="party-size">Party Size</h4>
+<p>The amount of playable characters that enter the dungeon. By default this number is expected to be 4, the entire game was designed around this premise. However, we tried to make it flexible so that different sized parties could be played as well. It's up to the actual players reading this document how large your party will be.</p>
+<p>A larger party will usually have an easier time, though this is not always the case since some mobs and bigger enemies scale depending on party size. Still, in theory, it should be possible to do this with parties as small as 2 and as large as needed. Though, I'd expect the game to become unbalanced if you deviate too much from 4.</p>
+<p>Because this value is very frequently used, I recommend you write down these three quantities:</p>
+<ul>
+<li><em>party_size</em></li>
+<li><em>party_size/2</em> - rounded down (no fractions)</li>
+<li><em>party_size/3</em> - rounded down (no fractions)</li>
+</ul>
+<p><em>Ignore the fractions in any calculations you do.</em></p>
+<h3 id="decide-who-will-be-the-torch-bearer">Decide Who Will Be The Torch Bearer</h3>
+<p><em>Trainer</em>: &quot;Listen, unless you can see in the dark there has to be light source or you will be slain by the many dangers in the dungeon. The normal way of going about this is to designate a torch bearer, so choose who among you will hold the torch.&quot;</p>
+<p>Select a character that will hold the torch until you reach a set of stairs. At which point, you may change the torch bearer for another character before moving on from the stairs. The chosen character will be holding a torch on one of its hands, hence it will not be able to use a shield or a two handed or ranged weapon (it can still use a scroll however, nod nod wink wink).</p>
+<p>The torch bearer will decrease the number of torches it holds upon entering the dungeon gate. Each flight of stairs, a new torch must be lit. It does not matter if you're descending or ascending, you still need a new torch - so be deliberate when you decide to turn back. You can change who the torch bearer each time you expend a torch.</p>
+<p>Any character that is not a dwarf, will die automatically if your party runs out of light, and while there are magical means to provide illumination... torch bearers are far less expensive.</p>
+<h3 id="order-of-play">Order of Play</h3>
+<p>When playing solo, things are very simple, your party is delving into the dungeon. You take control of both characters and monsters.</p>
+<p>If you play using COOP, then you have two choices:</p>
+<ul>
+<li><em>RPG Mode:</em> Party members divide characters among themselves: During exploration, turn alternates between one player and another. During your encounters, divide the monsters among yourselves combat goes in the order of your characters, then a second round is done with the monsters. If there's only one monster the last player rolls for the monster.</li>
+<li><em>Board Game Mode:</em> Players take turns:
+<ul>
+<li>When reading a quest, perform an action (such as disabling a trap or performing a maneuver) or select a choice</li>
+<li>During combat, each player takes control of the next character or monster</li>
+<li>During exploration, each player can perform one of the following:
+<ul>
+<li>Explore a new room</li>
+<li>Explore a space inside the staircase</li>
+<li>Revisit rooms until a hazard die is thrown or the quest is completed</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Combat and exploration will be described soon, however the key takeaway is you can trade turns between monsters and characters or divide these ahead of time between players.</p>
+<h4 id="during-battle">During battle</h4>
+<ul>
+<li><em>Encounters</em>: Your characters strike first.</li>
+<li><em>Quest Encounters</em>: Monsters strike first.</li>
+</ul>
+<p><em>I recommend that you revisit this section as more of these concepts become familiar.</em></p>
+<h4 id="quest-completion-cycle">Quest Completion Cycle</h4>
+<p>In this phase, your party will enter and attempt to fulfill the quest assigned. Once the job is finished, returns to the surface and resupplies, recovers and trades before getting another quest and going back in.</p>
+<p>All quests start at ground level which is <strong>Level 0</strong>. You enter a room and discover its layout, then its contents. The layouts are uniform, but there could be different pathways... Some of them can be seen with the naked eye while others are hidden. The contents usually tell you what happened there. If there are multiple players, remember to take turns leading the exploration.</p>
+<p>Note that each time a party successfully completes a quest, the next time they enter the dungeon they must descend <em>one level deeper</em> than the previous delve to fulfill the quest.</p>
+<h4 id="party-and-dungeon-levels">Party and Dungeon levels</h4>
+<p>As mentioned previously, only the first quest can be solved at <strong>Level 0</strong>, all other quests require you to descend deeper. To reach a lower level, you must investigate rooms until you find a flight of stairs to descend (see stairs).</p>
+<p>If all pathways are closed off and you're unable to descend as needed, then you must return to the surface and try again. Since each time you enter the dungeon, the layout changes (though not your mission) so consider this if you're close to finishing off your mission.</p>
+<p>In other words, after increasing your party's level you need to go one level deeper into the dungeon and at higher levels the risk is greater and it takes longer.</p>
+<h3 id="exploring-the-dungeon">Exploring the dungeon</h3>
+<p><em>Trainer</em>: &quot;Alright people, we're getting close to the entrance so pay special attention, soon you'll be on your own...&quot;</p>
+<p>Exploring a dungeon is basically done in two phases:</p>
+<ol>
+<li>The Discovery Phase</li>
+<li>The Backtracking Phase</li>
+</ol>
+<h4 id="the-discovery-phase">The Discovery Phase</h4>
+<p>This is what happens when you are still underway and heading to new rooms. One thing to keep in mind is that <em>each time you enter a dungeon, the dungeon changes its layout.</em></p>
+<p>The Discovery phase itself has two key steps:</p>
+<ul>
+<li>Determine The Layout Of A Room</li>
+<li>Discover The Room's Contents</li>
+</ul>
+<h5 id="determining-the-layout-of-a-room">Determining The Layout Of A Room</h5>
+<p>Upon entering a room, you will determine its layout. To do this, open up your <em>Navigation Charts</em>, then check the <em>Room Layout</em> section. You'll find all the possible layouts listed here.</p>
+<p>Roll a <em>d6</em> to determine what that room looks like and chart that location in a sheet of paper (we recommend you use graph paper for this), <a href="https://virtual-graph-paper.com/">you could consider using an app or website for this</a>.</p>
+<h6 id="determine-the-layout-and-location-of-the-dungeon-exit">Determine The Layout And Location Of The Dungeon Exit</h6>
+<p>Upon entering the dungeon, you must determine the layout of the starting room. Do this now!</p>
+<p>This first room is very special, your entrance will later be the exit of the dungeon. So be sure to <em>mark your entrance</em> with an arrow or other symbol for when you want to make your way out of the dungeon and return to the surface.</p>
+<h5 id="determine-the-contents-of-that-room">Determine the contents of that room</h5>
+<p>Once you know the layout, the next step is to describe what your party finds inside that room. Open up your <strong>Navigation Charts</strong> again and roll a <em>d6</em>. Look up the &quot;<em>Room Contents Table</em>&quot; to determine what your party found in that room.</p>
+<p>If they find a flight of stairs, they will immediately descend into level 1. You will need to descend into greater depths later, for now follow the instructions then make your way back to level 0 and complete your quest.</p>
+<p>Whenever you find a flight of stairs be sure to mark it for these same reasons you marked the dungeon entrance.</p>
+<h5 id="charting-your-progress">Charting Your Progress</h5>
+<p>It's recommended that you keep a log of your quests in case you find something you need later and so you can resume the game some other time. Also keep a separate sheet for each map, and preferably record each level on separate sheet of paper or section so they don't overlap.</p>
+<h4 id="the-backtracking-phase">The Backtracking Phase</h4>
+<p>When the layout of a room leads to a wall in an adjacent room you previously charted, any doors indicated are ignored (after all, a door that leads to a wall is not very helpful). Hence you may find yourself in need of backtracking, to find another way to advance. You also may need to revisit rooms if you are searching for a secret door or the dungeon layout closed in on itself.</p>
+<p>Likewise, when you finish your quest, you must return to the surface and will backtrack revisiting the rooms you entered on your way there.</p>
+<p>This is known as the backtracking phase, where you are either looking for something, ran into a dead end or are making your way back after completing the quest.</p>
+<p>In theory it's simple, all you have to do is to return the same way you got in. But you will revisit the rooms you already discovered, which means you will be rolling hazard die. Suffice to say that you should read the <em>Hazard Dice And Non Combat Events</em> section of your <strong>Navigation Charts</strong>.</p>
+<h4 id="stairs">Stairs</h4>
+<p>When you're in level 0, any flight of stairs you find will lead you downwards. However the room you land on, is a new floor of the dungeon. Each time you descend a floor you increase the Dungeon Level by 1. Notate that location of the staircase entrance and the staircase in the new floor, because when you come back to it, that staircase will lead you back to a floor above.</p>
+<p>There are exceptions to this behavior, but how stairs will work will be described in detail for said quests.</p>
+<p>Stairs are a good place for a snack, players can optionally eat 1 provision of rations when descending or going up a staircase. Eating a portion of rations will recover <em>(character_level)</em> HP and remove <em>1</em> round of fatigue (recover 1 fatigued slot). Note that you must explore the dungeon before eating again (after all you don't want to battle heartburn while fighting monsters).</p>
+<h2 id="character-death">Character Death</h2>
+<p><em>Trainer</em>: &quot;Remember you are officially a member of the guild, you likeness will be shown in tomorrow's paper. We hope it will take much longer to print your obituary, though that is a service we also provide to our members... In these cases, if any of you survives you should have no issues recruiting other members back at the guild.&quot;</p>
+<p>Should any of your characters die, you can &quot;recruit&quot; new members into your party at the guild in town (you must finish the quest and return). The settlement does not have people that can revive on retainer, sometimes they can bring people from the capital but they can arrive too late (not to mention the expense). In other words, be careful.</p>
+<h2 id="end-of-training">End Of Training</h2>
+<p><em>Trainer</em>: &quot;Well we have arrived, come see me at the guild if you need a refresher. Be careful and pace yourselves. Good luck on your first quest!&quot;</p>
+<center><img src="../Images/portrait.png" alt="Four DepthRangers entering the Dungeon."></center>
+
+</body>
+</html>

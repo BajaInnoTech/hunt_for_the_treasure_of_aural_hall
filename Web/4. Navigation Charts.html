@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>4. Navigation Charts.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manufacturing+Consent&family=Metamorphous&family=New+Rocker&family=Uncial+Antiqua&display=swap" rel="stylesheet">
+<style>
+
+body {
+  /* font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo"; */
+  font-family: "Metamorphous", system-ui;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 1.2em;
+  background-color: hsl(34, 11%, 87%);
+  margin-left: 5rem;
+  margin-right: 5rem;
+  line-height: 2rem;
+}
+
+h1, h2, h3, h4, h5, h6, b {
+    color: #4b3a0d;
+}
+
+table {
+  border: 2px solid rgb(114, 63, 5);
+  border-collapse: collapse;
+}
+
+ul {
+  background: rgba(202, 202, 201, 0.16);
+}
+
+ul, li {
+  border-radius: 1.05rem;
+  margin:0.8em;
+}
+
+img {
+	border-radius: .45rem;
+	box-shadow: .1em .1em 1em 0.05em rgb(80, 60, 23);
+	padding: 0.2em;
+	margin:0.8em;
+}
+
+h1 {
+  text-align: center;
+}
+
+tr:nth-child(odd) {
+  background-color: hsl(40, 27%, 96%);
+}
+
+tr:nth-child(even){background-color: #d8c0ac;}
+
+tr:hover {background-color: #eed7b8;}
+
+th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #ffe3b8;
+  color: rgb(71, 40, 4);
+}
+
+strong {
+  color: rgb(202, 117, 20);
+}
+
+a:link {
+  color: rgb(187, 126, 33);
+}
+
+a:visited {
+  color: #804d00;
+}
+a:hover {
+  color: #ff9900;
+}
+a:active {
+  color: #ffd900;
+}
+
+em, figcaption {
+  color:rgb(71, 40, 4);
+}
+
+</style>
+<h1 id="navigation-charts">Navigation Charts</h1>
+<p>You'll find the information you need to make your way through the dungeon here, that is room layouts, contents and dungeon behavior.</p>
+<h2 id="room-layout">Room layout</h2>
+<figure>
+  <center><img src="../Images/navigation.png" height="300" alt="You see three very distinct doors before you. One ornate, one made of iron, the other a basic yet sturdy reinforced wooden door."></center>
+  <i><center><figcaption>Room sizes vary, but they can be considered of sufficient size for most tactical enterprises from area effects to skirmishes to navigation within a short span of time.</figcaption></center></i>
+</figure>
+<p>For simplicity, rooms are described from the perspective of the entrance. An exit towards the front is considered &quot;Door 1&quot; or more concisely D1 (regardless of whether there is a door or just an open cave). To the left, is D2 and to the right is D3. Some exits can be seen in plain sight but some are hidden, these are depicted as Secret or S (S1, S2 or S3).</p>
+<p>Rool a d6 to discover the room layout:</p>
+<ol>
+<li>All doors open</li>
+</ol>
+<pre class="hljs"><code><div>***D1***
+*      *
+D2    D3
+*      *
+***EN***
+</div></code></pre>
+<ol start="2">
+<li>D2 &amp; D3 open</li>
+</ol>
+<pre class="hljs"><code><div>********
+*      *
+D2    D3
+*      *
+***EN***
+</div></code></pre>
+<ol start="3">
+<li>D1 open, S2 is a secret door</li>
+</ol>
+<pre class="hljs"><code><div>***D1***
+*      *
+S2     *
+*      *
+***EN***
+</div></code></pre>
+<ol start="4">
+<li>D1 open, S3 is a secret door</li>
+</ol>
+<pre class="hljs"><code><div>***D1***
+*      *
+*     S3
+*      *
+***EN***
+</div></code></pre>
+<ol start="5">
+<li>S1 is a secret door, D3 is open</li>
+</ol>
+<pre class="hljs"><code><div>***S1***
+*      *
+*     D3
+*      *
+***EN***
+</div></code></pre>
+<ol start="6">
+<li>S1 is a secret door, D2 is open</li>
+</ol>
+<pre class="hljs"><code><div>***S1***
+*      *
+D2     *
+*      *
+***EN***
+</div></code></pre>
+<p>Open doors can be traversed normally upon discovery; secret doors must be found before using, see <em>searching &amp; secret door detection</em> below.</p>
+<h3 id="room-contents">Room Contents</h3>
+<p>Once you determined the layout of the room, roll a d6 in the room contents table to determine what is actually in the room:</p>
+<h4 id="room-contents-table">Room Contents Table</h4>
+<table>
+<thead>
+<tr>
+<th><strong>Roll</strong></th>
+<th><strong>Room Contents</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><center> 1 </center></td>
+<td>You found <a href="#traps">a Trap</a>.</td>
+</tr>
+<tr>
+<td><center> 2 </center></td>
+<td>You face an Encounter, <em>see Monster Almanac</em>.</td>
+</tr>
+<tr>
+<td><center> 3 </center></td>
+<td>Quest encounter or encounter if none, <em>see Quest Catalog or Monster Almanac if none</em></td>
+</tr>
+<tr>
+<td><center> 4 </center></td>
+<td>You find a <a href="#treasure">Treasure</a>.</td>
+</tr>
+<tr>
+<td><center> 5 </center></td>
+<td>Quest event, <em>see Quest Catalog</em>.</td>
+</tr>
+<tr>
+<td><center> 6 </center></td>
+<td>The room contains <a href="#stairs">a Flight of Stairs</a>.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="hazard-dice-and-non-combat-events">Hazard Dice And Non Combat Events</h2>
+<p>Hazard dice depict the dangerous nature of the dungeon, thrown after 4 non combat events.</p>
+<h3 id="non-combat-event">Non Combat Event</h3>
+<p>Represent a sizable lapse of time spent out combat in a dungeon. Non Combat events are:</p>
+<ul>
+<li>Revisiting a room</li>
+<li>Searching</li>
+<li>Picking a lock</li>
+</ul>
+<p>Whenever a trap is sprung, a combat initiated or a hazard die is thrown, the non combat event count goes back to 0.</p>
+<h3 id="hazard-die-roll">Hazard Die Roll</h3>
+<p>Hazard Die Rolls depict events that take you by surprise when things seemed otherwise peaceful in the dungeon.</p>
+<h4 id="hazard-dice-table">Hazard Dice Table</h4>
+<table>
+<thead>
+<tr>
+<th><strong>Roll</strong></th>
+<th><strong>Hazard</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><center> 1 </center></td>
+<td>Quest Encounter</td>
+</tr>
+<tr>
+<td><center> 2 </center></td>
+<td>Encounter</td>
+</tr>
+<tr>
+<td><center> 3 </center></td>
+<td><a href="#traps">Trap</a></td>
+</tr>
+<tr>
+<td><center> 4 </center></td>
+<td>Fatigue</td>
+</tr>
+<tr>
+<td><center> 5 </center></td>
+<td><a href="#expiration-table">Expiration</a></td>
+</tr>
+<tr>
+<td><center> 6 </center></td>
+<td>No event</td>
+</tr>
+</tbody>
+</table>
+<h4 id="expiration-table">Expiration Table</h4>
+<p>An item in your possession expired, roll expiration table below to find out which:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Roll</strong></th>
+<th><strong>Item Expired</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><center> 1 </center></td>
+<td>Rations</td>
+</tr>
+<tr>
+<td><center> 2 </center></td>
+<td>Torch</td>
+</tr>
+<tr>
+<td><center> 3 </center></td>
+<td>Cure Potion</td>
+</tr>
+<tr>
+<td><center> 4 </center></td>
+<td>Antidote Potion</td>
+</tr>
+<tr>
+<td><center> 5 </center></td>
+<td>Medicinal Potion</td>
+</tr>
+<tr>
+<td><center> 6 </center></td>
+<td>Bandage set</td>
+</tr>
+</tbody>
+</table>
+<p>If the character doesn't own that item, then ignore the expiration. Otherwise, request that this item is moved to another slot to attempt to purify it later. Refusing causes other items in that slot to expire, though the player can choose to discard it instead. Torches are an exception, an expired torch is discarded automatically.</p>
+<h2 id="traps">Traps</h2>
+<figure>
+  <center><img src="../Images/traps.png" height="300" alt="Various traps super impossed, from poison spikes to deadly gas to a pit opening."></center>
+  <i><center><figcaption>Traps can be sprung at any time for every reason. One can't lower their guard within the dungeon.</figcaption></center></i>
+</figure>
+<p>You'll find many perilous traps underground.</p>
+<h3 id="traps-table">Traps Table</h3>
+<p>Roll a <em>d6</em> to determine which trap you ran into:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Roll</strong></th>
+<th><strong>Trap</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><center> 1 </center></td>
+<td><em>Pit Trap</em></td>
+<td>A pit opens below you, roll a <em>dex save</em> to avoid the trap or receive <em>(dungeon_level)+d6</em> HP damage also your character is <em>sprained</em>.</td>
+</tr>
+<tr>
+<td><center> 2 </center></td>
+<td><em>Poison Darts</em></td>
+<td>Poison darts shoot out of the walls, roll a <em>dex save</em> or be <em>poisoned</em>.</td>
+</tr>
+<tr>
+<td><center> 3 </center></td>
+<td><em>Toungues of Flame</em></td>
+<td>You hear a click and tongues of flames shoot out in your direction, roll a <em>dex save</em> or receive <em>(dungeon_level+1)d6</em> HP damage and loose one of your torches.</td>
+</tr>
+<tr>
+<td><center> 4 </center></td>
+<td><em>Spikes</em></td>
+<td>A weighted plate is pressed and spikes shoot forth, roll a <em>dex save</em> or receive <em>(dungeon_level)d6+(dungeon_level)</em> HP damage.</td>
+</tr>
+<tr>
+<td><center> 5 </center></td>
+<td><em>Toxic Gas</em></td>
+<td>Noxious gas floods the room, roll a <em>body save</em> or take <em>(dungeon_level+1)</em> HP damage and become <em>diseased</em>.</td>
+</tr>
+<tr>
+<td><center> 6 </center></td>
+<td><em>Lightning Rune</em></td>
+<td>You hear a hum then lightning is unleashed, roll a <em>magic save</em> or take <em>(dungeon_level)d6+2</em> HP damage.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="trap-deactivation">Trap Deactivation</h3>
+<p>In <strong>The Hunt For The Treasure Of Aural Hall</strong>, the <em>player who entered the room or rolled hazard die</em> has a chance to deactivate the trap so long as it has a set of thief's tools in its possession (it must already be in its inventory). To successfully disable a trap, you must throw a <em>1d6</em> and roll greater than <em>(3+dungeon_level/2)</em>  <a href="#trap-deactivation-table">see the Trap Deactivation Table</a>.</p>
+<p>If you succeed you deactivated the trap, if you fail the trap is sprung. Failure to deactivate the trap means all characters must save against the trap to avoid its effects.</p>
+<p>An attempt at trap deactivation will consume a set of thieves tools regardless of outcome. The character must already have the set of thief's tools in its possession, there is just not enough time to borrow the tools from another player. Rogues get a <em>+1</em> to trap deactivation rolls.</p>
+<h4 id="trap-deactivation-table">Trap Deactivation Table</h4>
+<table>
+<thead>
+<tr>
+<th>Dungeon Level</th>
+<th>Trap Disable Roll</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>4 or greater</td>
+</tr>
+<tr>
+<td>1</td>
+<td>4 or greater</td>
+</tr>
+<tr>
+<td>2</td>
+<td>5 or greater</td>
+</tr>
+<tr>
+<td>3</td>
+<td>5 or greater</td>
+</tr>
+<tr>
+<td>4</td>
+<td>6 or greater</td>
+</tr>
+<tr>
+<td>5</td>
+<td>6 or greater</td>
+</tr>
+</tbody>
+</table>
+<h2 id="finding-secret-doors">Finding Secret Doors</h2>
+<p>To find a secret door, you must roll a magic save. Elven keen senses give them an additional advantage gaining <em>+2</em> on detection of secret doors; if the elf has no status ailments, it can ignore the <em>+2</em> and choose to roll an additional d6 instead.</p>
+<h2 id="searching--secret-door-detection">Searching &amp; Secret Door Detection</h2>
+<ul>
+<li><em>Searching:</em> Characters detect secrets based on a die roll that must be greater than <em>(dungeon_level+1)</em>. Elves get a re-roll when detecting secrets, while Rogues have a <em>+1</em> to their role.</li>
+</ul>
+<p>Searching is performed when attempting to Detect a Secret Doors. This is done in a similar manner to disabling a trap, a player must roll a d6 roll greater than <em>(dungeon_level+1)</em> with 1 always being failure and 6 always being a success. Elves and Rogues gain a <em>+1</em> to search; these two bonuses are cumulative (an Elf Rogue gets a <em>+2</em>).</p>
+<p>The process of searching is slow and counts as traversing a room for the purposes of hazard dice rolls.</p>
+<h2 id="locks">Locks</h2>
+<p>To pick a lock a player must roll a d6 roll greater than <em>(dungeon_level+1)</em> with 1 always being failure and 6 always being a success. Rogues and Brownies gain a <em>+1</em> to lock picking rolls. A Brownie Rogue gets a <em>+2</em> to lock picking rolls.</p>
+<p>The process of picking a lock counts takes time and counts as traversing a room for the purposes of hazard dice rolls.</p>
+<p>Also Picking a lock consumes a lock-pickers kit.</p>
+<h2 id="treasure">Treasure</h2>
+<p>Fortune favors the bold. Adventurers will find something in those chest that more or less matches what they need. However things are not always what they seem when finding treasure  you must roll to see what kind of treasure  you found. Then, depending on the contents, refer to the proper table:</p>
+<h3 id="treasure-table">Treasure  Table</h3>
+<table>
+<thead>
+<tr>
+<th><strong>Roll</strong></th>
+<th><strong>Treasure</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><center> 1 </center></td>
+<td><em>Trapped</em></td>
+<td><a href="#traps">You found a trapped regular treasure. Disable the trap first</a>, <a href="#regular-treasure">then view its contents</a>.</td>
+</tr>
+<tr>
+<td><center> 2 </center></td>
+<td><em>Mimic</em></td>
+<td>Surprise attack. If in ground level (<em>dungeon_level</em> is 0), this is a <a href="#regular-treasure">regular treasure</a>.</td>
+</tr>
+<tr>
+<td><center> 3 </center></td>
+<td><em>Locked</em></td>
+<td>Must expend a thieves toolkit to open, roll a dex save if failed the mechanism is jammed - This is a <a href="#regular-treasure">regular treasure</a>.</td>
+</tr>
+<tr>
+<td><center> 4 </center></td>
+<td><em>Locked</em></td>
+<td>Must expend a thieves toolkit to open, roll a dex save if failed the mechanism is jammed - This is a <a href="#regular-treasure">regular treasure</a>.</td>
+</tr>
+<tr>
+<td><center> 5 </center></td>
+<td><em>Regular treasure</em></td>
+<td>You find a <a href="#regular-treasure">regular treasure</a>.</td>
+</tr>
+<tr>
+<td><center> 6 </center></td>
+<td><em>Regular treasure</em></td>
+<td>You find a <a href="#regular-treasure">regular treasure</a>.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="regular-treasure">Regular Treasure</h3>
+<p>You found an unlocked and unguarded treasure , roll the regular treasure  contents table to find out what's inside:</p>
+<h4 id="regular-treasure-contents-table">Regular Treasure Contents Table</h4>
+<p>Roll a d6 to discover the treasure's contents:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Roll</strong></th>
+<th><strong>Contents</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><center> 1 </center></td>
+<td><em>Weapon</em></td>
+<td>You found a weapon, see <a href="#weapons-table">weapons table</a>.</td>
+</tr>
+<tr>
+<td><center> 2 </center></td>
+<td><em>Gold</em></td>
+<td><em>100*(1+dungeon_level)d6</em> g.</td>
+</tr>
+<tr>
+<td><center> 3 </center></td>
+<td><em>Rations</em></td>
+<td>There are <em>3*(1+dungeon_level)</em> of them; however you must roll a <em>d6</em> equal to or greater to the level where they were found or these are spoiled and must be purified before consuming.</td>
+</tr>
+<tr>
+<td><center> 4 </center></td>
+<td><em>Adventure gear</em></td>
+<td><em>(dungeon_level)</em> torches, thief's tools and fire oil (can be distributed between party members).</td>
+</tr>
+<tr>
+<td><center> 5 </center></td>
+<td><em>Armor</em></td>
+<td>You found a piece of armor, <a href="#armor-table">see armor table</a>.</td>
+</tr>
+<tr>
+<td><center> 6 </center></td>
+<td><em>Spell scroll</em></td>
+<td>You found a magic scroll, <a href="#scrolls-table">see scroll table</a>.</td>
+</tr>
+</tbody>
+</table>
+<p><em>Tables for each category of item you can find in the table above are outlined below, roll a d6 to see which item you found.</em></p>
+<h5 id="weapons-table">Weapons Table</h5>
+<p>Roll a d6 to see which weapon you found inside the treasure:</p>
+<h5 id="weapons-table">Weapons Table</h5>
+<p>Roll a d6 to see which weapon you found inside the treasure:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Roll</strong></th>
+<th><strong>Contents</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><center> 1 </center></td>
+<td><em>Arrows</em></td>
+<td>You find <em>10*(1+dungeon_level)</em> arrows and <em>10*(dungeon_level+1)</em> g.</td>
+</tr>
+<tr>
+<td><center> 2 </center></td>
+<td><em>Bow and Arrows</em></td>
+<td>You find 10 arrows and a +<em>(dungeon_level)/2</em> bow, worth <em>50*(dungeon_level+1)</em> g.</td>
+</tr>
+<tr>
+<td><center> 3 </center></td>
+<td><em>One Handed Weapon</em></td>
+<td>You find a <em>+(dungeon_level)/2</em> One Handed Weapon worth <em>100*(dungeon_level)</em> g.</td>
+</tr>
+<tr>
+<td><center> 4 </center></td>
+<td><em>One Handed Weapon</em></td>
+<td>You find a <em>+(dungeon_level)/2</em> One Handed Weapon worth <em>100*(dungeon_level)</em> g.</td>
+</tr>
+<tr>
+<td><center> 5 </center></td>
+<td><em>Two Handed Weapon</em></td>
+<td>You find a <em>+(dungeon_level)/2</em> Two Handed Weapon worth <em>150*(dungeon_level)</em> g.</td>
+</tr>
+<tr>
+<td><center> 6 </center></td>
+<td><em>Ranged Weapon</em></td>
+<td>You find a <em>+(dungeon_level)/2</em> Ranged Weapon worth *150*(dungeon_level)*g and <em>300*(dungeon_level)</em> g.</td>
+</tr>
+</tbody>
+</table>
+<p><em>As can be seen, level 0 weapons are not worth anything, but as can be seen they will become valuable later on.</em></p>
+<h5 id="armor-table">Armor Table</h5>
+<p>Roll a d6 to see which piece or armor you found inside the treasure:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Roll</strong></th>
+<th><strong>Contents</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><center> 1 </center></td>
+<td><em>Shield</em></td>
+<td>You find a +<em>(dungeon_level)/2</em> Shield, worth <em>30*(dungeon_level)</em> g.</td>
+</tr>
+<tr>
+<td><center> 2 </center></td>
+<td><em>Shield</em></td>
+<td>You find a +<em>(dungeon_level)/2</em> Shield, worth <em>30*(dungeon_level)</em> g.</td>
+</tr>
+<tr>
+<td><center> 3 </center></td>
+<td><em>Helmet</em></td>
+<td>You find a +<em>(dungeon_level)/2</em> Helmet, worth <em>60*(dungeon_level)</em> g.</td>
+</tr>
+<tr>
+<td><center> 4 </center></td>
+<td><em>Bringandine</em></td>
+<td>You find a +<em>(dungeon_level)/2</em> Brigandine, worth <em>50*(dungeon_level)</em> g.</td>
+</tr>
+<tr>
+<td><center> 5 </center></td>
+<td><em>Chainmail</em></td>
+<td>You find a +<em>(dungeon_level)/2</em> Chainmail, worth <em>100*(dungeon_level)</em> g.</td>
+</tr>
+<tr>
+<td><center> 6 </center></td>
+<td><em>Platemail</em></td>
+<td>You find a +<em>(dungeon_level)/2</em> Platemail, worth <em>200*(dungeon_level)</em> g.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="scrolls-table">Scrolls Table</h5>
+<p>Roll a d6 to see which magic scroll you found inside the treasure:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Roll</strong></th>
+<th><strong>Contents</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><center> 1 </center></td>
+<td><em>Illuminate</em></td>
+</tr>
+<tr>
+<td><center> 2 </center></td>
+<td><em>Invisibility</em></td>
+</tr>
+<tr>
+<td><center> 3 </center></td>
+<td><em>Protection</em></td>
+</tr>
+<tr>
+<td><center> 4 </center></td>
+<td><em>Invigorate</em></td>
+</tr>
+<tr>
+<td><center> 5 </center></td>
+<td><em>Stop</em></td>
+</tr>
+<tr>
+<td><center> 6 </center></td>
+<td><em>Fireball</em></td>
+</tr>
+</tbody>
+</table>
+<p><em>Each of these scrolls can be consumed or learned upon reaching the surface.</em></p>
+<h3 id="stairs">Stairs</h3>
+<p>Once the stairs have been found you instinctively go down (you can choose to go back up the next turn, but first you descend). Then roll a d6:</p>
+<p><em>Note that traversing a flight of stairs counts as traversing a room for the purposes of hazard dice rolls. Though this comes into effect after reaching your destination.</em></p>
+<h4 id="stairs-table">Stairs Table</h4>
+<table>
+<thead>
+<tr>
+<th><strong>Roll</strong></th>
+<th><strong>Contents</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><center> 1 </center></td>
+<td>You reach a normal room, <a href="#room-layout">roll for room layout</a> then <a href="#room-contents">roll for room contents</a>.</td>
+</tr>
+<tr>
+<td><center> 2 </center></td>
+<td>You reach a normal room, <a href="#room-layout">roll for room layout</a> then <a href="#room-contents">roll for room contents</a>.</td>
+</tr>
+<tr>
+<td><center> 3 </center></td>
+<td>You reach a normal room, <a href="#room-layout">roll for room layout</a> then <a href="#room-contents">roll for room contents</a>.</td>
+</tr>
+<tr>
+<td><center> 4 </center></td>
+<td>You reach an empty room, <a href="#room-layout">roll for room layout</a>.</td>
+</tr>
+<tr>
+<td><center> 5 </center></td>
+<td>You reach an empty room, <a href="#room-layout">roll for room layout</a>.</td>
+</tr>
+<tr>
+<td><center> 6 </center></td>
+<td>You reach an empty room, <a href="#room-layout">roll for room layout</a>.</td>
+</tr>
+</tbody>
+</table>
+<p>As soon as you enter a new room you should begin charting your map on a different page or a distant part of the page if you have space. Make sure to mark this initial room as the exit to the surface, see <em>making your way back</em>.</p>
+<h4 id="reached-a-normal-room">Reached A Normal Room</h4>
+<p>Roll the room Contents Table, keeping in mind you are now one level deeper. Don't forget to notate the staircase in this room.</p>
+<h4 id="reached-an-empty-room">Reached An Empty Room</h4>
+<p>If you reach an empty room, you made it one level below. There are no monsters here but it's not a safe place to stay for long so you should continue exploring. Don't forget to make a note of the staircase in this room.</p>
+
+</body>
+</html>

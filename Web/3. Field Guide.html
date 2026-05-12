@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>3. Field Guide.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manufacturing+Consent&family=Metamorphous&family=New+Rocker&family=Uncial+Antiqua&display=swap" rel="stylesheet">
+
+<style>
+
+body {
+  /* font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo"; */
+  font-family: "Metamorphous", system-ui;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 1.2em;
+  background-color: hsl(34, 11%, 87%);
+  margin-left: 5rem;
+  margin-right: 5rem;
+  line-height: 2rem;
+}
+
+h1, h2, h3, h4, h5, h6, b {
+    color: #4b3a0d;
+}
+
+/* table {
+  border: 2px solid rgb(114, 63, 5);
+  border-collapse: collapse;
+} */
+
+ul {
+  background: rgba(202, 202, 201, 0.16);
+}
+
+/* ul, li {
+  border-radius: 1.05rem;
+  margin:0.8em;
+} */
+
+img {
+	border-radius: .45rem;
+	box-shadow: .1em .1em 1em 0.05em rgb(80, 60, 23);
+	padding: 0.2em;
+	margin:0.8em;
+}
+
+h1 {
+  text-align: center;
+}
+
+tr:nth-child(odd) {
+  background-color: hsl(40, 27%, 96%);
+}
+
+tr:nth-child(even){background-color: #d8c0ac;}
+
+tr:hover {background-color: #eed7b8;}
+
+th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #ffe3b8;
+  color: rgb(71, 40, 4);
+}
+
+strong {
+  color: rgb(202, 117, 20);
+}
+
+a:link {
+  color: rgb(187, 126, 33);
+}
+
+a:visited {
+  color: #804d00;
+}
+a:hover {
+  color: #ff9900;
+}
+a:active {
+  color: #ffd900;
+}
+
+em, figcaption {
+  color:rgb(71, 40, 4);
+}
+
+</style>
+<h1 id="field-guide">Field Guide</h1>
+<p>This field guide works as a dungeon preparation pamphlet. You'll find a description of common items and their uses here.</p>
+<h2 id="market-wares">Market Wares</h2>
+<p>This is a list of all the items you can find across the market's many shops. This should be more than enough for an eager explorer, though there are many things not found here which you may find beneath the surface.</p>
+<ul>
+<li><strong>One-handed Weapons</strong>: From blades to clubs, these are weapons that can be wielded with one hand alone. They inflict <em>(character_level)d6</em> damage, and cost 20g
+<ul>
+<li>Single handed Melee weapons can be used while holding a shield or a torch on the other hand.</li>
+<li>One-handed Weapons take up 1 inventory slot.</li>
+</ul>
+</li>
+<li><strong>Two-handed Weapons</strong>: Larger weapons that require both hands to use, the wielder must be someone who can withstand both the weight and size of the weapon. They inflict <em>(character_level)d6+(character_level)</em> damage, and cost 50g
+<ul>
+<li>Can't equip a two handed weapon and a shield or hold a torch at the same time.</li>
+<li>Two-handed Weapons take up 2 inventory slots.</li>
+</ul>
+</li>
+<li><strong>Ranged Weapons</strong>: Weapons that can be used to attack at a distance, they require both hands to use and consume ammunition. They inflict <em>(character_level)d6</em> damage, and cost 30g
+<ul>
+<li>Ranged Weapons take up 1 inventory slot.</li>
+</ul>
+</li>
+<li><strong>Arrows</strong>: Ammunition for your ranged weapon the cost per unit is 2g
+<ul>
+<li>You can store 10 arrows per slot.</li>
+</ul>
+</li>
+<li><strong>Rations</strong>: Edible if not flavorful; they can be stored for a considerable amount of time and will be needed should you find a place safe enough to rest within your travels. Rations are sold for single person lasting 1 day, they cost 3g
+<ul>
+<li>Each character must consume one set of rations per rest to gain its benefits.</li>
+<li>Brownies can use rations to persuade animals.</li>
+<li>You can store 5 rations per slot.</li>
+</ul>
+</li>
+<li><strong>Torches</strong>: They are used to see at a distance (30 ft radius), though monsters can see you as well. Torches are sold in sets of 3 and cost 5g
+<ul>
+<li>One character in your party must carry a torch instead of a shield or two handed weapon.</li>
+<li>You can store 5 torches per slot.</li>
+</ul>
+</li>
+<li><strong>Brigandine</strong>: Light padded armor with minor steel plate reinforcements. It allows for ease of movement providing light protection. It offers +1 AC, and costs 50g
+<ul>
+<li>Light armor, can be used by all.</li>
+<li>Takes up 2 inventory slots.</li>
+</ul>
+</li>
+<li><strong>Chainmail</strong>: Fortified armor made of interlocking metal rings, while it still offers protection and some mobility only someone with strong physical endurance can be comfortable with prolonged use. It offers +2 AC, and costs 100g
+<ul>
+<li>Fortified armor, can be used by most save Mages and non warrior brownies.</li>
+<li>Takes up 2 inventory slots.</li>
+</ul>
+</li>
+<li><strong>Platemail</strong>: A particularly heavy armor made of metal plates. While well balanced, the wearer must be trained to use this outside an exhibition room. It offers +3 AC, and costs 200g
+<ul>
+<li>Strongest conventional armor, can be used by non brownie warriors and healers.</li>
+<li>Takes up 3 inventory slots.</li>
+</ul>
+</li>
+<li><strong>Helmet</strong>: Head protection, while not too ornamented it sure is better than a bucket. It offers +1 AC, and costs 60g
+<ul>
+<li>Can be used by non brownies / mages.</li>
+<li>Takes up 1 inventory slot.</li>
+</ul>
+</li>
+<li><strong>Shield</strong>: Made out of wood with iron supports. Bulky but able to take a couple of blows. It offers +1 AC, and an additional +1 AC against ranged attacks, and costs 30g
+<ul>
+<li>Can be used by non brownies / mages.</li>
+<li>Takes up 1 inventory slot.</li>
+</ul>
+</li>
+<li><strong>Spell Scroll</strong>: Cheaply made but handy, use of scrolls saves precious spell slots. Each costs 100g
+<ul>
+<li>Spell Scrolls contain mage spells exclusively. A spell scroll can be used for casting by Mages and Healers (though healers can only use spells that target party members).</li>
+<li>The spell types in those scrolls must be defined upon acquisition (before entering the dungeon).</li>
+<li>Mages can't learn from these scrolls, to learn a new spell the scroll must be obtained during your travels.</li>
+<li>They're fragile so you can store 3 per slot.</li>
+</ul>
+</li>
+<li><strong>Thief’s Tools</strong>: These are thin bits made for lockpicking and trap dismantling. They cost 3g
+<ul>
+<li>Unfortunately thieves tools can only be used once.</li>
+<li>Used for door, treasure and trap picking by anyone (though Rogues get a +1).</li>
+<li>You can store 5 per slot.</li>
+</ul>
+</li>
+<li><strong>Healing Potion</strong>: It comes in small vials, each costs 20g
+<ul>
+<li>You can store 10 potions per slot.</li>
+</ul>
+</li>
+<li><strong>Fire Oil</strong>: It can explode when activated causing a room (12 ft radius) to be set ablaze and harming monsters for 2d6 HP damage. Each costs 30g
+<ul>
+<li>Set all monsters in the room ablaze, and anyone can use them.</li>
+<li>They're volatile so you can only store 5 per slot.</li>
+</ul>
+</li>
+<li><strong>Sedative Gas Potion</strong>: It seems empty but its sweet scent is a reminder of its potent effect. Each costs 100g
+<ul>
+<li>All living enemies in a normal encounter within 20ft in a non ventilated area must must roll a save of 4 or become paralized for 1 turn. Sleeping enemies are automatically sneak attacked by Rogues.</li>
+<li>They're volatile so you can only store 5 per slot.</li>
+</ul>
+</li>
+<li><strong>Bandages</strong>: A large pad of absorvent cloth, attached to the middle of a strip of thin fabric dowsed in anesthetic and antiseptic oils. Each set of bandages costs 3g.
+<ul>
+<li>Recover 2 HP (healers recover more), can help with slight injuries.</li>
+<li>Bandages can be used to stop bleeding.</li>
+<li>You can store 15 per slot.</li>
+</ul>
+</li>
+<li><strong>Antidote Potion</strong>: A yellow vial containing a particularly acrid scent. Each costs 30g
+<ul>
+<li>Recovers you from poison status, though you must roll a <em>d6</em> vs <em>poison_level</em> to see if it took effect. You can store 10 per slot.</li>
+</ul>
+</li>
+<li><strong>Medicinal Potion</strong>: A blue vial containing an antibacterial compound. Like most medicines, it has a bitter taste, each costs 50g
+<ul>
+<li>Helps recover from sickness.</li>
+<li>You can store 10 per slot.</li>
+</ul>
+</li>
+<li><strong>Tonic</strong>: A green vial that has a spicy scent, each costs 100g
+<ul>
+<li>Helps recover one stack of fatigue.</li>
+<li>You can store 5 per slot.</li>
+</ul>
+</li>
+<li><strong>Restore Expired Goods</strong>: Treatment for each item costs 1g</li>
+</ul>
+<p><em>Every trader you find, regardless of their specialty or location, will purify expired goods for 1g (per piece) as a service to explorers.</em></p>
+<h2 id="selling-gear--items">Selling Gear &amp; Items</h2>
+<p>Tough most of what you buy is already second hand, it doesn't mean you are not affected by depreciation. When you sell items, you only get half the item's price. You can always sell gear at the surface, but there are actually a good deal of places to sell gear in the dungeon itself.</p>
+<h2 id="exchanging-items-between-party-members">Exchanging Items Between Party Members</h2>
+<p>When making your purchases, keep in mind that once inside the dungeon, there is less time to go rummaging through your backpacks. So each party member should be somewhat self sufficient. On one hand, adventurers can exchange items only outside of combat. And even then, since you're on the go, you can only exchange one item at a time (one item per room traveled). That means that if you wish to give your party mate 3 bottles of healing, you will give them one at a time as you keep on exploring so that you both hand over each and store them.</p>
+<h2 id="important-terminology">Important Terminology</h2>
+<p>These concepts will be used for many aspects of the game such as monster damage. We suggest that you always <em>ignore fractions in any calculations you do.</em></p>
+<h3 id="dungeon-level">Dungeon Level</h3>
+<p>Level you're currently at in a dungeon (starts at 0), found in calculations as: <strong>dungeon_level</strong>. Again if you're not in a dungeon, then your quest itself determines what this value is.</p>
+<h3 id="monster-level">Monster Level</h3>
+<p>In <strong>The Hunt For The Treasure Of Aural Hall</strong> the level of a monster is always the same as the <strong>dungeon_level</strong>. Monsters have generally <em>(dungeon_level)d6</em> HP as well as damage.</p>
+<h3 id="character-level">Character Level</h3>
+<p>Level your playable character currently has (starts at <em>1</em>), found in calculations as: <strong>character_level</strong></p>
+<h3 id="party-size">Party Size</h3>
+<p>Amount of playable characters that make up your party. These monster encounters were designed with 4 in mind, so you might need to make adjustments if you deviate a lot from this amount. Found in calculations as: <strong>party_size</strong></p>
+<h2 id="combat">Combat</h2>
+<p>A DepthRanger's life is not a cozy one - Life or death situations are commonplace in the depths. This section are the bits of knowledge that provide a lifeline to these brave explorers.</p>
+<p>First, determine who goes first.</p>
+<p>Second, determine the amount of enemy forces and HP each has.</p>
+<p>Third, read their description carefully. Monster behavior is varied. Plus, knowing the specifics of that monster type might open up a few tactical possibilities.</p>
+<p>Players are warned to carry ranged weapons as well (the best weapon type is having both melee and ranged)!!!</p>
+<p>With that out of the way, the next sections will get into detail on the particulars of aiming, tactics, etc.</p>
+<h3 id="combat-order">Combat Order</h3>
+<p>While nothing would be best than the heroic <strong>DepthRangers</strong> to always strike first, that is not always possible. Especially after lowering the guard during a negocioation. In any case combat order can be determined by doing the following:</p>
+<p>Throw a d6, on normal encounters roll against (4-character_level+dungeon_level), on quest encounters roll against (5-character_level+dungeon level); players rolling a 6 always go first, and if you roll a 1 monsters strike first. Bosses always go first.</p>
+<p>Characters with the <strong>reconnaissance</strong> attribute will add a <em>+1</em> to these rolls.</p>
+<p>The order of combat is:</p>
+<ul>
+<li><em>Players Strike First</em>: The character who entered the room strikes first. Then attack follows play order. Once all characters have attacked, monsters strike the first character who attacked then the other characters.</li>
+<li><em>Monsters Strike First</em>: Monsters will strike the first character who entered the room first, and then continue following order of play.</li>
+</ul>
+<h3 id="melee-weapons">Melee Weapons</h3>
+<p>Single and Two-Handed weapons are used by front line combatants. They have the advantage of not requiring munitions, plus certain classes have boons specifically for this type of combat.</p>
+<h3 id="ranged-weapons">Ranged Weapons</h3>
+<p>A ranged weapon generates the same level of damage as a melee weapon. Since using a ranged weapon allows the user to attack at a distance, that user is granted +<em>(character_level)</em> AC. When a player is using a ranged weapon, they use both hands so technically ranged weapons are a special class of two handed weapon though they only take up one slot when stored. Meaning a character wielding a ranged weapon can't hold a torch.</p>
+<p>Unfortunately, each use consumes an arrow and you can only have 10 arrows per slot (unless you find a quiver). In addition, you may need a backup melee weapon to switch to if you run out of ammonition. Also, in order to use your ranged weapon you need to equip the ranged weapon ahead of time. Changing weapons mid battle requires spending a turn performing this task.</p>
+<p>Finally, you can't use ranged weapons to detain someone who's trying to escape (you use your hands or the flat of the blade).</p>
+<h3 id="empty-handed-fighting">Empty Handed Fighting</h3>
+<p>When a character lacks a weapon, they have single handed weapon accuracy and inflict <em>character_level</em> damage.</p>
+<h3 id="attacking">Attacking</h3>
+<p>Attack outcome is determined when damage dice are rolled, in other words there's no need for an additional roll to determine outcome.</p>
+<p>Depending on what numbers were rolled, one of three things will happen:</p>
+<ul>
+<li>A devastating critical attack</li>
+<li>A normal attack</li>
+<li>Missing your target, <a href="#attack-accuracy">see attack accuracy</a></li>
+</ul>
+<h4 id="critical-attack">Critical Attack</h4>
+<p>Your character performs a devastating attack. Critical attacks perform serious damage, and in addition certain classes and monster types unleash a specific tactical maneuver.</p>
+<h5 id="critical-attack-table">Critical Attack Table</h5>
+<table>
+<thead>
+<tr>
+<th><strong>Character Level</strong></th>
+<th><strong>Number Of Fives/Sixes Rolled</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><center> 1 </center></td>
+<td>If the character rolls a 6, it performs a critical attack.</td>
+</tr>
+<tr>
+<td><center> 2 </center></td>
+<td>If the character rolls a single 6, it performs a critical attack.</td>
+</tr>
+<tr>
+<td><center> 3 </center></td>
+<td>If the character rolls a combination of one 5 or 6, and one 6 it performs a critical attack.</td>
+</tr>
+<tr>
+<td><center> 4 </center></td>
+<td>If the character rolls a combination of one 5 or 6, and one 6 it performs a critical attack.</td>
+</tr>
+<tr>
+<td><center> 5 </center></td>
+<td>If the character rolls a combination of two 5 or 6, and one 6 it performs a critical attack.</td>
+</tr>
+<tr>
+<td><center> 6 </center></td>
+<td>If the character rolls a combination of two 5 or 6, and one 6 it performs a critical attack.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="normal-attack">Normal Attack</h4>
+<p>Normal attacks simply tally the damage dice and add any bonuses (or minuses) to the total damage output.</p>
+<h4 id="attack-accuracy">Attack Accuracy</h4>
+<p>During combat, weapon accuracy is determined with the same dice throw used for damage.</p>
+<h5 id="single-handed-and-ranged-weapon-accuracy">Single Handed and Ranged Weapon Accuracy</h5>
+<p>When you roll <em>(character_level)/2+1</em> one's, that character misses. That is, it takes rolling a 1 on the first level then an additional 1 every even level up. This is laid out on the table below:</p>
+<h6 id="single-handed-weapon-accuracy-table">Single Handed Weapon Accuracy Table</h6>
+<table>
+<thead>
+<tr>
+<th><strong>Character Level</strong></th>
+<th><strong>Number Of Ones Rolled That Cause The Character To Miss An Attack</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><center> 1 </center></td>
+<td><em>1</em>, if the character rolls a single one, the attack misses.</td>
+</tr>
+<tr>
+<td><center> 2 </center></td>
+<td><em>1</em>, if the character rolls a single one, the attack misses.</td>
+</tr>
+<tr>
+<td><center> 3 </center></td>
+<td><em>2</em>, if the character rolls two ones, the attack misses.</td>
+</tr>
+<tr>
+<td><center> 4 </center></td>
+<td><em>2</em>, if the character rolls two ones, the attack misses.</td>
+</tr>
+<tr>
+<td><center> 5 </center></td>
+<td><em>3</em>, if the character rolls three ones, the attack misses.</td>
+</tr>
+<tr>
+<td><center> 6 </center></td>
+<td><em>3</em>, if the character rolls three ones, the attack misses.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="two-handed-weapons-accuracy">Two Handed Weapons Accuracy</h5>
+<p>A two handed sword allows you to ignore one of these rolls, when you roll <em>(character_level)/2+2</em> one's, that character misses. Similar to the above, just a bit more accuracy:</p>
+<h6 id="two-handed-weapon-accuracy-table">Two Handed Weapon Accuracy Table</h6>
+<table>
+<thead>
+<tr>
+<th><strong>Character Level</strong></th>
+<th><strong>Number Of Ones Rolled That Cause The Character To Miss An Attack</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><center> 1 </center></td>
+<td><em>n/a</em>, the attack always succeeds.</td>
+</tr>
+<tr>
+<td><center> 2 </center></td>
+<td><em>2</em>, if the character rolls a two ones,  the attack misses.</td>
+</tr>
+<tr>
+<td><center> 3 </center></td>
+<td><em>3</em>, if the character rolls three ones, it misses.</td>
+</tr>
+<tr>
+<td><center> 4 </center></td>
+<td><em>3</em>, if the character rolls three ones, it misses.</td>
+</tr>
+<tr>
+<td><center> 5 </center></td>
+<td><em>4</em>, if the character rolls four ones, it misses.</td>
+</tr>
+<tr>
+<td><center> 6 </center></td>
+<td><em>4</em>, if the character rolls four ones, it misses.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="retreating-from-an-encounter">Retreating From An Encounter</h3>
+<p>What are you a humanoid or a rat person? No retreating, you succeed or die trying!</p>
+<p><em>We actively discourage retreat</em>, however if you wish to indulge in this behavior, then all characters in the party must roll a successful dex save to run away. Upon failure, your party spends a turn inactive.</p>
+<h2 id="hazard-dice-and-non-combat-events">Hazard Dice And Non Combat Events</h2>
+<p>Hazard dice depict the dangerous nature of your profession, thrown after 4 non combat events.</p>
+<h3 id="non-combat-event">Non Combat Event</h3>
+<p>Non Combat Events represent a sizeable lapse of time spent out combat during your adventures. Non Combat events are:</p>
+<ul>
+<li>Revisiting a location</li>
+<li>Searching</li>
+<li>Picking a lock</li>
+</ul>
+<p>Whenever a trap is sprung, a combat initiated or a hazard die is thrown, the non combat event count goes back to 0.</p>
+<p>The point is that spending idle time is a luxury and comes at a cost. Besides, the existence of hazard die is a reminder of why you can't just rest anywhere.</p>
+<h3 id="hazard-die-roll">Hazard Die Roll</h3>
+<p>Hazard Die Rolls depict events that take you by surprise when things seemed otherwise peaceful during your adventures. Players roll hazard die to determine the nature of the event.</p>
+<h2 id="out-of-combat-transactions">Out of combat transactions</h2>
+<p>Due to the danger of their environment adventurers can't be too distracted while traveling the dungeon. They can only perform one transaction per room traveled. Transactions available are:</p>
+<ul>
+<li>Casting a spell</li>
+<li>Switching between weapons, for example from ranged to shield and short melee weapon</li>
+<li>Exchanging 1 item, such as a potion. Each item requires an individual transaction (one character reaching for the item, handing it over to another character, and that second character then taking the item and storing it).
+<ul>
+<li>Arrows however are special, since they are found in the same place. Hence, up to 3 arrows can be shared at a time.</li>
+</ul>
+</li>
+</ul>
+<p>In other words, <em>all characters must have planned ahead to be mostly self-sufficient</em>. These transactions are there to provide support but not to compesate for lack of planning.</p>
+<p>Out of combat transactions do not count as non-combat events. Instead they represent activities the party can do without interrupting their travels.</p>
+<h2 id="searching">Searching</h2>
+<p><em>Searching:</em> Players can search for hidden mysteries such as secret doors by rolling a d6 that must be greater than:</p>
+<p><em><center>(5-character_level+dungeon_level)</center></em></p>
+<p>Both Elves and Rogues get a <em>+1</em> to search rolls; an Elven Rogue will get a <em>+2</em> to search rolls.</p>
+<p>To detect a Secret Door you must perform a successful search.</p>
+<p>The process of searching is slow and counts as a non-combat event (for the purposes of hazard dice rolls).</p>
+<h2 id="lock-picking">Lock-picking</h2>
+<p>To pick a lock a player must throw a <em>1d6</em> and roll greater than <em>4</em>. Rogues gain a <em>+1</em>, and Brownies also gain a <em>+1</em> to lock-picking throws. A Brownie Rogue gets a <em>+2</em> to lock picking rolls.</p>
+<p>The process of picking a lock takes time and counts as a non-combat event (for the purposes of hazard dice rolls).</p>
+<p>Also Picking a lock consumes a lock-pickers kit.</p>
+<h2 id="trap-deactivation">Trap Deactivation</h2>
+<p>In <strong>The Hunt For The Treasure Of Aural Hall</strong>, the <em>player who entered the room or rolled hazard die</em> has a chance to deactivate the trap so long as it holds a set of thief's tools in its possession (its inventory). To successfully disable a trap, you must throw a <em>1d6</em> and roll greater than <em>(4+dungeon_level/2)</em> (see the Trap Deactivation Table in the Navigation Charts). If you succeed you deactivated the trap, if you fail the trap is sprung. Failure to deactivate the trap means all players must save against the trap to avoid its effects.</p>
+<p>An attempt at trap deactivation will consume a set of thieves tools regardless of outcome. The character must already have the set of thief's tools in its possession, there is just not enough time to borrow the tools from another player. Rogues get a <em>+1</em> to trap deactivation rolls.</p>
+<h2 id="lingering-status-effects">Lingering Status Effects</h2>
+<ul>
+<li><a href="#bleeding-status">bleeding status</a></li>
+<li><a href="#diseased-status">diseased status</a></li>
+<li><a href="#poisoned-status">poisoned status</a></li>
+<li><a href="#sprained">sprained</a></li>
+<li><a href="#fatigue">fatigue</a></li>
+</ul>
+<h3 id="bleeding-status">Bleeding Status</h3>
+<p>A character has an open wound that causes it to lose <em>(dungeon_level)</em> HP every time a <em>hazard die</em> is thrown. Bleeding can be cured upon resting or application of a bandage.</p>
+<h3 id="diseased-status">Diseased Status</h3>
+<p>A diseased character grows weakened. They will roll a <em>d6</em> every time a <em>hazard die</em> is thrown: on a roll of 1 they must fatigue a slot.</p>
+<p>Since a diseased character is weakened they will also walk slower; the party will expend 2 non combat events each time you travel to a visited location.</p>
+<p>To cure disease, you can drink medicine (which will remove the status effect but not recover any fatigued slots) or ask the healer to purify. While characters recover upon reaching the surface, resting does not cure this status ailment.</p>
+<h3 id="poisoned-status">Poisoned Status</h3>
+<p>If your character is poisoned, it will become weakened and walk slower; forcing the party to expend 2 non combat events each time you travel to a visited location. A poisoned character will roll a <em>d6</em> every time a hazard die is thrown, on a roll of <em>1</em> they will receive <em>(poisoned_level)</em> damage. Hence at <em>dungeon_level</em> 0, the character is slowed but receives no ongoing damage.</p>
+<p><strong>poisoned_level</strong>: When you're poisoned, note the <em>dungeon_level</em> you're currently at when the creature poisoned you. This will be your: &quot;<em>poisoned_level</em>&quot;.</p>
+<p>If your character is poisoned for a second time, it keeps the largest <em>poisoned_level</em> value.</p>
+<p>As an example, if you were poisoned at <em>dungeon_level</em> then poisoned again by a <em>dungeon_level</em> 3 creature, your <em>poisoned_level</em> will be 3; if you're poisoned by a <em>dungeon_level</em> 3 then again at <em>dungeon_level</em> 1, your <em>poisoned_level</em> will also be 3 (you are afflicted by the most potent poison).</p>
+<p>To remove the poison, you can use an antidote, or have your healer purify your wound. If you use an antidote, you must roll vs your <em>poisoned_level</em> to make sure that the antidote is effective. Note that healer characters have bonuses that make it easier to cure poisons.</p>
+<h3 id="sprained">Sprained</h3>
+<p>A character with a minor injury will slow down the party, the party will expend 2 non combat events each time you travel to a visited location.</p>
+<p>Thankfully, this injury is not serious: You can either...</p>
+<ul>
+<li>use bandages for support and recover instantly, or</li>
+<li>you can &quot;walk it off&quot; and heal it after ascending or descending a flight of stairs.</li>
+</ul>
+<h3 id="fatigue">Fatigue</h3>
+<p>A round of fatigue forces you to lose one inventory slot. Fatigue is cumulative, meaning each round of fatigue makes you lose an additional slot, and can only be fully restored upon rest, and partially restored (a single slot) by consuming a tonic. Players are free to choose which slot is afflicted by fatigue (so I suggest starting with the free slots).</p>
+<h2 id="finding-treasure">Finding Treasure</h2>
+<p>While quest rewards are certainly a great incentive to explore the depths, treasure is also a potent motivator. Upon finding underground treasure, you have the following options:</p>
+<ul>
+<li>Open it</li>
+<li>Let someone else open it</li>
+<li>If nobody wants to open it, you may choose to leave it alone</li>
+</ul>
+<p>Whomever opens a treasure, gets to keep its contents. However, if you choose to open it, then you may need to expend thief's tools. Additionally, if the treasure is trapped you will be the one to deal with the trap (which could affect the entire party)!</p>
+<h2 id="resting">Resting</h2>
+<p>Nothing like taking the armor off and resting those sore limbs. Whenever you leave the dungeon, your characters rest by default (in story). Resting eases fatigue (all fatigued slots are recovered), fully heals HP, recovers Healer &amp; Mage spells. Also a rest resets non combat event count to 0.</p>
+<p>However, resting in the dungeon depends on finding a safe place to rest (which is not too common). Note that even if you find a place to rest, you need provisions for each member of your team. There are few places that actually offer food but generally you need your own food to benefit from resting. Anyone who does not eat, will not recover, and if they go 2 days (rest twice) without eating they fatigue 3 spaces, which doubles each day there after (we consider resting to take a day) until fed and rested (and this can't be cured by a spell).</p>
+<p>Each character consumes a ration, but it doesn't matter who's carrying the rations. Just keep in mind that when you have a brownie in your party sharing a meal may help you make friends out of the less aggressive monsters.</p>
+<p>Therefore, as far as normal HP and status recovery is concerned, it's primarily your healer's job and resting is a luxury that's welcome but can't be taken for granted.</p>
+<h2 id="illumination">Illumination</h2>
+<p>Dwarfs don't need a source of light, however Brownies, Elves and Humans do. You spend one torch each time you go through a flight of stairs. There may be other times when this is done as well. You can use a single torch, Aura of Light or Illuminate to make out your bearings and spot the many dangers in the dungeon. That said, spells are a finite and expensive resource. Any character that is not a Dwarf, will die automatically if your party runs out of light.</p>
+<h2 id="leveling-up">Leveling Up</h2>
+<p>The guild levels up characters that successfully complete one of their quests. To level up, players must enter the dungeon, successfully complete the objective, then return to the guild.</p>
+<p><em>There's no XP tracking in this campaign!</em></p>
+
+</body>
+</html>
