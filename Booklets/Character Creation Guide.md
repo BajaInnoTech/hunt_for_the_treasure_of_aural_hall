@@ -169,7 +169,7 @@ All characters combine their species with their profession, something the great 
     * [Rogue Boon - Rogue Reconnaissance](#rogue-boon---rogue-reconnaissance)
     * [Rogue Boon - Finishing Blow](#rogue-boon---finishing-blow)
 
-<div class="page"/><div class="page"/>
+<div class="page"/>
 
 ## Base stats
 

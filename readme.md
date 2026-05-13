@@ -10,18 +10,21 @@ It requires minimal setup, but provides variety within dungeon layouts and quest
 
 ## How to Play?
 
-To play:
+To play you can choose between playing on your browser (HTML) or downloading the books.
 
-* [First download the booklet PDFs](https://github.com/BajaInnoTech/treasure_of_aural_hall/tree/master/Booklets).
-* [Then download the Character Templates](https://github.com/BajaInnoTech/treasure_of_aural_hall/tree/master/Character%20Templates)
+To play in the browser, [click here to open a new tab](https://bajainnotech.github.io/hunt_for_the_treasure_of_aural_hall/). Then, click on the Beginner Adventurer's Guide, it will guide you, and tell you when to open other tabs with the rest of the game's contents.
 
-Start with the first booklet: the Beginner Adventurer's Guide. It guides you through the process of getting started. Explaining as you play and telling you when and how to make use of the other material.
+If you prefer to have the PDFs (great for offline use), [you can download the booklet PDFs here](https://github.com/BajaInnoTech/treasure_of_aural_hall/tree/master/Booklets). Similarly, start with the Beginner Adventuer's guide. It will let you know when to open the other PDFs.
 
-Alternatively, if you find this confusing consider [visiting us on Itch.io](https://bitmysteries.itch.io/the-hunt-for-the-treasure-of-aural-hall).
+In either case, we highly recommend that you also [download the Character Templates](https://github.com/BajaInnoTech/treasure_of_aural_hall/tree/master/Character%20Templates). As this will greatly simplify character creation. You'll find the templates available in DOCX or Word format, and ODT or LibreOffice format.
 
-Also consider [hopping onto our Discord Server to have a good time rolling dice](https://discord.gg/wwRY2vEBK).
+As mentioned before, start with the first booklet: the Beginner Adventurer's Guide. It guides you through the process of getting started. Explaining as you play and telling you when and how to make use of the other material.
 
-*For security reasons, we do not ask anyone to install any software. Please report anyone who does this including us. Thanks!*
+Alternatively, [consider visiting us on Itch.io](https://bitmysteries.itch.io/the-hunt-for-the-treasure-of-aural-hall).
+
+Also consider [feel free to hop onto our Discord Server and have a great time rolling dice](https://discord.gg/wwRY2vEBK).
+
+*For security reasons, we will never ask our Discord members to install any software. Please report anyone who does this. Thanks!*
 
 ## Who created this?
 
@@ -72,7 +75,7 @@ The end result being a somewhat rules light RPG system that is leaner than somet
 
 ## Release Version of This Campaign
 
-**The Hunt For The Treasure  Of Aural Hall** is v0.3.0, and it uses **DepthRangers** system **v1.1.1**.
+**The Hunt For The Treasure  Of Aural Hall** is v0.3.1, and it uses **DepthRangers** system **v1.1.1**.
 
 ## License and legal
 
