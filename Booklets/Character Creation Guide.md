@@ -169,7 +169,7 @@ All characters combine their species with their profession, something the great 
     * [Rogue Boon - Rogue Reconnaissance](#rogue-boon---rogue-reconnaissance)
     * [Rogue Boon - Finishing Blow](#rogue-boon---finishing-blow)
 
-<div class="page"/>
+<div class="page"/><div class="page"/>
 
 ## Base stats
 
@@ -182,6 +182,8 @@ How resilient to damage your character is. The base HP for characters is *(1d6+3
 ### Armor Class
 
 Equipping armor is vital to surviving your adventures. You subtract the damage you receive by the total amount of armor class or "*AC*" you have. Your maximum armor is determined by the armor you can equip yourself with. Though there are some restrictions on who can use certain gear (see [races](#races) & [classes](#classes)).
+
+<div class="page"/>
 
 ### Saves
 
@@ -567,6 +569,8 @@ When equipped with a ranged weapon, Rogues get a *+1* to their dex save when rol
 Starting at level 2, Rogues are able to use scrolls or wands with a proficiency of 1/2 their *character_level*. Though to use one, they must cast a successful *magic save*.
 
 Revive scrolls require 2 consecutive successful *magic saves* to succeed.
+
+<div class="page"/>
 
 #### Rogue Boon - Rogue Reconnaissance
 
