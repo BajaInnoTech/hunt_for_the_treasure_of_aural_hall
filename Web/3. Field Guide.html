@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <title>3. Field Guide.md</title>
 <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
@@ -355,16 +355,6 @@ code {
 </style>
 
 <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
-</head>
-<body>
-  <script>
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-          ? 'dark'
-          : 'default'
-    });
-  </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manufacturing+Consent&family=Metamorphous&family=New+Rocker&family=Uncial+Antiqua&display=swap" rel="stylesheet">
@@ -450,9 +440,18 @@ em, figcaption {
 }
 
 </style>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
 <h1 id="field-guide">Field Guide</h1>
 <p>This field guide works as a dungeon preparation pamphlet. You'll find a description of common items and their uses here.</p>
-<div class="page"/>
 <h2 id="table-of-contents">Table of Contents</h2>
 <ul>
 <li><a href="#market-wares">Market Wares</a></li>
@@ -523,7 +522,6 @@ em, figcaption {
 <li><a href="#illumination">Illumination</a></li>
 <li><a href="#leveling-up">Leveling Up</a></li>
 </ul>
-<div class="page"/>
 <h2 id="market-wares">Market Wares</h2>
 <p>This is a list of all the items you can find across the market's many shops. This should be more than enough for an eager explorer, though there are many things not found here which you may find beneath the surface.</p>
 <ul>
@@ -612,7 +610,7 @@ em, figcaption {
 <li>You can store 10 potions per slot.</li>
 </ul>
 </li>
-<li><strong>Fire Oil</strong>: It can explode when activated causing a room (12 ft radius) to be set ablaze and harming monsters for 2d6 HP damage. Each costs 30g
+<li><strong>Fire Oil</strong>: It can explode when activated causing all monsters in a room are set ablaze and are harmed for <em>2d6</em> HP damage. Each costs 30g
 <ul>
 <li>Set all monsters in the room ablaze, and anyone can use them.</li>
 <li>They're volatile so you can only store 5 per slot.</li>
@@ -620,8 +618,9 @@ em, figcaption {
 </li>
 <li><strong>Sedative Gas Potion</strong>: It seems empty but its sweet scent is a reminder of its potent effect. Each costs 100g
 <ul>
-<li>All living enemies in a normal encounter within 20ft in a non ventilated area must must roll a save of 4 or become paralized for 1 turn. Sleeping enemies are automatically sneak attacked by Rogues.</li>
-<li>They're volatile so you can only store 5 per slot.</li>
+<li>All living enemies in the room must roll a save of 4 or become paralized for 1 turn.</li>
+<li>Sleeping enemies are automatically sneak attacked by Rogues.</li>
+<li>Sedative Gas Potions are volatile, you can only store 5 per slot.</li>
 </ul>
 </li>
 <li><strong>Bandages</strong>: A large pad of absorvent cloth, attached to the middle of a strip of thin fabric dowsed in anesthetic and antiseptic oils. Each set of bandages costs 3g.
@@ -659,7 +658,6 @@ em, figcaption {
 <p>These concepts will be used for many aspects of the game such as monster damage. We suggest that you always <em>ignore fractions in any calculations you do.</em></p>
 <h3 id="dungeon-level">Dungeon Level</h3>
 <p>Level you're currently at in a dungeon (starts at 0), found in calculations as: <strong>dungeon_level</strong>. Again if you're not in a dungeon, then your quest itself determines what this value is.</p>
-<div class="page"/>
 <h3 id="monster-level">Monster Level</h3>
 <p>In <strong>The Hunt For The Treasure Of Aural Hall</strong> the level of a monster is always the same as the <strong>dungeon_level</strong>. Monsters have generally <em>(dungeon_level)d6</em> HP as well as damage.</p>
 <h3 id="character-level">Character Level</h3>
@@ -675,9 +673,32 @@ em, figcaption {
 <p>With that out of the way, the next sections will get into detail on the particulars of aiming, tactics, etc.</p>
 <h3 id="combat-order">Combat Order</h3>
 <p>While nothing would be best than the heroic <strong>DepthRangers</strong> to always strike first, that is not always possible. Especially after lowering the guard during a negocioation. In any case combat order can be determined by doing the following:</p>
-<p>Throw a d6, on normal encounters roll against (4-character_level+dungeon_level), on quest encounters roll against (5-character_level+dungeon level); players rolling a 6 always go first, and if you roll a 1 monsters strike first. Bosses always go first.</p>
+<p>To determine combat order, you must roll a d6:</p>
+<h4 id="combat-order-table">Combat Order Table</h4>
+<table>
+<thead>
+<tr>
+<th>Encounter Type</th>
+<th>Roll To attack first</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Normal</td>
+<td><em>(4-character_level+dungeon_level)</em></td>
+</tr>
+<tr>
+<td>Quest Encounter</td>
+<td><em>(5-character_level+dungeon level)</em></td>
+</tr>
+<tr>
+<td>Boss</td>
+<td>Bosses always go first.</td>
+</tr>
+</tbody>
+</table>
+<p><em>When not facing Bosses (they always go first), players rolling a 6 go first. If you roll a 1 monsters strike first.</em></p>
 <p>Characters with the <strong>reconnaissance</strong> attribute will add a <em>+1</em> to these rolls.</p>
-<div class="page"/>
 <p>The order of combat is:</p>
 <ul>
 <li><em>Players Strike First</em>: The character who entered the room strikes first. Then attack follows play order. Once all characters have attacked, monsters strike the first character who attacked then the other characters.</li>
@@ -701,7 +722,6 @@ em, figcaption {
 </ul>
 <h4 id="critical-attack">Critical Attack</h4>
 <p>Your character performs a devastating attack. Critical attacks perform serious damage, and in addition certain classes and monster types unleash a specific tactical maneuver.</p>
-<div class="page"/>
 <h5 id="critical-attack-table">Critical Attack Table</h5>
 <table>
 <thead>
@@ -780,7 +800,6 @@ em, figcaption {
 </table>
 <h5 id="two-handed-weapons-accuracy">Two Handed Weapons Accuracy</h5>
 <p>A two handed sword allows you to ignore one of these rolls, when you roll <em>(character_level)/2+2</em> one's, that character misses. Similar to the above, just a bit more accuracy:</p>
-<div class="page"/>
 <h6 id="two-handed-weapon-accuracy-table">Two Handed Weapon Accuracy Table</h6>
 <table>
 <thead>
@@ -851,7 +870,6 @@ em, figcaption {
 <p>Both Elves and Rogues get a <em>+1</em> to search rolls; an Elven Rogue will get a <em>+2</em> to search rolls.</p>
 <p>To detect a Secret Door you must perform a successful search.</p>
 <p>The process of searching is slow and counts as a non-combat event (for the purposes of hazard dice rolls).</p>
-<div class="page"/>
 <h2 id="lock-picking">Lock-picking</h2>
 <p>To pick a lock a player must throw a <em>1d6</em> and roll greater than <em>4</em>. Rogues gain a <em>+1</em>, and Brownies also gain a <em>+1</em> to lock-picking throws. A Brownie Rogue gets a <em>+2</em> to lock picking rolls.</p>
 <p>The process of picking a lock takes time and counts as a non-combat event (for the purposes of hazard dice rolls).</p>
@@ -859,7 +877,6 @@ em, figcaption {
 <h2 id="trap-deactivation">Trap Deactivation</h2>
 <p>In <strong>The Hunt For The Treasure Of Aural Hall</strong>, the <em>player who entered the room or rolled hazard die</em> has a chance to deactivate the trap so long as it holds a set of thief's tools in its possession (its inventory). To successfully disable a trap, you must throw a <em>1d6</em> and roll greater than <em>(4+dungeon_level/2)</em> (see the Trap Deactivation Table in the Navigation Charts). If you succeed you deactivated the trap, if you fail the trap is sprung. Failure to deactivate the trap means all players must save against the trap to avoid its effects.</p>
 <p>An attempt at trap deactivation will consume a set of thieves tools regardless of outcome. The character must already have the set of thief's tools in its possession, there is just not enough time to borrow the tools from another player. Rogues get a <em>+1</em> to trap deactivation rolls.</p>
-<div class="page"/>
 <h2 id="lingering-status-effects">Lingering Status Effects</h2>
 <ul>
 <li><a href="#bleeding-status">bleeding status</a></li>
@@ -874,14 +891,12 @@ em, figcaption {
 <p>A diseased character grows weakened. They will roll a <em>d6</em> every time a <em>hazard die</em> is thrown: on a roll of 1 they must fatigue a slot.</p>
 <p>Since a diseased character is weakened they will also walk slower; the party will expend 2 non combat events each time you travel to a visited location.</p>
 <p>To cure disease, you can drink medicine (which will remove the status effect but not recover any fatigued slots) or ask the healer to purify. While characters recover upon reaching the surface, resting does not cure this status ailment.</p>
-<div class="page"/>
 <h3 id="poisoned-status">Poisoned Status</h3>
 <p>If your character is poisoned, it will become weakened and walk slower; forcing the party to expend 2 non combat events each time you travel to a visited location. A poisoned character will roll a <em>d6</em> every time a hazard die is thrown, on a roll of <em>1</em> they will receive <em>(poisoned_level)</em> damage. Hence at <em>dungeon_level</em> 0, the character is slowed but receives no ongoing damage.</p>
 <p><strong>poisoned_level</strong>: When you're poisoned, note the <em>dungeon_level</em> you're currently at when the creature poisoned you. This will be your: &quot;<em>poisoned_level</em>&quot;.</p>
 <p>If your character is poisoned for a second time, it keeps the largest <em>poisoned_level</em> value.</p>
 <p>As an example, if you were poisoned at <em>dungeon_level</em> then poisoned again by a <em>dungeon_level</em> 3 creature, your <em>poisoned_level</em> will be 3; if you're poisoned by a <em>dungeon_level</em> 3 then again at <em>dungeon_level</em> 1, your <em>poisoned_level</em> will also be 3 (you are afflicted by the most potent poison).</p>
-<p>To remove the poison, you can use an antidote, or have your healer purify your wound. If you use an antidote, you must roll vs your <em>poisoned_level</em> to make sure that the antidote is effective. Note that healer characters have bonuses that make it easier to cure poisons.</p>
-<div class="page"/>
+<p>To remove the poison, you can use an antidote, or have your healer purify your wound. If you use an antidote, you must roll vs your <em>poisoned_level</em> to make sure that the antidote is effective. Note that Healer characters have bonuses that make it easier to cure poisons.</p>
 <h3 id="sprained">Sprained</h3>
 <p>A character with a minor injury will slow down the party, the party will expend 2 non combat events each time you travel to a visited location.</p>
 <p>Thankfully, this injury is not serious: You can either...</p>
@@ -903,7 +918,6 @@ em, figcaption {
 <p>Nothing like taking the armor off and resting those sore limbs. Whenever you leave the dungeon, your characters rest by default (in story). Resting eases fatigue (all fatigued slots are recovered), fully heals HP, recovers Healer &amp; Mage spells. Also a rest resets non combat event count to 0.</p>
 <p>However, resting in the dungeon depends on finding a safe place to rest (which is not too common). Note that even if you find a place to rest, you need provisions for each member of your team. There are few places that actually offer food but generally you need your own food to benefit from resting. Anyone who does not eat, will not recover, and if they go 2 days (rest twice) without eating they fatigue 3 spaces, which doubles each day there after (we consider resting to take a day) until fed and rested (and this can't be cured by a spell).</p>
 <p>Each character consumes a ration, but it doesn't matter who's carrying the rations. Just keep in mind that when you have a brownie in your party sharing a meal may help you make friends out of the less aggressive monsters.</p>
-<div class="page"/>
 <p>Therefore, as far as normal HP and status recovery is concerned, it's primarily your healer's job and resting is a luxury that's welcome but can't be taken for granted.</p>
 <h2 id="illumination">Illumination</h2>
 <p>Dwarfs don't need a source of light, however Brownies, Elves and Humans do. You spend one torch each time you go through a flight of stairs. There may be other times when this is done as well. You can use a single torch, Aura of Light or Illuminate to make out your bearings and spot the many dangers in the dungeon. That said, spells are a finite and expensive resource. Any character that is not a Dwarf, will die automatically if your party runs out of light.</p>
