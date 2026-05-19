@@ -360,20 +360,10 @@
     </style>
 
     <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
-    </head>
-    <body>
-    <script>
-        mermaid.initialize({
-        startOnLoad: true,
-        theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-            ? 'dark'
-            : 'default'
-        });
-    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manufacturing+Consent&family=Metamorphous&family=New+Rocker&family=Uncial+Antiqua&display=swap" rel="stylesheet">
-    <style>
+   <style>
 
     body {
     /* font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo"; */
@@ -468,6 +458,14 @@
     </style>
 </head>
 <body>
+    <script>
+        mermaid.initialize({
+        startOnLoad: true,
+        theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+            ? 'dark'
+            : 'default'
+        });
+    </script>
     <div >
         <img class="stylized-name1" src="./Images/bit-mysteries-presents.png" alt="Bit Mysteries Presents in Stylized Letters">
     </div>
