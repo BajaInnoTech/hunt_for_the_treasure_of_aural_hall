@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <title>5. Monster Almanac.md</title>
 <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
@@ -355,16 +355,6 @@ code {
 </style>
 
 <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
-</head>
-<body>
-  <script>
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-          ? 'dark'
-          : 'default'
-    });
-  </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manufacturing+Consent&family=Metamorphous&family=New+Rocker&family=Uncial+Antiqua&display=swap" rel="stylesheet">
@@ -450,10 +440,19 @@ em, figcaption {
 }
 
 </style>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
 <h1 id="monster-almanac">Monster Almanac</h1>
 <p>These are the official <strong>DepthRangers</strong> guild monster records. This tome describes &quot;most&quot; of the beasts encountered during travels in the dungeons... There are rumors, of certain beasts that have not been charted, so keep that in mind, and consider submitting any such discoveries so they can be added to the official records.</p>
 <p><em>Such monsters will only be found in the corresponding quest</em>.</p>
-<div class="page"/>
 <h2 id="table-of-contents">Table of Contents</h2>
 <ul>
 <li><a href="#calculating-monster-stats">Calculating Monster Stats</a></li>
@@ -463,6 +462,7 @@ em, figcaption {
 <ul>
 <li><a href="#level-0-encounters-table">Level 0 Encounters Table</a></li>
 <li><a href="#level-1-encounters-table">Level 1 Encounters Table</a></li>
+<li><a href="#level-2-encounters-table">Level 2 Encounters Table</a></li>
 </ul>
 </li>
 </ul>
@@ -483,14 +483,12 @@ em, figcaption {
 <li><a href="#retreating-from-an-encounter">Retreating From An Encounter</a></li>
 <li><a href="#enemy-reactions">Enemy Reactions</a></li>
 </ul>
-<div class="page"/>
 <h2 id="calculating-monster-stats">Calculating Monster Stats</h2>
 <p>Monster become more powerful the deeper you go into the dungeon. As a general principle, their HP is related to their level:</p>
 <p><em><center>Monster HP = (dungeon_level+1)d6</center></em></p>
 <p>And the monster damage uses the same formula:</p>
 <p><em><center>Monster Damage = (dungeon_level+1)d6</center></em></p>
 <p>But, there are many exceptions, please read the monster's detailed descriptions to see if the principle laid out applies.</p>
-<div class="page"/>
 <h2 id="encounters">Encounters</h2>
 <p>There are many perils to face when in the depths of the dungeon. Worse yet is that the dungeon itself becomes more perilous the deeper you descend. The monsters you already knew will become more powerful, adding an HP/damage dice for each level.</p>
 <p>This makes surface dwelling monsters very deadly when found deeper. However, there are some monsters who never show themselves on the surface and can only be met once you have descended sufficiently. And those will be even deadlier.</p>
@@ -506,7 +504,6 @@ em, figcaption {
 <li><a href="#centerspidercenter">Spider</a>+</li>
 <li><a href="#centerbatcenter">Bat</a>+</li>
 </ol>
-<div class="page"/>
 <h4 id="level-1-encounters-table">Level 1 Encounters Table</h4>
 <ol>
 <li><a href="#centerblack-oozecenter">Black Ooze</a></li>
@@ -516,10 +513,18 @@ em, figcaption {
 <li><a href="#centerskeletoncenter">Skeleton</a></li>
 <li><a href="#centerspidercenter">Spider</a>+</li>
 </ol>
+<h4 id="level-2-encounters-table">Level 2 Encounters Table</h4>
+<ol>
+<li><a href="#centerminotaurcenter">Minotaur</a></li>
+<li><a href="#centerblack-oozecenter">Black Ooze</a></li>
+<li><a href="#centerorccenter">Orc</a>*</li>
+<li><a href="#centergoblincenter">Goblin</a>*</li>
+<li><a href="#centerskeletoncenter">Skeleton</a></li>
+<li><a href="#centerspidercenter">Spider</a>+</li>
+</ol>
 <p><em>We are currently play-testing the rest of the journey, so unfortunately for now this is as deep as you should descend. However, should you descend further (into a level that's not currently covered), use monsters from the last charted level (for now).</em></p>
 <h2 id="monsters">Monsters</h2>
 <p>As mentioned before, there are many denizens in the depths however record keeping is not an easy task when you're in the heat of battle. Even afterwards, horror, fatigue or death seem to get in the way of proper recollection of the minutia of these dangerous beings. That said, here is a list of a few well known dwellers of the depths.</p>
-<div class="page"/>
 <h3 id="centerbatcenter"><center>Bat</center></h3>
 <figure>
   <center><img src="../Images/bats.png" height="300" alt="A group of blood draining bats attacks your party."></center>
@@ -535,7 +540,6 @@ em, figcaption {
   <i><center><figcaption>Black Oozes pose an unsurmountable challenge for ill-prepared explorers.</figcaption></center></i>
 </figure>
 <p>Black Oozes come in pairs and have <em>(dungeon_level+1)d6</em> HP and inflict the same amount of damage. They are immune to sneak attacks, sedation and all spells, and must be attacked by ranged weapons or they will split into <em>2</em> Black Oozes. They have an accuracy equivalent to a character using single weapon (remember to add <em>+1</em> to the monster level).</p>
-<div class="page"/>
 <h3 id="centergoblincenter"><center>Goblin</center></h3>
 <figure>
   <center><img src="../Images/goblin.png" height="300" alt="A group of goblins, every action they take seems to be bathed in cruel intentions."></center>
@@ -547,7 +551,6 @@ em, figcaption {
 <p><strong>Underhanded Tactics:</strong> When there's than more than one Goblin adversary, upon landing a critical hit, another Goblin in its party is incentivized to take advantage of the distraction and attack the character with the least HP. This attack can potentially trigger an indefinite number of additional <em>Underhanded Tactics</em> attacks on consecutive critical attacks.</p>
 <p><strong>Rejection Of Fairness:</strong> When the number of goblins left is lower than your party size, a Goblin will escape on a missed attack.</p>
 <p>Roll a reaction dice when encountering goblins, when uncertain pay <em>(dungeon_level+1)*100</em>g to bribe them.</p>
-<div class="page"/>
 <h3 id="centerlesser-vampirecenter"><center>Lesser Vampire</center></h3>
 <!-- TODO This monster is missing an image -->
 <p>A lesser vampire is a recently transformed human, they are still weaker than their longer lived brethren (fortunately). However, they still possess many deadly abilities that can put any party in danger.</p>
@@ -556,7 +559,6 @@ em, figcaption {
 <p><strong>Mesmerized</strong>: You are unable to attack the vampire who's mesmerizing you (you can attack any other enemy though, including other vampires). This is a form of mental compulsion.</p>
 <p><strong>Compulsion Desperation</strong>: Additionally, when the vampire is critically wounded, each member of the party must roll a magic save or be mesmerized (only triggers once). On failure, roll a magic save each round until you succeed. After succeeding however, you must wait one more round before your head is clear enough to resume attacking.</p>
 <p><strong>Lightly Armored:</strong> Lesser Vampires have a strong resistance against damage granting them an equivalent to <em>(dungeon_level+1)/2</em> AC.</p>
-<div class="page"/>
 <h3 id="centermimiccenter"><center>Mimic</center></h3>
 <figure>
   <center><img src="../Images/mimic.png" height="300" alt="A mimic disguised as a chest ready to pounce on an unsuspecting explorer."></center>
@@ -566,7 +568,14 @@ em, figcaption {
 <p>When a mimic has already latched, the player must now roll a body save (raw strength) to escape. Mimics can only latch on to one player at a time, should the discoverer escape, then their main target is whomever is weakest. They have <em>2*(dungeon_level+party_size/3)d6</em> HP.</p>
 <p><strong>Opportune Getaway</strong>: Should they kill an adventurer, they will escape with the body making it impossible to revive the fallen character.</p>
 <p><strong>Self Preservation</strong>: When a mimic's life is reduced to <em>(dungeon_level+1)</em> HP it will immediately escape.</p>
-<div class="page"/>
+<h3 id="centerminotaurcenter"><center>Minotaur</center></h3>
+<figure>
+  <center><img src="../Images/minotaur.png" height="300" alt="A hostile looking minotaur flaunts its axe while keeping a ."></center>
+  <i><center><figcaption>The Minotaur seems an equally strong and fierce combatant, this won't be an easy fight.</figcaption></center></i>
+</figure>
+<p>Mintoaurs are patient and calculating but once they engage they are completely taken over by fury and will never stop attacking unless either its targets or itself are slain. They have <em>(level+party_size+1)d6</em> HP and cause <em>(level+1)d6+level/2</em> damage. On a roll of <em>5</em> or <em>6</em>, they perform a charge.</p>
+<p><strong>Lightly Armored:</strong> Minotaurs have <em>(dungeon_level+1)/2</em> AC.</p>
+<p><strong>Minotaur Charge</strong>: The Minotaur runs horns first against an opponent, the target must perform a successful <em>body save</em> or will be knocked out their (remaining unconscious for one round). When the Minotaur successfully knocks out an opponent, it continues its charge against another target, stopping only upon failure or after having knocked out the entire party, in which case the minotaur attacks all members again (the charge continues while the party is unconscious).</p>
 <h3 id="centerorccenter"><center>Orc</center></h3>
 <figure>
   <center><img src="../Images/orcs.png" height="300" alt="You have stumbled upon a group of Orc Hunters."></center>
@@ -578,7 +587,6 @@ em, figcaption {
 <p><strong>Payback:</strong> Upon receiving a critical attack, the enraged Orc will strike the opponent back, potentially triggering bloodlust when landing a critical attack to the attacker.</p>
 <p><strong>Last Stand:</strong> When an Orc only has <em>(dungeon_level+1)</em> HP left or is the last Orc left alive, it can crit on attacks that use <em>4s</em> as well as <em>5s</em> and <em>6s</em>.</p>
 <p>Roll a reaction dice when encountering orcs, when persuadable pay <em>(dungeon_level+1)</em> rations plus <em>(dungeon_level+1)*100g</em>.</p>
-<div class="page"/>
 <h3 id="centerskeletoncenter"><center>Skeleton</center></h3>
 <figure>
   <center><img src="../Images/skeletons.png" height="300" alt="Skeletons walk mechanically towards your party."></center>
@@ -587,7 +595,6 @@ em, figcaption {
 <p>Skeletons are undead monsters that come in <em>(party_size)</em> quantities, and have <em>(dungeon_level+1)d6</em> HP and inflict the same damage. Skeletons are immune to ranged weapons (though they sound musical when struck), sedation and sneak attacks. They have an accuracy equivalent to a character using single weapon (remember to add <em>+1</em> to the monster level).</p>
 <p><strong>Reanimate:</strong> When a skeleton is defeated, it must be attacked again the next round or it will recover half its HP total. If not completely destroyed, they can reanimate an indefinite amount of times.</p>
 <p><strong>Undead:</strong> Skeletons are undead creatures.</p>
-<div class="page"/>
 <h3 id="centerspidercenter"><center>Spider</center></h3>
 <figure>
   <center><img src="../Images/spider.png" height="300" alt="A large and poisonous spider makes its appearance."></center>
@@ -595,7 +602,6 @@ em, figcaption {
 </figure>
 <p>You are attacked by <em>(party_size+dungeon_level+2)</em> spiders, they have <em>(dungeon_level+1)</em> HP and inflict the same damage. Spiders are venomous, when attacked make a successful Body save or you will be poisoned. They have an accuracy equivalent to a character using single weapon (remember to add <em>+1</em> to the monster level).</p>
 <p>Brownies can talk to spiders, when persuadable pay a single ration for all spiders.</p>
-<div class="page"/>
 <h3 id="centersnakecenter"><center>Snake</center></h3>
 <figure>
   <center><img src="../Images/snake.png" height="300" alt="You're attacked by a massive snake, you feel dizzy as you keep track of its puzzling movements."></center>
@@ -607,7 +613,6 @@ em, figcaption {
 <p><strong>Hypnotized:</strong> When a target is hypnotized by a snake, the target will become motionless (unable to attack, defend or assist in any way). A successful Magic save ends this condition early. If the target successfully saves vs hypnotism the angered snake still delivers critical attack damage. Otherwise, the target is unharmed that round.</p>
 <p><strong>Whiplash Attack:</strong> The snake coils itself then unleashes a punishing blow, the target must perform a successful body save or will be sprained.</p>
 <p>Brownies can talk to snakes, when persuadable pay <em>(dungeon_level+1)*2</em> rations.</p>
-<div class="page"/>
 <h2 id="retreating-from-an-encounter">Retreating From An Encounter</h2>
 <p>What are you a humanoid or a Humanoid Rat? No retreating, you succeed or die trying!</p>
 <h2 id="enemy-reactions">Enemy Reactions</h2>

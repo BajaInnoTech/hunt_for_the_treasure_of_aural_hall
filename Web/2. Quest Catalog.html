@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <title>2. Quest Catalog.md</title>
 <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
@@ -355,16 +355,6 @@ code {
 </style>
 
 <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
-</head>
-<body>
-  <script>
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-          ? 'dark'
-          : 'default'
-    });
-  </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manufacturing+Consent&family=Metamorphous&family=New+Rocker&family=Uncial+Antiqua&display=swap" rel="stylesheet">
@@ -450,6 +440,16 @@ em, figcaption {
 }
 
 </style>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
 <h1 id="quest-catalog">Quest Catalog</h1>
 <p>This catalog contains all quests available at the DepthRangers guild.</p>
 <p>The quests categories are described in the quest table below:</p>
@@ -458,12 +458,11 @@ em, figcaption {
 <ol>
 <li><a href="#quest-1---hunt-down-the-orc-leader">Hunt Down The Orc Leader</a></li>
 <li><a href="#rescue-an-npc">Rescue An NPC</a></li>
-<li><a href="#quest-3---retrieve-the-green-armor">Retrieve The Green Armor</a></li>
+<li><a href="#find-a-treasure">Find A Treasure</a></li>
 <li><a href="#quest-4---exchange-prisoner-elgar">Exchange Prisoner Elgar</a></li>
 <li><a href="#quest-5---rescue-the-hostages-from-the-dragon">Rescue The Hostages From The Dragon</a></li>
 <li><a href="#quest-6---portal-peril">Portal Peril</a></li>
 </ol>
-<div class="page"/>
 <h3 id="quest-1---hunt-down-the-orc-leader">Quest 1 - Hunt Down The Orc Leader</h3>
 <p>An particularly fearless and fierce orc has been rallying troops with the intention to take over the settlement. You're tasked with hunting him down before he raises a sufficiently sized army to attack the surface. The clerk finally gives you a warning:</p>
 <blockquote>
@@ -475,7 +474,6 @@ em, figcaption {
 <p><strong>Orc Leader:</strong> <em>BOSS</em>, <em>(party_size+dungeon_level)d6</em> HP, and produces <em>(dungeon_level+1)d6</em> damage. This ruthless opponent has <em>(dungeon_level+party_size/3)</em> orc minions by his side. These minions are normal Orcs that have <em>1</em> HP and do <em>(dungeon_level+1)+1d6</em> damage.</p>
 <p><strong>Armored:</strong> The Orc leader has <em>(dungeon_level+1)</em> AC.</p>
 <p><em>Upon reaching the surface:</em> You place the leader's tusks on the counter and people fall silent. You are paid <em>(350*character_level)</em> g each, and receive recognition as a champion. You have leveled up.</p>
-<div class="page"/>
 <h2 id="rescue-an-npc">Rescue An NPC</h2>
 <p>From kidnapped villagers to unwise adventurers, you may find yourself involved in a rescue operation. While the specifics lie with the person in question, in general the idea is to go in, find the person, then reach the surface with said person in good health. Failing to protect the person means failing the quest.</p>
 <p>Roll a d6 to find out who needs your assistance to find its way out:</p>
@@ -489,7 +487,6 @@ em, figcaption {
 <li><a href="#npc-rescue-6---hero">Hero</a></li>
 </ol>
 <p>Once you reach the appropriate level, the quest event will involve finding the NPC you must rescue.</p>
-<div class="page"/>
 <h3 id="npc-rescue-1---archaeologist">NPC Rescue 1 - Archaeologist</h3>
 <p>You are tasked with retrieving an archaeologist. Apparently the archaologist wandered off during a research expedition. The clerk says in a relaxed tone:</p>
 <blockquote>
@@ -497,7 +494,6 @@ em, figcaption {
 </blockquote>
 <p><em>Quest Event:</em> You find the archaeologist. The Archaeologist however, is frail of health and can't keep up with the party. You must slow down your pace, the party will expend <em>2</em> non combat events each time you travel to a visited location (including the stairs) for the purposes of hazard die rolls (if you have a diseased or poisoned member, this handicap does not increase).</p>
 <p><em>Upon reaching the surface:</em> The archaeologist is very grateful and says that you will be commended for your efforts though unfortunately there's no financial reward. 3 months later you receive a letter of recommendation from the academy for a low skill position as a grounds keeper. You shrug and toss it aside. You managed to level up.</p>
-<div class="page"/>
 <h3 id="npc-rescue-2---child">NPC Rescue 2 - Child</h3>
 <p>You enter the guild, a couple are sobbing next to the clerk. The clerk turns and asks that you retrieve their child. In a somber tone she adds:</p>
 <blockquote>
@@ -506,13 +502,11 @@ em, figcaption {
 <p><em>Quest Event:</em> You found the child. This child is afraid of vermin, if you're attacked by spiders, or bats it will run away and need to be found in that level again in a visited room. If the child runs away see searching for the child.</p>
 <p><em>Searching for the child:</em> Enter a room and roll a d6, you find the child on a <em>5</em> or <em>6</em>. If you find the child, ignore the hazard die roll for that one room. Don't immediately search in a room you already searched.</p>
 <p><em>Upon reaching the surface:</em> Two parents in tears greet you at the entrance, you're paid <em>5</em> g and level up. Not all rewards are financial in this world. You managed to level up.</p>
-<div class="page"/>
 <h3 id="npc-rescue-3---old-adventurer">NPC Rescue 3 - Old Adventurer</h3>
 <p>The clerk looks at you begins talking as she sorts some papers:</p>
 <p>&quot;Some people can't come to terms with the passing of time, and so this old timer took its gear and went in. Nobody would bat an eye if the will were not stored in that armor, hence the pious second child who would not inherit has ordered you to return that old timer alive if possible and that will at all costs.&quot;</p>
 <p><em>Quest Event:</em> You find the old timer who turns out to be much stronger than any of you, has <em>(party_size+2*character_level)d6</em> HP more than your party and is able to attack using <em>2*(character_level)d6</em> while casting Restore Vitality once per fight, and is capable of double attacks. However, his blasted helmet has a foul charm that forces you to throw a Hazard die every tile for every revisited room (essentially moving equates to 4 non combat events). And, only has <em>(dungeon_level+1)d6</em> rations. Not to mention, he counts as a party member for all intents and purposes meaning all your encounters will be tougher.<br>
 <em>Upon reaching the surface:</em> The old timer invites you to his home for a pint and rest near the fireplace where the old timer throws the will. The next morning, you're offered <em>(200*character_level)</em> g each. You managed to level up.</p>
-<div class="page"/>
 <h3 id="npc-rescue-4---alchemist">NPC Rescue 4 - Alchemist</h3>
 <p>You are taken to a separate room where the guild master describes a delicate situation. It seems that a well known alchemist has decided wander on its own into the depths of the dungeon and there are concerns, financial and influential concerns, about the well being of said alchemist. You're tasked with easing those concerns by retrieving the lost researcher.</p>
 <p><em>Quest Event:</em> Crying in a corner like a lost child is the alchemist. The alchemist says in a wobbly voice: &quot;I failed because I succeeded, I'm a fool because I'm a genius, what a sad day this triumph is my worst defeat ever&quot;. After a few more contrasting praises and derision, he explains that he succeeded in creating a Golem that can be disassembled but not destroyed and it won't let him out.</p>
@@ -544,7 +538,6 @@ em, figcaption {
 <p><em>Escape is generally discouraged, but may be worth considering in this case. Hence, as a reminder, to escape from the Golem all characters must roll a successful dex save. If any one character fails the save, escape fails and the Golem will attack first.</em></p>
 <p>Upon defeat, the Golem remains immobile until the next hazard die roll (it malfunctions temporarily, but resumes operating shortly).</p>
 <p><em>Upon reaching the surface:</em> The guards are ready to apprehend the alchemist, when a very ornate chariot from the treasury arrives to take the alchemist away. You are handed <em>(1000*character_level)</em> g and told you did not witness anything. You managed to level up.</p>
-<div class="page"/>
 <h3 id="npc-rescue-5---damsel">NPC Rescue 5 - Damsel</h3>
 <p>The clerk looks at you and says:</p>
 <p>&quot;A prank held by her younger brother who proposed a tryst inside the dungeon. The child is reported to have said: &quot;I never thought she'd fall for it&quot;. The family of this young lady has requested your services, her fiance says she can stay in there for all he cares.&quot;</p>
@@ -576,13 +569,22 @@ em, figcaption {
 <p><em>Upon reaching the surface:</em><br>
 <em>If she's still alive:</em> the family takes her away violently and with a look of disgust throws you a sack of gems worth <em>(300*character_level)</em> g. You managed to level up.<br>
 <em>If she was turned into a vampire:</em> The family refuses your claims despite the evidence and their influence leaves the guild with no recourse but consider your mission failed. The guild master apologizes but mentions how not doing so would create a lot of problems for the guild. You're still offered a pint and a chance to rest. But you didn't level up or earn any money, this makes the ale taste rather bitter.</p>
-<div class="page"/>
 <h3 id="npc-rescue-6---hero">NPC Rescue 6 - Hero</h3>
 <p>The Hero was last seen 2 weeks ago, and due to protocol you are now faced with a search and retrieve mission.</p>
 <p><em>Quest Event:</em> You have finally found The Hero. The Hero was bored and looking for a challenge and is going back merely for a change of scenery. Upon meeting The Hero, you can consider that quest won as The Hero dispatches all enemies but takes any loot found (treasures and so on, hard to argue with someone that strong).</p>
 <p><em>Upon reaching the surface:</em> You're rewarded <em>(200*character_level)</em> g, and level up. While successful, you wonder... Was this really a victory?</p>
-<div class="page"/>
-<h3 id="quest-3---retrieve-the-green-armor">Quest 3 - Retrieve The Green Armor</h3>
+<h2 id="find-a-treasure">Find a Treasure</h2>
+<p>Great riches, magical artifacts, archaeological discoveries, just about any big find. When there's something very special down there that someone in the surface wants, it's up to your party to retrieve it. You know what you have to do...</p>
+<h3 id="treasure-raid-quests-table">Treasure Raid Quests Table</h3>
+<ol>
+<li><a href="#treasure-raid-1---retrieve-the-green-armor">Retrieve The Green Armor</a></li>
+<li><a href="#treasure-raid-2---seize-the-thunder-dagger">Seize The Thunder Dagger</a></li>
+<li><a href="#treasure-raid-3---locate-and-retrieve-the-ancient-orb">Locate And Retrieve The Ancient Orb</a></li>
+<li><a href="#treasure-raid-4---retrieve-the-wisdom-amulet">Retrieve The Wisdom Amulet</a></li>
+<li><a href="#treasure-raid-5---obtain-the-night-cloak">Obtain The Night Cloak</a></li>
+<li><a href="#treasure-raid-6---capture-and-return-the-cursed-fang">Capture And Return The Cursed Fang</a></li>
+</ol>
+<h3 id="treasure-raid-1---retrieve-the-green-armor">Treasure  Raid 1 - Retrieve The Green Armor</h3>
 <p>Runes have been found pointing to the legendary green armor used by the ancient dwarfs in the battle against the shadow fiends.</p>
 <p>First descend to the appropriate level, then the quests events will take place - you will find clues, and decipher them to discover the armor.</p>
 <p><em>Quest Event1:</em> You encounter a glyph in the wall, roll a magic save to successfully decipher the glyphs.<br>
@@ -597,7 +599,142 @@ em, figcaption {
 <p><em>This creature is vulnerable to Aura of Light and Illumination spells, they make it unable to hold on to the armor (it looses its 3 AC).</em></p>
 <p>Once defeated, you hold the mythical green armor. It's a +<em>(3+dungeon_level)</em> AC unique armor, that molds to the body shape of the wearer and is extremely light (anybody can use it). You're free to wear it on the way back. So time to make your way to the surface.</p>
 <p><em>Upon reaching the surface:</em> It's tempting to hold on to the armor, however if you decided to keep it you'd have fight of the guild and perhaps the entire army so suffice to say once you hand it over to the guild who themselves hand it over to a rather scrawny noble who'll never see combat in his lifetime. Still you're rewarded <em>(100*character_level)</em> g each, and leveled up. Could be worse.</p>
-<div class="page"/>
+<h3 id="treasure-raid-2---seize-the-thunder-dagger">Treasure  Raid 2 - Seize The Thunder Dagger</h3>
+<p>There are rumors of a small lizard being worshiped as a deity. It's your job to figure out if that's a threat, if there's treasure  and if so - in the name of the crown - seize it and bring it to the surface.</p>
+<p>First descend to the appropriate level, then the quest events will take place.</p>
+<p>You will face Quest Encounter 1 until you successfully finish Quest Event 1.</p>
+<p><em>Quest Encounter 1</em>: (party_size) Normal Kobolds</p>
+<p><em>Normal Kobold</em>: (dungeon_level+1)d6, inflicts (dungeon_level+1) damage, but on a 5 or 6, in addition to its attack, it will throw a tiny spider. It's identical to the spider but it only has 1 HP.</p>
+<p><strong>Edible:</strong> All Kobolds can be considered edible for certain purposes.</p>
+<p><em>Quest Event1:</em> You see a roasted rodent on the ground. There could be some truth to the claims... move on to Quest event 2, also you will face Quest Encounter 2 during Quest Encounters.</p>
+<p><em>Quest Encounter 2</em>: (party_size) Kobold Warriors.</p>
+<p><em>Kobold Warrior</em>: (dungeon_level+2)d6 HP, inflicts (dungeon_level)d6 damage. On any 5 or 6, in addition to its attack, it will throw a small spider. It's identical to the spider but it has 3 HP.</p>
+<p><em>Quest Event2:</em> You hear a high pitched scream:</p>
+<blockquote>
+<p>&quot;I am master of thunder, me must be feared!&quot;</p>
+</blockquote>
+<p>Followed by a storm from within the walls. This can't be good!</p>
+<p>After fulfilling Quest Event 2, the next Quest event is Quest Event 3 however you may also face the quest encounter without activating that event!</p>
+<p><em>Quest Encounter 3</em>: Kobold Thunder Wielder.</p>
+<p><em>Kobold Thunder Wielder</em>: (party/2+dungeon_level)d6, its dagger causes <em>(dungeon_level+1)d6</em> damage to everyone in the party at once, magic save for half damage. Additionally, on a <em>5</em> or <em>6</em> a minion kobold joins him. Minion Kobolds are identical to normal kobolds but they have only <em>1</em> hp. However if the mirror shield was discovered, the lightning bounces back, shocking the kobold who releases the dagger and runs away.</p>
+<p><em>Quest Event3:</em> You see an adventurer, his head charred, but his arm intact. He seems to be wearing a very reflective shield. You decide to take the shield.</p>
+<p><em>After defeating the kobold:</em> You take the dagger from its cold dead hands. Take a deep breath and regret doing so, my gosh are these nasty creatures stinky. Without too much fanfare, you begin your journey to the surface. You will no longer face opponents in your next encounter.</p>
+<p><em>If the kobold ran away:</em> You pickup the dagger, and begin the process of heading to the surface. Unfortunately, Kobolds are very vengeful and so for each quest event you will be fighting Kobold warriors until you make it out of the dungeon.</p>
+<p>The dagger does <em>(dungeon_level+1)d6</em> to any opponents, and you can use it on your way up.</p>
+<p><em>Upon reaching the surface:</em> As you enter the guild people turn up their noses in disgust, with a grin you place the stinky dagger on the counter. It's carried off in a handkerchief that's irredeemably sullied upon contact. You're rewarded <em>(25*character_level)</em> g each, you argue about it, but the guild claims that they had to spend the rest in removing the stench from the counter. You managed to level up.</p>
+<h3 id="treasure-raid-3---locate-and-retrieve-the-ancient-orb">Treasure  Raid 3 - Locate And Retrieve The Ancient Orb</h3>
+<p>The grand magus herself has sent a request to the guild (not in person, that's for lesser magicians) for the retrieval of the ancient orb. Being as wise as she is, she does not know that the rest of the world is not as erudite. You ask around but hear nothing. With absolutely no clues, you enter the dungeon.</p>
+<p>Soon you start thinking: Just because nobody knows about the orb in the surface doesn't mean nobody knows about it below the surface, though who could I ask around here?<br>
+(Ask any friendly monsters, or use the Quest Event).</p>
+<p>First travel to the appropriate level (stairs count in this case), then visit rooms until you trigger a Quest Event, or manage to convince a monster into helping you for <em>Quest Event 1</em>.</p>
+<p><em>Quest Event1:</em> (same if you successfully pay or convince a monster to tell you) You receive a lead regarding an ancient relic for magicians. You will now look for clues in the glyphs. Go to <em>Quest Event 2</em>.</p>
+<p><em>Quest Event2:</em> You carefully study the ornaments on the walls and realize that said orb is here, roll a magic save to determine if you can expedite the search. On success, search for a secret door then go to <em>Quest Event 4</em>, on failure, go to <em>Quest Event 3</em>.</p>
+<p><em>Quest Event3:</em> You study the walls and finally it all makes sense, the answer was not as complex as you thought (but upon reflecting on it, none of it makes sense so you stop reflecting on it). You search for a secret door, then go to <em>Quest Event 4</em>.</p>
+<p><em>Quest Event4:</em> You study the glyphs and soon hear a voice in your head inviting you somewhere. Unconsciously you begin walking towards the wall, and soon you're in a beautiful garden with springs and wonderful clear skies. An orb is placed on a pillar: &quot;You can take me with you, but first you must solve a riddle&quot; images flash in your mind, they come fast and are far too complex for you to clearly identify anything let alone articulate what you saw. &quot;So what is your answer?&quot; Says the voice. You are stumped, this is like asking a 2 year old child about the finances of the kingdom or advanced military tactics. Roll a magic save:<br>
+<em>on success:</em> You manage to bluff your way through, and take the orb. You don't really know what the orb is or does, you don't know what you were asked, but you do know you're 1 <em>(dungeon_level)</em> above the level you entered (unless you were in ground level in which case you return to ground level). Now it's time to make your way back.<br>
+<em>on failure:</em> The orb disappears and you're in ground level next to the entrance.</p>
+<p><em>Upon reaching the surface:</em><br>
+<em>If you have the Orb:</em> You receive <em>(1000*character_level)</em> g each, and soon an invitation to the royal academy of magic is in your hands. You try to open the letter and realize that it won't budge, and the letter just escapes your fingers an leaves... Good, it's not like you needed the aggravation anyway you tell yourself (someone seems to be cutting onions nearby). Confused, you realize that the only solution is at the bottom of a large mug. You managed to level up.<br>
+<em>If you don't have the Orb:</em> You try to explain what happened and the clerk makes a silence gesture when a violent flash illuminates the sky followed by a deafening roar and a very loud and sustained ringing in your ears. Seems the magus is not pleased. You have failed the quest, you did not manage to level up but, you did manage to go to the pub.</p>
+<h3 id="treasure-raid-4---retrieve-the-wisdom-amulet">Treasure  Raid 4 - Retrieve The Wisdom Amulet</h3>
+<p>The arch bishop has requested that you retrieve a holy symbol by following a set of patterns that should be in the dungeon. All you have to do is go in, find it, then return.</p>
+<p>First travel to the appropriate level then, visit rooms until you trigger a quest event.</p>
+<p><em>Quest Event1:</em> You find said glyphs and with no difficulty realize where it leads. Search for a secret door, then upon discovering the door unlock to go to quest event 2. Failure to unlock or find the secret door means that was not the room and you must keep searching.</p>
+<p><em>Quest Event2:</em> These symbols conflict with all you were told, the bishop is lying, this is a trap (roll a dex save on success you anticipate the trap on failure roll trap then keep reading). These glyphs seem to give a warning rather than invitation. In any case, the way forward seems to be through a secret entrance. Search for an unobstructed secret door then instead of entering it, or activating another event go directly to quest event 3.</p>
+<p><em>Quest Event3:</em> You notice a gem protruding from the glyphs on the wall, and two hands below it. You place 6 days rations (if you don't have them you must procure to advance - go look for rations) then press on the gem press it. The wall shudders then moves to reveal a pedestal with the pendant placed on top. Next to it are two statues, one them is a muscular man in an athletic posture, while the other is a wise man lost deep in thought.</p>
+<p>To achieve wisdom you must attain balance... Whom among you is worthy?</p>
+<ol>
+<li>First choose a party member.</li>
+<li>Take the numbers on your saves and from your and write that down elsewhere. If you chose an Elf, then subtract one from magic and dex, and one to body. If you chose Dwarf subtract two from body and add one to dex. Humans are unaffected.</li>
+<li>Roll <em>3d6</em>.</li>
+<li>Assign a dice to each save so that the value in your die is greater than the save. If you chose a human and you haven't used your dice re-roll, you can do so now.</li>
+<li>If all three saves were successful, you have achieved balance. Otherwise, you have failed.</li>
+</ol>
+<p><em>On success:</em> You take the wisdom pendant and put it on, you concentrate and visualize yourself brething deeply and evenly. You realize that you were right... Not much insight there. You concentrate harder, and regularize your breath, and come to the realization that you should make your way back to the surface. Does this pendant do anything at all?<br>
+<em>On failure:</em> You reach for the wisdom pendant when the statues come to life and attack!</p>
+<p><em>athletic statue:</em> <em>(dungeon_level+3)</em> HP, immune to sneak attack and sedation. When hit, roll a body save or be stunned for two rounds.<br>
+<em>thinking statue:</em> <em>(dungeon_level)</em> HP,  immune to sneak attack and sedation. Casts sleep on the party, roll a magic save or sleep for <em>(dungeon_level)</em> rounds - no sleep on ground level.</p>
+<p><em>Upon defeating the statues:</em> The talisman shatters.</p>
+<p>Time to head for the surface, if you roll another quest event the pendant activates and you have an inner monolog (optional)</p>
+<p><em>Quest Event4:</em> You realize that this pendant will probably be far less useful to most people than they thought. It's not useless per se, but it won't do the work for them which is what people expect out of it, instead it will point out what they already know to be correct.</p>
+<p><em>Quest Event5:</em> Many ideas come to mind, you begin to see your place in the world clearly...</p>
+<p><em>Upon reaching the surface:</em><br>
+<em>If you're wearing the talisman:</em> You notice the clerk is about to hand you a fraction of what you deserve, pocketing the rest of it. You smile and tell the clerk that you can wait and will come when the guild master is ready to collect. The clerk seems irritated but hands over the bag stored behind the counter with the rest of your earrings <em>(350*character_level)</em> g each,. You start thinking about your profession, are you really on the right path? And then you start chocking as the clerk pulls on the necklace - you hand it over. You realize how dumb this whole ordeal was, but you had enough savviness to get the most out things... Then the next thing you know you have already drunk enough for 10 and are working towards making that 20, guess the necklace's effect is non-permanent.<br>
+<em>If it shattered:</em> You are questioned and treated almost like a traitor to the kingdom. Everyone thinks you stole the necklace, eventually you are released but get no money. You were not able to level up.</p>
+<h3 id="treasure-raid-5---obtain-the-night-cloak">Treasure  Raid 5 - Obtain The Night Cloak</h3>
+<p>You receive a commission from an undisclosed source to retrieve the &quot;Night Cloak&quot;. No particular details of the artifact are revealed, but there is an urgency to this. You are provided some clues as to how to decipher its location, and are told that there is a keen interest in this particular item. Soon you set off...</p>
+<p>You enter the dungeon and get a feeling someone might be watching you, it's a bit unusual to be honest and not quite comforting.</p>
+<p>This is a special quest, from ground level until you make your way to the target level, all quests encounters and quest events trigger an encounter, roll to determine which:</p>
+<h4 id="night-cloak-encounter-table">Night Cloak Encounter Table</h4>
+<p>1-2. <em>Ruffian Mage:</em> (dungeon_level)d6 HP, casts Fireball and Stop once each.<br>
+3-4. <em>Ruffian Rogue:</em> (dungeon_level)d6 HP, the character lowest on HP must roll a dex save or receive 6+(1d6) damage.<br>
+5-6. <em>Ruffian Fighter:</em> (dungeon_level)d6 HP, attacks the strongest in the party first. On a 6 will perform two attacks.</p>
+<p>Upon reaching the level, quest encounters still trigger the above, but quest events change:</p>
+<p><em>Quest Event1:</em> Your torch flickers for a moment (same thing happens to any illumination spells you might be using), roll to see if you find a secret door (ignore the layout of the room).<br>
+<em>On success:</em> You recognize the inscriptions on the walls. You press a button revealing a small hole. Roll an lock-picking check. If you succeed, you hear click at a distance. Locate a secret entrance in another room and immediately trigger Quest Event2<br>
+<em>On failure:</em> It seems this is unrelated to the subject matter after all, you must continue your search elsewhere.</p>
+<p>After finding an unobstructed secret entrance:</p>
+<p><em>Quest Event2:</em> There is a torch holder but no torch, if you have a torch place it.<br>
+_Use on of your torches:_You take one of your torches and place it and nothing happens. Frustrated you turn around and shrug accidentally hitting the shaft of the torch and unlocking the door.<br>
+<em>You have no more torches:</em> You may be able to unlock this by combining a successful lock-pick, body (strength) save and sacrificing a one-handed weapon (you put it where the torch should go) and also casting Illuminate (Aura of Light is not focused enough). If you succeed, you manage to open the door, but using a weapon as a rod left you with a nasty cut - you suffer 1HP damage. Also that weapon is now jammed and will remain there and the light you casted disappeared when the door opened.</p>
+<p><em>On success:</em> Go to mirror room.<br>
+<em>On failure:</em> Argh perhaps this wasn't it at all. You count your losses and continue the search go to Quest Event 1 when the the next Quest Event is triggered.</p>
+<p><strong>Mirror room</strong> You see various mirrors arranged in a very suspicious manner. Roll a magic save to decipher their purpose.</p>
+<p><em>On success:</em> You need to once again douse this place in light, but this must be brighter than what a torch can offer. Use either Magic light or Aura of Light, a new door opens and you enter. Go to the shrine of the night cloak.<br>
+<em>On failure:</em> None of this makes any sense, you have no choice but to make a meticulous study. Perform a Magic save, followed by a detect secret. On success go to the shrine of the night cloak. On failure, you face a quest encounter as others also interested in the cloak catch up to you.</p>
+<h4 id="the-shrine-of-the-night-cloak">The Shrine Of The Night Cloak</h4>
+<p>You enter the shrine, there are 4 statues illuminating an empty pedestal. What on earth could this be about? Roll a d6:</p>
+<ol>
+<li>The statues must be toppled by might, roll a body save for each statue. On success you move to the next, on failure you take 3HP damage from the debris that fell off. Upon success, you obtain cloak of might, then head back to the surface.</li>
+</ol>
+<ol start="2">
+<li>The statues must be toppled by skill, roll a dex save for each statue. On success, you climb on a ledge and make your way to the top of the statue and detach the source of light. On failure you take 2HP damage because you fell performing said maneuver. Upon success, you obtain the cloak of the venturer then head back to the surface.</li>
+<li>The statues must be toppled by intellect, roll a magic save for each statue. On success, you move to the next, on failure you take 2HP psychic damage from the statue. Upon success, you obtain the cloak of the archmage then head back to the surface.</li>
+<li>The cape requires a bit of slight of hand to obtain. You tie rope around a weapon and make a dex save to hit the shinny part of the statue with a -1 penalty, you don't take any damage but it sure isn't easy. After 3 failures on a statue, roll the dice again for another option on this table. On success, you obtain the cloak of skulduggery then head back to the surface.</li>
+<li>You reach out directly to the pedestal and run your fingers on it, you feel soft cloth and then a sharp pain. You get 1 HP damage, the cloth falls to the ground and a mechanical automaton attacks. After defeating it, you obtain the cloak of misdirection then head back to the surface.</li>
+<li>You pull your resources together, coordinating your efforts on each statue. Roll a save vs magic, body and dex. On success the moment a statue is disabled the cloak appears, and you obtain cloak of concealment then head back to the surface.</li>
+</ol>
+<p><em>Mechanical Automaton:</em> (1d6) HP immune to sneak attack and sedation, requires a roll of 2 or greater to hit and only takes 1 HP of damage regardless of the attack.</p>
+<p>Cloak variants:</p>
+<p><em>Cloak of might:</em> The wearer has 4 additional d6 of damage.<br>
+<em>Cloak of the venturer:</em> The wearer is capable of dodging any attack not on a 6.<br>
+<em>Cloak of the archmage:</em> The wearer can cast fireball nonstop.<br>
+<em>Cloak of skulduggery:</em> The wearer always performs a sneak attack even if the target is an undead, and even if the wearer is not a Rogue. Rogues perform a sneak attack on every attack.<br>
+<em>Cloak of misdirection:</em> The wearer can confuse the enemy, on a roll of 3 or greater, the enemy will see the wearer as one of its kin and ignore them.<br>
+<em>Cloak of concealment:</em> This cloak looks more like a bed sheet. You see the stars drawn on one end and nothing but pitch black on the other, as light were being devoured. If the party remains close, most enemies will not be able to find them (for every encounter, roll a d6 on a 3 or more you manage to avoid the conflict).</p>
+<p><em>Upon reaching the surface:</em> The clerk takes the cloak and tosses it aside like rotten cabbage hands you 10g each and brushes you off, then a mysterious and unsavory character grabs the poor clerk by the throat and tosses him with the same disdain. This individual wears the cloak and suddenly it comes to life. You can see multiple worlds moving from one part to another, then suddenly the cloak turns a dull gray. You receive <em>(1500*character_level)</em> g each, then the stranger disappears before your eyes. You managed to level up.</p>
+<h3 id="treasure-raid-6---capture-and-return-the-cursed-fang">Treasure  Raid 6 - Capture And Return The Cursed Fang</h3>
+<p>The archbishop himself is standing right next to the clerk and turns towards you, handing you a letter then waves you off. The letter says:</p>
+<blockquote>
+<p>The cursed fang is a vestige from the land of shadows. It pulsates with necrotic energy and could snuff the life of a large city in the right hands. Hence it must be captured and returned</p>
+</blockquote>
+<p>There are some sketches on it that should help narrow its location.</p>
+<p>This is a special quest, from ground level until you make your way to the target level, all quests encounters and quest events trigger an encounter, roll to determine which:</p>
+<h4 id="cursed-fang-encounter-table">Cursed Fang Encounter Table</h4>
+<p>1-2. <em>Lesser Vampire</em><br>
+3-4. <em>Zombies</em><br>
+5-6. <em>Skeleton</em></p>
+<p>Upon reaching the appropriate level, only quest encounters trigger an encounter table roll. Visit rooms until you trigger a quest event.</p>
+<p><em>Quest Event 1:</em> You see an ominous mark, roll a magic save to see if you can decipher the contents.<br>
+<em>On Success:</em> The scribbling depicts the events of a terrible battle where the creatures of shadow attempted to conquer the kingdom. At the center of this is a shiny gem that is not only worth a fortune but is crudely out of place. You could either try to pry it open or attempt to block in some way...</p>
+<ul>
+<li><em>Pry it open:</em> You choose to pry it open, roll a dex save-1 (you need one more point than usual), if you succeed you will also expend 2 lock picks (you use them in an unconventional manner and spoil them). On success: the jewel is in your hand, go to on success. On failure: You can attempt again or choose another strategy.</li>
+<li><em>Darken it with magic</em>: You cast Invisibility on the rock itself, the rock fades - go to on success.</li>
+</ul>
+<p><em>On success:</em> A mechanism activates at a distance, next time trigger quest event 2.</p>
+<p><em>Quest Event 2:</em> The glyphs on the wall remind you of what you saw last time, this time however a jewel is missing where it should be (you're getting good at this, you got it without any effort). There are three ways in which you could solve this:</p>
+<ul>
+<li>If you took the jewel from the previous glyph, place the very expensive jewel from the other glyph: The jewel fits neatly, you hear a click at a distance... sadly you will have to part ways with the loot. Go to On Success.</li>
+<li>Use Illuminate spell: You focus your attention (roll a d6, if you have 2 or more you succeed) then place a light in place of the missing jewel, the wall shudders but won't budge. There's an orifice just a small nudge expending thieves tools will do it (you use a set of thieves tools). You hear a click in the distance, go to on success. If you don't have thieves tools, you unfortunately go to on failure.</li>
+<li>Using a torch and thieves tools: Sometimes you must take the hard road to get somewhere... To make this happen you expend a torch and a set of thieves tools, in addition you must perform a successful lock-picking, detect secrets and magic save. If you succeed then go to on success, otherwise go to on failure.</li>
+</ul>
+<p><em>On Failure:</em> Seems that this won't budge. Perhaps it would be a good idea to try and pry that jewel go to Quest Event 1.</p>
+<p><em>On Success:</em> This is it, you're sure to have unlocked the path! Now to find an unobstructed secret passage, when that happens trigger the third Quest Event automatically (no need for an event roll this time).</p>
+<p><em>Quest Event 3:</em> You detect a hidden pathway and begin looking for clues when you see the door open wide, a nasty Troll comes out of it. From its neck hangs the <em>Cursed Fang</em>, this brute turned it into a necklace.</p>
+<p><em>Troll:</em> (party_size+dungeon_level)d6, regenarates 2HP each round and causes (dungeon_level+1)d6 harm. Though it's been said trolls are vulnerable to fire (double damage).</p>
+<p><em>Upon defeating the troll:</em> You take a part of its skirt and wrap the evil item in it, then use the necklace part to fasten it to your belt. Best to go back now.</p>
+<p><em>Cursed fang:</em> With the cursed fang in your possession, all undead encounters are dismissed. They simply ignore your party as if you weren't there.</p>
+<p><em>Upon reaching the surface:</em> The archbishop himself is at the exit of the dungeon. Whatever this thing really is must be important. Two high priests place the item in a sealed container, you receive <em>(3000*character_level)</em> g each, and leveled up.</p>
 <h3 id="quest-4---exchange-prisoner-elgar">Quest 4 - Exchange Prisoner Elgar</h3>
 <p>You receive a letter from the captain of the guard:</p>
 <blockquote>
@@ -607,7 +744,6 @@ em, figcaption {
 <blockquote>
 <p>You will deliver someone and retrieve someone, both of which wish to escape, and that can be a big problem if they do. Since you won't be allowed back out or at the drop off location until you find your inmate. Also, you are tasked with keeping the prisoner alive, if the prisoner escapes, DO NOT kill it during recapture! I repeat, you must make sure the prisoner does not escape or die during transit. Cellar if you'd do the honors...</p>
 </blockquote>
-<div class="page"/>
 <p>The cellar clears his throat and puts the key in the cell door. Then the guard continues:</p>
 <blockquote>
 <p>You have the privilege of escorting Half-Elf Elgar. He's wanted for high treason here, but he's equally wanted for high treason in his homeland. However, they have a dark magus who needs to be interrogated and the cellar is only too eager to provide assistance (yeesh, some things you rather not know about). The job is to take him to this location...</p>
@@ -621,28 +757,23 @@ em, figcaption {
 </blockquote>
 <p>Says Elgar sarcastically! You brush it off and make your way to the entrance.</p>
 <p><strong>Recapture Mechanism:</strong> Should the prisoner escape, during recapture Elgar will inflict <em>1d6</em> damage each round. To recapture Elgar, you must roll a 5 or 6 to incapacitate - he'll receive 1HP damage. If you roll a 1, then you will inflict <em>1d6</em> damage and the prisoner will escape injured. You have two roundsj during recapture before he escapes, in which case you must locate the prisoner again and begin the process anew.</p>
-<div class="page"/>
 <p><strong>Hazard die rolls:</strong> If you're revisiting rooms, the prisoner will delay your efforts to reach your destination. The party will expend 2 non combat events each time you travel to a visited location (including the stairs). Should the inmate die, you will carry the corpse which slows you even further so you'll have to throw a hazard die every room. In which case, perhaps you could revive the prisoner, at least before handing him over?</p>
 <p><strong>Traps and inmate health:</strong> Traps that are set off will also affect the inmate, so be careful!</p>
 <p><strong>Rest and lunch breaks:</strong> Since you have a prisoner who wishes to escape, you can't rest until you have delivered the exchanged prisoner. This includes eating at the staircase.</p>
 <p><em>Quest Events while escorting Elgar:</em> The prisoner attempts to escape, roll a dex save to stop the prisoner in time. If the Prisoner has escaped, ignore these events until he's captured.</p>
 <p><em>Quest Encounters while Escorting Elgar:</em> If the Prisoner is in custody ignore the encounters, otherwise you find the prisoner.</p>
 <p>Upon reaching the level, you look for an unobstructed secret door and roll a magic save. If you succeed, you notice a keyhole. Roll a lock-picking check if you succeed again, go to on success.</p>
-<div class="page"/>
 <p><em>On Success:</em> You open the door to meet a series of armed guards at the ready. They all look elven, but their skin is dark. The one at the front motions you to drop your weapons to the floor.</p>
 <p><em>If you have the prisoner - alive:</em> One of the guards pulls on Elgar's chains then uses the momentum to ram the hilt of his sword straight onto his jaw splattering blood and pieces of teeth on the floor. With an effortless motion he proceeds to carry him unconscious. The rest of the guards put their weapons to your throats but remain otherwise immobile. After a moderate wait period, you see a very beaten up man. In addition to manacles, he's also gagged. Time to make your way back.<br>
 <em>If you have the prisoner - dead:</em> The front guard collects the body, pulling it by the hair and tossing it to the other guards. You are given a letter formally refusing the exchange. You must make your way back.<br>
 <em>If you don't have the prisoner:</em> The front guard collects your weapons then sends an arrow straight onto your shoulder, you suffer 1d6HP damage. The wall then closes - The message is clear, find the prisoner before returning! What a day...</p>
 <p><em>On your way back:</em> Much like Elgar, Morton does not wish to arrive to his destination, and will put up a much greater fight.</p>
-<div class="page"/>
 <p><em>Quest Events while escorting Morton:</em> The prisoner attempts to escape his gag, roll a dex save to stop the prisoner in time. If the Prisoner manages to escape the gag he will immediately cast Stop on you and become invisible then run away. Morton has escaped, ignore further events until he's captured again.</p>
 <p><em>Quest Encounters while Escorting Morton:</em> If the Prisoner is in custody ignore the encounters, otherwise you find the prisoner. Morton inflicts 2 damage, you must roll a <em>5</em> or <em>6</em> to incapacitate him, but he'll receive <em>1</em> HP damage. On a 1 you inflict <em>1d6</em> damage and he escapes injured (if he survives). You have one round to capture him before he turn invisible and escapes.</p>
 <p><em>Upon reaching the surface:</em><br>
 <em>If you deliver Morton alive:</em> You finally reach the prison. The cellar greets you at the entrance with a small garrison. He thanks you for your efforts and the many happy nights ahead, meanwhile you can see Morton's pale complexion upon hearing about this... Seems the cellar has quite a reputation! You return to the guild and receive <em>(300*character_level)</em> g each, and an invitation to the party later that night by the cellar. While it's always nice for people to remember you fondly, you decide you rather party with a tankard full of ale and forget this incident. You managed to level up.</p>
-<div class="page"/>
 <p><em>If you deliver Morton dead:</em> You reach a security outpost and deliver the body, then head to the guild. The clerk looks at you and hands over <em>(50*character_level)</em> g each then tells you to lay low for a while since the cellar is particularly upset. It would be wise to wait until he receives a new playmate rather than to prance around the streets carelessly. You have failed the quest and do not advance a level.<br>
 <em>If you deliver the Elven letter:</em> You reach a security outpost and deliver the letter, then head to the guild. The clerk tells you to leave and make sure to have your affairs in order in case of an inspection which should happen regularly. Also to keep a close eye in case a soldier wishes to plant a bogus charge, then he charges you <em>(15*character_level)</em> g each for the advice. You have failed the quest and do not advance a level.</p>
-<div class="page"/>
 <h3 id="quest-5---rescue-the-hostages-from-the-dragon">Quest 5 - Rescue The Hostages From The Dragon</h3>
 <p>You enter the guild and a distressed clerk reads:</p>
 <blockquote>
@@ -661,7 +792,6 @@ em, figcaption {
 <p>Roll <em>(dungeon_level+1)</em> consecutive dex saves to sprint as quickly as you can out of here, each time you fail, fire damage will singe you causing <em>(dungeon_level+1)d6</em> HP damage.</p>
 <p><em>After escaping the crawl space:</em> You make a sigh of relief then hear a massive charge against the wall. It held, but for how long? You must keep running out of here! Make your way out of this level. Roll a hazard dice every square, each time you land on <em>2</em>, roll a body save or suffer <em>(dungeon_level +1)</em> damage from the heat of the dragon increasing the temperature of the entire level. Once you reach the stairs, escape returns to normal.</p>
 <p><em>Upon reaching the surface:</em> You take the victims straight to the pub and all of you have a cold beverage, it still feels like you are back in that furnace of a level. Then you go to the guild, and a security officer goes along with a clerk to help and collect their testimony. Meanwhile you receive a <em>(150*character_level)</em> g reward each, the Guild master is about to protest about taking the victims to the pub then looks at the sooth in your clothes, hair and eyes and decides to hand you and additional <em>100</em> g instead. This time, you simply go to bed and call it a day. Congratulations, you managed to level up.</p>
-<div class="page"/>
 <h3 id="quest-6---portal-peril">Quest 6 - Portal Peril</h3>
 <p>You found a peculiar device at ground level. Unfortunately, you tend to touch things that interest you, and soon you were a level deeper than your party level. To make things worse, you hear a roaring at a distance.</p>
 <p>You must escape and quickly !</p>
