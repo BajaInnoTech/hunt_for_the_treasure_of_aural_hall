@@ -61,7 +61,7 @@ For each quest you will be given an objective within the dungeon. Upon completio
 
 The goal of the game is to acquire the legendary treasure at the deepest part of the dungeon then make it back to safety - preferably alive. Once players have already delved to level 4 and successfully completed a quest, they can aim for discovering the Final challenge, *"The Hunt for The Treasure of Aural Hall"* rumored to be at level 5.
 
-For this initial release, we provide a limited series of quests. The aim being to provide one level of gameplay. Stay tuned as additional content will be provided regularly as we playtest them and prepare it for rollout. We have a lot already written, but it must be up to the same or higher standards before we release it.
+For these initial releases, we provide a limited series of quests. We are currently providing gameplay up to the second dungeon level. Stay tuned as additional content will be provided regularly as we playtest them and prepare it for rollout. We have a lot already written, but it must be up to the same or higher standards before we release it.
 
 ## About the Depth Rangers System
 
@@ -75,7 +75,7 @@ The end result being a somewhat rules light RPG system that is leaner than somet
 
 ## Release Version of This Campaign
 
-**The Hunt For The Treasure  Of Aural Hall** is **v0.3.2**, and it uses **DepthRangers** system **v1.1.1**.
+**The Hunt For The Treasure  Of Aural Hall** is **v0.4.0**, and it uses **DepthRangers** system **v1.1.1**.
 
 ## License and legal
 
