@@ -472,15 +472,15 @@ em, figcaption {
 <li><a href="#centerbatcenter">Bat</a></li>
 <li><a href="#centerblack-oozecenter">Black Ooze</a></li>
 <li><a href="#centergoblincenter">Goblin</a></li>
-<li><a href="#centerlesser-vampirecenter">Lesser Vampire</a></li>
 <li><a href="#centermimiccenter">Mimic</a></li>
 <li><a href="#centerorccenter">Orc</a></li>
+<li><a href="#centerrecently-converted-vampirecenter">Recently Converted Vampire</a></li>
 <li><a href="#centerskeletoncenter">Skeleton</a></li>
 <li><a href="#centerspidercenter">Spider</a></li>
 <li><a href="#centersnakecenter">Snake</a></li>
+<li><a href="#centerzombiecenter">Zombie</a></li>
 </ul>
 </li>
-<li><a href="#retreating-from-an-encounter">Retreating From An Encounter</a></li>
 <li><a href="#enemy-reactions">Enemy Reactions</a></li>
 </ul>
 <h2 id="calculating-monster-stats">Calculating Monster Stats</h2>
@@ -551,14 +551,6 @@ em, figcaption {
 <p><strong>Underhanded Tactics:</strong> When there's than more than one Goblin adversary, upon landing a critical hit, another Goblin in its party is incentivized to take advantage of the distraction and attack the character with the least HP. This attack can potentially trigger an indefinite number of additional <em>Underhanded Tactics</em> attacks on consecutive critical attacks.</p>
 <p><strong>Rejection Of Fairness:</strong> When the number of goblins left is lower than your party size, a Goblin will escape on a missed attack.</p>
 <p>Roll a reaction dice when encountering goblins, when uncertain pay <em>(dungeon_level+1)*100</em>g to bribe them.</p>
-<h3 id="centerlesser-vampirecenter"><center>Lesser Vampire</center></h3>
-<!-- TODO This monster is missing an image -->
-<p>A lesser vampire is a recently transformed human, they are still weaker than their longer lived brethren (fortunately). However, they still possess many deadly abilities that can put any party in danger.</p>
-<p>A lesser vampire has <em>2*((dungeon_level+1)d6)</em> HP (first roll your d6, then multiply the total by two), and is immune to sedation and sneak attacks.</p>
-<p><strong>Lasting Injuries</strong>: When attacked by a lesser vampire, roll a body save or lose <em>1</em> HP per round for <em>(dungeon_level+1)</em> rounds.</p>
-<p><strong>Mesmerized</strong>: You are unable to attack the vampire who's mesmerizing you (you can attack any other enemy though, including other vampires). This is a form of mental compulsion.</p>
-<p><strong>Compulsion Desperation</strong>: Additionally, when the vampire is critically wounded, each member of the party must roll a magic save or be mesmerized (only triggers once). On failure, roll a magic save each round until you succeed. After succeeding however, you must wait one more round before your head is clear enough to resume attacking.</p>
-<p><strong>Lightly Armored:</strong> Lesser Vampires have a strong resistance against damage granting them an equivalent to <em>(dungeon_level+1)/2</em> AC.</p>
 <h3 id="centermimiccenter"><center>Mimic</center></h3>
 <figure>
   <center><img src="../Images/mimic.png" height="300" alt="A mimic disguised as a chest ready to pounce on an unsuspecting explorer."></center>
@@ -587,6 +579,18 @@ em, figcaption {
 <p><strong>Payback:</strong> Upon receiving a critical attack, the enraged Orc will strike the opponent back, potentially triggering bloodlust when landing a critical attack to the attacker.</p>
 <p><strong>Last Stand:</strong> When an Orc only has <em>(dungeon_level+1)</em> HP left or is the last Orc left alive, it can crit on attacks that use <em>4s</em> as well as <em>5s</em> and <em>6s</em>.</p>
 <p>Roll a reaction dice when encountering orcs, when persuadable pay <em>(dungeon_level+1)</em> rations plus <em>(dungeon_level+1)*100g</em>.</p>
+<h3 id="centerrecently-converted-vampirecenter"><center>Recently Converted Vampire</center></h3>
+<figure>
+  <center><img src="../Images/recently-converted-vampire.png" height="300" alt="A recently converted vampire approaches, its hands blurry."></center>
+  <i><center><figcaption>This recently converted vampire must have been drained and is determined to restore its blood by draining yours.</figcaption></center></i>
+</figure>
+<p>Recently converted vampires are weaker than their longer lived brethren (fortunately). However, they still possess many deadly abilities that can put any party in danger.</p>
+<p>A recently converted vampire has <em>2*((dungeon_level+1)d6)</em> HP (first roll your d6, then multiply the total by two), and is immune to sedation and sneak attacks.</p>
+<p><strong>Lasting Injuries</strong>: When attacked by a recently converted vampire, roll a body save or lose <em>1</em> HP per round for <em>(dungeon_level+1)</em> rounds.</p>
+<p><strong>Mesmerized</strong>: You are unable to attack the vampire who's mesmerizing you (you can attack any other enemy though, including other vampires). This is a form of mental compulsion.</p>
+<p><strong>Desperate Compulsion</strong>: Additionally, when the vampire is critically wounded, each member of the party must roll a magic save or be mesmerized (only triggers once). On failure, roll a magic save each round until you succeed. After succeeding however, you must wait one more round before your head is clear enough to resume attacking.</p>
+<p><strong>Lightly Armored:</strong> Recently Converted Vampires have a strong resistance against damage granting them an equivalent to <em>(dungeon_level+1)/2</em> AC.</p>
+<p><strong>Undead:</strong> Recently Converted Vampires are undead creatures.</p>
 <h3 id="centerskeletoncenter"><center>Skeleton</center></h3>
 <figure>
   <center><img src="../Images/skeletons.png" height="300" alt="Skeletons walk mechanically towards your party."></center>
@@ -613,8 +617,16 @@ em, figcaption {
 <p><strong>Hypnotized:</strong> When a target is hypnotized by a snake, the target will become motionless (unable to attack, defend or assist in any way). A successful Magic save ends this condition early. If the target successfully saves vs hypnotism the angered snake still delivers critical attack damage. Otherwise, the target is unharmed that round.</p>
 <p><strong>Whiplash Attack:</strong> The snake coils itself then unleashes a punishing blow, the target must perform a successful body save or will be sprained.</p>
 <p>Brownies can talk to snakes, when persuadable pay <em>(dungeon_level+1)*2</em> rations.</p>
-<h2 id="retreating-from-an-encounter">Retreating From An Encounter</h2>
-<p>What are you a humanoid or a Humanoid Rat? No retreating, you succeed or die trying!</p>
+<h3 id="centerzombiecenter"><center>Zombie</center></h3>
+<figure>
+  <center><img src="../Images/zombie.png" height="300" alt="Lifeless corpses stumble in your direction."></center>
+  <i><center><figcaption>Zombies are only aware of their hunger.</figcaption></center></i>
+</figure>
+<p>Zombies should never be underestimated, their threat is in their numbers and their ability to add to them. You are attacked by <em>(party_size+dungeon_level+1)</em> <em>Zombies</em>. Each zombie has <em>1d6</em> HP, but can't be sneak attacked, sedated or compelled by most means since they are mindless.</p>
+<p><strong>Voracious Grip:</strong> On an attack of <em>4</em> or more, the player must perform a dex save or be grappled. Once grappled the player receives maximum damage until a successful dex save or another character kills that <em>Zombie</em>.</p>
+<p><strong>Assimilating Taint:</strong> Characters slain by <em>Zombies</em> immediately rise as <em>Zombies</em> themselves attacking other players in that round. One can restore a Zombified character with a raise the dead spell without a need for rolling any save.</p>
+<p><strong>Incompatible With Life:</strong> <em>Zombies</em> are immediately neutralized by means of a raise the dead spell, and harmed by curative spells or items.</p>
+<p><strong>Undead</strong>: <em>Zombies</em> are undead creatures.</p>
 <h2 id="enemy-reactions">Enemy Reactions</h2>
 <p>Monsters  may react in a non-hostile manner (or not); some monsters will only react if there's a Brownie in the party. Throwing a reaction die provides 3 outcomes:</p>
 <table>
@@ -643,6 +655,5 @@ em, figcaption {
 </tr>
 </tbody>
 </table>
-
 </body>
 </html>

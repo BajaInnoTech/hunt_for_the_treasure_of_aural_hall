@@ -452,6 +452,7 @@ em, figcaption {
   </script>
 <h1 id="navigation-charts">Navigation Charts</h1>
 <p>You'll find the information you need to make your way through the dungeon here, that is room layouts, contents and dungeon behavior.</p>
+<p>We recommend you become somewhat familiar with the contents of this book, then return to it later to read in depth as needed.</p>
 <h2 id="table-of-contents">Table of Contents</h2>
 <ul>
 <li><a href="#room-layout">Room layout</a>
@@ -489,7 +490,7 @@ em, figcaption {
 <li><a href="#locks">Locks</a></li>
 <li><a href="#treasure">Treasure</a>
 <ul>
-<li><a href="#treasure--table">Treasure  Table</a></li>
+<li><a href="#treasure-table">Treasure  Table</a></li>
 <li><a href="#regular-treasure">Regular Treasure</a>
 <ul>
 <li><a href="#regular-treasure-contents-table">Regular Treasure Contents Table</a>
@@ -497,6 +498,8 @@ em, figcaption {
 <li><a href="#weapons-table">Weapons Table</a></li>
 <li><a href="#armor-table">Armor Table</a></li>
 <li><a href="#scrolls-table">Scrolls Table</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -520,15 +523,13 @@ em, figcaption {
 </ul>
 </li>
 </ul>
-</li>
-</ul>
 <h2 id="room-layout">Room layout</h2>
 <figure>
   <center><img src="../Images/navigation.png" height="300" alt="You see three very distinct doors before you. One ornate, one made of iron, the other a basic yet sturdy reinforced wooden door."></center>
   <i><center><figcaption>Room sizes vary, but they can be considered of sufficient size for most tactical enterprises from area effects to skirmishes to navigation within a short span of time.</figcaption></center></i>
 </figure>
 <p>For simplicity, rooms are described from the perspective of the entrance. An exit towards the front is considered &quot;Door 1&quot; or more concisely D1 (regardless of whether there is a door or just an open cave). To the left, is D2 and to the right is D3. Some exits can be seen in plain sight but some are hidden, these are depicted as Secret or S (S1, S2 or S3).</p>
-<p>Rool a d6 to discover the room layout:</p>
+<p>Roll a d6 to discover the room layout:</p>
 <ol>
 <li>All doors open</li>
 </ol>
@@ -797,7 +798,7 @@ D2     *
 <p>To find a secret door, you must roll a magic save. Elven keen senses give them an additional advantage gaining <em>+2</em> on detection of secret doors; if the elf has no status ailments, it can ignore the <em>+2</em> and choose to roll an additional d6 instead.</p>
 <h2 id="searching--secret-door-detection">Searching &amp; Secret Door Detection</h2>
 <ul>
-<li><em>Searching:</em> Characters detect secrets based on a die roll that must be greater than <em>(dungeon_level+1)</em>. Elves get a re-roll when detecting secrets, while Rogues have a <em>+1</em> to their role.</li>
+<li><strong>Searching</strong>: Characters detect secrets based on a die roll that must be greater than <em>(dungeon_level+1)</em>. Elves get a re-roll when detecting secrets, while Rogues have a <em>+1</em> to their role.</li>
 </ul>
 <p>Searching is performed when attempting to Detect a Secret Doors. This is done in a similar manner to disabling a trap, a player must roll a d6 roll greater than <em>(dungeon_level+1)</em> with 1 always being failure and 6 always being a success. Elves and Rogues gain a <em>+1</em> to search; these two bonuses are cumulative (an Elf Rogue gets a <em>+2</em>).</p>
 <p>The process of searching is slow and counts as traversing a room for the purposes of hazard dice rolls.</p>
@@ -806,7 +807,12 @@ D2     *
 <p>The process of picking a lock counts takes time and counts as traversing a room for the purposes of hazard dice rolls.</p>
 <p>Also Picking a lock consumes a lock-pickers kit.</p>
 <h2 id="treasure">Treasure</h2>
-<p>Fortune favors the bold. Adventurers will find something in those chest that more or less matches what they need. However things are not always what they seem when finding treasure  you must roll to see what kind of treasure  you found. Then, depending on the contents, refer to the proper table:</p>
+<p>Fortune favors the bold. Adventurers will find something in those chest that more or less matches what they need.</p>
+<figure>
+  <center><img src="../Images/treasure.png" height="300" alt="A chest full of gold sparkles when lit by your torch."></center>
+  <i><center><figcaption>Seems you found a treasure chest, this is a joyous occasion... Or is it?</figcaption></center></i>
+</figure>
+<p>However things are not always what they seem when finding treasure  you must roll to see what kind of treasure  you found. Then, depending on the contents, refer to the proper table:</p>
 <h3 id="treasure-table">Treasure  Table</h3>
 <table>
 <thead>
@@ -850,7 +856,7 @@ D2     *
 </tbody>
 </table>
 <h3 id="regular-treasure">Regular Treasure</h3>
-<p>You found an unlocked and unguarded treasure , roll the regular treasure  contents table to find out what's inside:</p>
+<p>You found an unlocked and unguarded treasure, roll the regular treasure  contents table to find out what's inside:</p>
 <h4 id="regular-treasure-contents-table">Regular Treasure Contents Table</h4>
 <p>Roll a d6 to discover the treasure's contents:</p>
 <table>
@@ -1020,6 +1026,11 @@ D2     *
 </table>
 <p><em>Each of these scrolls can be consumed or learned upon reaching the surface.</em></p>
 <h3 id="stairs">Stairs</h3>
+<p>You reached a flight of stairs, however upon descending you may find any sort of passages. Regardless, once you exit, you reach a lower level.</p>
+<figure>
+  <center><img src="../Images/stairs.png" height="300" alt="This flight of stairs connects to a network of staircases."></center>
+  <i><center><figcaption>This party has run into a massive hub of staircases. Most flights of stairs lead straight down, but it's impossible to anticipate a staircase layout.</figcaption></center></i>
+</figure>
 <p>Once the stairs have been found you instinctively go down (you can choose to go back up the next turn, but first you descend). Then roll a d6:</p>
 <p><em>Note that traversing a flight of stairs counts as traversing a room for the purposes of hazard dice rolls. Though this comes into effect after reaching your destination.</em></p>
 <h4 id="stairs-table">Stairs Table</h4>
@@ -1105,11 +1116,12 @@ D2     *
 <p>If you lack food provisions, the adventurer will exchange 3 torches for a single day's worth of rations.</p>
 <p>Otherwise, you exchange a look of acknowledgment and move on and reach an empty room, see above.</p>
 <h5 id="you-meet-a-friendly-ghost">You Meet A Friendly Ghost</h5>
+<p>Friendly undead steer clear of Paladins, if you have a Paladin in your party you will instead simply reach a normal room. Otherwise, keep reading...</p>
 <p>In front is a translucent figure, you don't feel malice or evil intent coming from it - perhaps, it's a fallen comrade.</p>
 <p>If your next quest objective requires that you talk to someone or find a clue, the ghost will be willing to help but you'll have to roll a save against magic to understand what it's saying.</p>
 <p>Otherwise, you move on and reach an empty room, see above.</p>
 <h5 id="you-meet-a-friendly-monster">You Meet A Friendly Monster</h5>
-<p>In front is a menacing figure, but you don't feel malice or evil intent coming from it.</p>
+<p>In front is a menacing figure, but you don't feel malice or evil intent coming from it. However if you have a Paladin on your party, roll against (1+dungeon_level), if you fail the monster decides to ignore you, instead you will simply reach a normal room. Otherwise, keep reading...</p>
 <p>If your next quest objective requires that you talk to someone or find a clue, the monster will be willing to help but you'll have to roll a save against body to understand what it's saying (body-talk).</p>
 <p>Otherwise, you move on and reach an empty room, see above.</p>
 <h5 id="you-meet-a-merchant">You meet a merchant</h5>
