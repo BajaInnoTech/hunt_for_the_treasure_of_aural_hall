@@ -682,11 +682,11 @@ Additionally, *Paladins* shun bribery choosing to intimidate instead. This uncha
 - *Orcs*: Orcs will only be willing to ignore a party on a roll of *6* regardless of who does the talking. However Orcs being fearless means that as long as a *Paladin* does the talking, they will neither provide clues nor assistance.
 - *Goblins*: Goblins are easily frightened and will only be friendly on a roll of *6* regardless of who does the talking. However they are cowardly enough to be subdued into revealing clues.
 
+<div class="page"/>
+
 #### Paladin Boon - Self Sacrifice
 
 A *Paladin* can absorb half of the damage inflicted to a party member from a trap or event, and once per battle from an enemy.
-
-<div class="page"/>
 
 ### Rogue
 
@@ -697,6 +697,8 @@ A *Paladin* can absorb half of the damage inflicted to a party member from a tra
 
 Rogues are equally dexterous and deadly. They bring an equally valuable set of skills to weapon combat and to exploration.
 
+<div class="page"/>
+
 #### Rogue Gear
 
 Rogues are able to use anything they find except for plate armor.
@@ -705,8 +707,6 @@ Rogues are able to use anything they find except for plate armor.
 
 Rogues get a *+1* to search, trap and lock picking rolls.
 
-<div class="page"/>
-
 #### Rogue Boon - Sneak Attack
 
 Rogues deliver devastating sneak attacks to susceptible enemies (enemies such as undead may be immune, receiving a normal attack instead). To inflict them they must first hide, by spending a turn inactive and succeeding a dex save, then they produce a *(6\*character_level)d6* damage. Basically they gain full damage die plus an additional *1d6* roll of damage.
@@ -714,6 +714,8 @@ Rogues deliver devastating sneak attacks to susceptible enemies (enemies such as
 #### Rogue Boon - Deadly Sniper
 
 When equipped with a ranged weapon, Rogues get a *+1* to their dex save when rolling for sneak attacking.
+
+<div class="page"/>
 
 #### Rogue Boon - Magical Item Use
 
@@ -724,8 +726,6 @@ Revive scrolls require 2 consecutive successful *magic saves* to succeed.
 #### Rogue Boon - Rogue Reconnaissance
 
 Rogues always peer into the room they're entering, looking for signs of trouble. Hence when a Rogue is the first in the room, Monsters have a tougher time catching them unprepared for combat.
-
-<div class="page"/>
 
 #### Rogue Boon - Finishing Blow
 
