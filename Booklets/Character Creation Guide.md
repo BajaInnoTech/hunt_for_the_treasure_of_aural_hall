@@ -666,7 +666,7 @@ If their boons make their total AC negative, they will incur AC damage each roun
 
 #### Paladin Boon - Rigid Resilience
 
-*Paladins* training grants them extraordinary resilience, however this comes at the cost of a modicum of dexterity. They have a *+1* penalty to *dex Saves*, and gain a *-1* boon to *Body Saves*. However to their unique phisiology and upbringing, Dwarves are unaffected by this boon their saves are untouched.
+*Paladins* training grants them extraordinary resilience, however this comes at the cost of a modicum of dexterity. They have a *+1* penalty to *dex Saves*, and gain a *-1* boon to *Body Saves*. However to their unique phisiology and upbringing, Dwarfs are unaffected by this boon their saves are untouched.
 
 <div class="page"/>
 
