@@ -468,6 +468,7 @@ em, figcaption {
 </li>
 <li><a href="#combat">Combat</a>
 <ul>
+<li><a href="#enemy-reactions">Enemy Reactions</a></li>
 <li><a href="#combat-order">Combat Order</a></li>
 <li><a href="#melee-weapons">Melee Weapons</a></li>
 <li><a href="#ranged-weapons">Ranged Weapons</a></li>
@@ -479,7 +480,6 @@ em, figcaption {
 <li><a href="#critical-attack-table">Critical Attack Table</a></li>
 </ul>
 </li>
-<li><a href="#normal-attack">Normal Attack</a></li>
 <li><a href="#attack-accuracy">Attack Accuracy</a>
 <ul>
 <li><a href="#single-handed-and-ranged-weapon-accuracy">Single Handed and Ranged Weapon Accuracy</a>
@@ -494,6 +494,7 @@ em, figcaption {
 </li>
 </ul>
 </li>
+<li><a href="#normal-attack">Normal Attack</a></li>
 </ul>
 </li>
 <li><a href="#retreating-from-an-encounter">Retreating From An Encounter</a></li>
@@ -670,12 +671,43 @@ em, figcaption {
 <h3 id="party-size">Party Size</h3>
 <p>Amount of playable characters that make up your party. These monster encounters were designed with 4 in mind, so you might need to make adjustments if you deviate a lot from this amount. Found in calculations as: <strong>party_size</strong></p>
 <h2 id="combat">Combat</h2>
-<p>A DepthRanger's life is not a cozy one - Life or death situations are commonplace in the depths. This section are the bits of knowledge that provide a lifeline to these brave explorers.</p>
-<p>First, determine who goes first.</p>
-<p>Second, determine the amount of enemy forces and HP each has.</p>
-<p>Third, read their description carefully. Monster behavior is varied. Plus, knowing the specifics of that monster type might open up a few tactical possibilities.</p>
-<p>Players are warned to carry ranged weapons as well (the best weapon type is having both melee and ranged)!!!</p>
+<p>A DepthRanger's life is not a cozy one - Life or death situations are commonplace in the depths. This section are the bits of knowledge that provide a lifeline to these brave explorers. Whenever you face an Encounter, Quest Encounter or find yourself facing an opponent there are some things that should be taken into consideration.</p>
+<ol>
+<li>Check your <a href="#enemy-reactions">Enemy Reaction</a> - Not all battles need to be fought</li>
+<li>Check the <a href="#combat-order">Combat Order</a> - If you do need to fight, determine who strikes first.</li>
+<li>Research your enemy, read their description carefully. Monster behavior is varied. Plus, knowing the specifics of that monster type might open up a few tactical possibilities.</li>
+</ol>
+<p>After that, it's time to begin combat. It's always a wise strategy to carry melee and ranged weapons as well, the best weapon type is having both!!!</p>
+<p>Be mindful of aiming. Some attacks can produce devastating damage, these are known as <a href="#critical-attack">critical attacks</a>, most do normal damage, and some of them are simply <a href="#attack-accuracy">ineffective and miss the target</a>.</p>
 <p>With that out of the way, the next sections will get into detail on the particulars of aiming, tactics, etc.</p>
+<h2 id="enemy-reactions">Enemy Reactions</h2>
+<p>Monsters  may react in a non-hostile manner (or not); some monsters will only react if there's a Brownie in the party. Throwing a reaction die provides 3 outcomes:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Roll</strong></th>
+<th><strong>Reaction</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1-2</td>
+<td><em>Hostile</em></td>
+<td>You engage in combat</td>
+</tr>
+<tr>
+<td>3-4</td>
+<td><em>Persuadable</em></td>
+<td>Pay <em>(monster_level+1)d6</em> gold and be left alone, pay twice that amount and gain clues if that is a quest event for you. If  you don't have the money to be left alone they will pretend to be friendly and engage when you least expect it. Characters with the <strong>reconnaissance</strong> attribute get to roll as if it were a <em>Quest Encounter</em>. Otherwise, monsters get to attack first.</td>
+</tr>
+<tr>
+<td>5-6</td>
+<td><em>Friendly</em></td>
+<td>Monsters will not attack and can offer clues if your quest requires them.</td>
+</tr>
+</tbody>
+</table>
 <h3 id="combat-order">Combat Order</h3>
 <p>While nothing would be best than the heroic <strong>DepthRangers</strong> to always strike first, that is not always possible. Especially after lowering the guard during a negocioation. In any case combat order can be determined by doing the following:</p>
 <p>To determine combat order, you must roll a d6:</p>
@@ -683,8 +715,8 @@ em, figcaption {
 <table>
 <thead>
 <tr>
-<th>Encounter Type</th>
-<th>Roll To attack first</th>
+<th><strong>Encounter Type</strong></th>
+<th><strong>Roll To Attack First</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -716,17 +748,17 @@ em, figcaption {
 <p>Unfortunately, each use consumes an arrow and you can only have 10 arrows per slot (unless you find a quiver). In addition, you may need a backup melee weapon to switch to if you run out of ammonition. Also, in order to use your ranged weapon you need to equip the ranged weapon ahead of time. Changing weapons mid battle requires spending a turn performing this task.</p>
 <p>Finally, you can't use ranged weapons to detain someone who's trying to escape (you use your hands or the flat of the blade).</p>
 <h3 id="empty-handed-fighting">Empty Handed Fighting</h3>
-<p>When a character lacks a weapon, they have single handed weapon accuracy and inflict <em>character_level</em> damage.</p>
+<p>When a character lacks a weapon, they have single handed weapon accuracy and inflict <em>character_level</em> damage. Meaning that an unarmed party member will throw dice to determine if their attack lands but produce minimal constant damage. Armored enemies will take suffer minimal damage from unarmed strikes, if any. So don't enter the dungeon unarmed.</p>
 <h3 id="attacking">Attacking</h3>
 <p>Attack outcome is determined when damage dice are rolled, in other words there's no need for an additional roll to determine outcome.</p>
 <p>Depending on what numbers were rolled, one of three things will happen:</p>
 <ul>
-<li>A devastating critical attack</li>
-<li>A normal attack</li>
-<li>Missing your target, <a href="#attack-accuracy">see attack accuracy</a></li>
+<li>A devastating blow, <a href="#critical-attack">see <em>Critical Attack</em></a></li>
+<li>Missing your target, <a href="#attack-accuracy">see <em>Attack Accuracy</em></a></li>
+<li>You deliver a blow against your opponent, <a href="#normal-attack">see <em>Normal Attack</em></a></li>
 </ul>
 <h4 id="critical-attack">Critical Attack</h4>
-<p>Your character performs a devastating attack. Critical attacks perform serious damage, and in addition certain classes and monster types unleash a specific tactical maneuver.</p>
+<p>A Critical Attack is a devasting blow. Not only do Critical Attacks perform serious damage, certain classes and monster types often also unleash a specific tactical maneuver.</p>
 <h5 id="critical-attack-table">Critical Attack Table</h5>
 <table>
 <thead>
@@ -762,8 +794,6 @@ em, figcaption {
 </tr>
 </tbody>
 </table>
-<h4 id="normal-attack">Normal Attack</h4>
-<p>Normal attacks simply tally the damage dice and add any bonuses (or minuses) to the total damage output.</p>
 <h4 id="attack-accuracy">Attack Accuracy</h4>
 <p>During combat, weapon accuracy is determined with the same dice throw used for damage.</p>
 <h5 id="single-handed-and-ranged-weapon-accuracy">Single Handed and Ranged Weapon Accuracy</h5>
@@ -840,6 +870,8 @@ em, figcaption {
 </tr>
 </tbody>
 </table>
+<h4 id="normal-attack">Normal Attack</h4>
+<p>Normal attacks are attacks that are not devastating <em>Critical Attacks</em>, but also did not miss (see <em>Attack Accuracy</em> above). On a normal attack simply tally the damage dice and add any bonuses (or minuses) to the total damage output then subtract enemy armor if any.</p>
 <h3 id="retreating-from-an-encounter">Retreating From An Encounter</h3>
 <p>What are you a humanoid or a rat person? No retreating, you succeed or die trying!</p>
 <p><em>We actively discourage retreat</em>, however if you wish to include this, then all characters in the party must roll a successful dex save to run away. Upon failure, you spend a turn inactive - in the process of escape you lose tactical advantage while the enemy attacks freely for that round.</p>
