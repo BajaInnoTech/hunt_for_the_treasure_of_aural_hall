@@ -83,7 +83,7 @@ em, figcaption {
   color:rgb(71, 40, 4);
 }
 
-</style> -->
+</style>
 
 # Character Creation Guide
 
@@ -91,7 +91,7 @@ This reference guide provides an explanation on how to create your characters wi
 
 All characters combine their species with their profession, something the great sage Gigax calls Races & Classes.
 
-<div class="page"/>
+<div class="page"/> -->
 
 ## Table of Contents
 
