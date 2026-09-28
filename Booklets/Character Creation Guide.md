@@ -182,14 +182,26 @@ All characters combine their species with their profession, something the great 
     - [Paladin Boon - Rigid Resilience](#paladin-boon---rigid-resilience)
     - [Paladin Boon - Inflexible Diplomacy](#paladin-boon---inflexible-diplomacy)
     - [Paladin Boon - Self Sacrifice](#paladin-boon---self-sacrifice)
-  - [Rogue](#rogue)
-    - [Rogue Gear](#rogue-gear)
-    - [Rogue Boon - Expert Explorer](#rogue-boon---expert-explorer)
-    - [Rogue Boon - Sneak Attack](#rogue-boon---sneak-attack)
-    - [Rogue Boon - Deadly Sniper](#rogue-boon---deadly-sniper)
-    - [Rogue Boon - Magical Item Use](#rogue-boon---magical-item-use)
-    - [Rogue Boon - Rogue Reconnaissance](#rogue-boon---rogue-reconnaissance)
-    - [Rogue Boon - Finishing Blow](#rogue-boon---finishing-blow)
+  * [Ranger](#ranger)
+    * [Ranger Gear](#ranger-gear)
+    * [Ranger Boon - Adept Explorer](#ranger-boon---adept-explorer)
+    * [Ranger Boon - Situational Awareness](#ranger-boon---situational-awareness)
+    * [Ranger Boon - Expert Marksmanship](#ranger-boon---expert-marksmanship)
+    * [Ranger Boon - Bow mastery](#ranger-boon---bow-mastery)
+    * [Ranger Boon - Ambidextrous](#ranger-boon---ambidextrous)
+    * [Ranger Boon - Basic Medical Knowledge](#ranger-boon---basic-medical-knowledge)
+    * [Ranger Boon - Basic field medic training](#ranger-boon---basic-field-medic-training)
+    * [Ranger Boon - AntiVenom Treatment](#ranger-boon---antivenom-treatment)
+    * [Ranger Boon - Animal Empathy](#ranger-boon---animal-empathy)
+    * [Ranger Boon - Ranger Reconnaissance](#ranger-boon---ranger-reconnaissance)
+  * [Rogue](#rogue)
+    * [Rogue Gear](#rogue-gear)
+    * [Rogue Boon - Expert Explorer](#rogue-boon---expert-explorer)
+    * [Rogue Boon - Sneak Attack](#rogue-boon---sneak-attack)
+    * [Rogue Boon - Deadly Sniper](#rogue-boon---deadly-sniper)
+    * [Rogue Boon - Magical Item Use](#rogue-boon---magical-item-use)
+    * [Rogue Boon - Rogue Reconnaissance](#rogue-boon---rogue-reconnaissance)
+    * [Rogue Boon - Finishing Blow](#rogue-boon---finishing-blow)
 
 <div class="page"/>
 
@@ -688,6 +700,59 @@ Additionally, *Paladins* shun bribery choosing to intimidate instead. This uncha
 
 A *Paladin* can absorb half of the damage inflicted to a party member from a trap or event, and once per battle from an enemy.
 
+### Ranger
+
+Rangers are versatile explorers who combine combat effectiveness, basic healing knowledge and exploration skills. Being more of a generalist that provides support on many fronts to its more specialized teammates.
+
+<figure>
+  <center><img src="../Images/ranger.png" height="300" alt="A well equipped Ranger eager to explore new depths."></center>
+  <i><center><figcaption>Rangers are versatile explorers who have a wide range of skills.</figcaption></center></i>
+</figure>
+
+#### Ranger Gear
+
+Rangers are able to use anything they find except for plate armor.
+
+#### Ranger Boon - Adept Explorer
+
+Rangers gain a *+1* to rolls when searching and disabling traps.
+
+#### Ranger Boon - Situational Awareness
+
+Due to their profound bodily awareness and their keen attention to their surroundings, Rangers can re-roll *dex save* dies that land on one.
+
+#### Ranger Boon - Expert Marksmanship
+
+Rangers have two handed weapon accuracy when wielding a bow.
+
+#### Ranger Boon - Bow mastery
+
+When a Ranger is equipped with a ranged weapon, and lands a critical attack. They fire an additional arrow, potentially triggering a chain of attacks.
+
+#### Ranger Boon - Ambidextrous
+
+When wielding two single handed weapons, Rangers have two-handed weapon accuracy. Additionally, when landing a critical attack, rangers use their second weapon to make an additional strike to an adjacent adversary.
+
+#### Ranger Boon - Basic Medical Knowledge
+
+Rangers can use healing potions more effectively, healing an additional *+(character_level/2)* HP.
+
+#### Ranger Boon - Basic field medic training
+
+Rangers can add half their level for the purposes of antidote rolls. Regardless, a Ranger always successfully cure poison on a roll of *6*.
+
+#### Ranger Boon - AntiVenom Treatment
+
+Rangers can add half their level for the purposes of antidote rolls. Regardless of the discrepancy, a ranger is always able to cure poison on a roll of *6*.
+
+#### Ranger Boon - Animal Empathy
+
+Rangers can avoid fighting animals that are friendly (but can't persuade them). Brownie rangers gain a *+1* to any persuadeable animal reactions.
+
+#### Ranger Boon - Ranger Reconnaissance
+
+Rangers always peer into the room they're entering, looking for signs of trouble. Hence when a Ranger is the first in the room, Monsters have a tougher time catching them unprepared for combat.
+
 ### Rogue
 
 <figure>
@@ -697,15 +762,13 @@ A *Paladin* can absorb half of the damage inflicted to a party member from a tra
 
 Rogues are equally dexterous and deadly. They bring an equally valuable set of skills to weapon combat and to exploration.
 
-<div class="page"/>
-
 #### Rogue Gear
 
 Rogues are able to use anything they find except for plate armor.
 
 #### Rogue Boon - Expert Explorer
 
-Rogues get a *+1* to search, trap and lock picking rolls.
+Rogues get a *+1* to search and lock picking rolls. Additionally they get a *+2* to trap rolls.
 
 #### Rogue Boon - Sneak Attack
 
@@ -714,8 +777,6 @@ Rogues deliver devastating sneak attacks to susceptible enemies (enemies such as
 #### Rogue Boon - Deadly Sniper
 
 When equipped with a ranged weapon, Rogues get a *+1* to their dex save when rolling for sneak attacking.
-
-<div class="page"/>
 
 #### Rogue Boon - Magical Item Use
 

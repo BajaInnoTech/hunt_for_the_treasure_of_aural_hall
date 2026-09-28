@@ -477,10 +477,19 @@ em, figcaption {
 </li>
 <li><a href="#traps">Traps</a>
 <ul>
-<li><a href="#traps-table">Traps Table</a></li>
 <li><a href="#trap-deactivation">Trap Deactivation</a>
 <ul>
 <li><a href="#trap-deactivation-table">Trap Deactivation Table</a></li>
+</ul>
+</li>
+<li><a href="#traps-table">Traps Table</a>
+<ul>
+<li><a href="#magic-trap">Magic Trap</a></li>
+<li><a href="#gas-trap">Gas Trap</a></li>
+<li><a href="#edged-trap">Edged Trap</a></li>
+<li><a href="#pressure-plate-trap">Pressure Plate Trap</a></li>
+<li><a href="#dart-trap">Dart Trap</a></li>
+<li><a href="#pit-trap">Pit Trap</a></li>
 </ul>
 </li>
 </ul>
@@ -490,7 +499,7 @@ em, figcaption {
 <li><a href="#locks">Locks</a></li>
 <li><a href="#treasure">Treasure</a>
 <ul>
-<li><a href="#treasure-table">Treasure  Table</a></li>
+<li><a href="#treasure-table">Treasure Table</a></li>
 <li><a href="#regular-treasure">Regular Treasure</a>
 <ul>
 <li><a href="#regular-treasure-contents-table">Regular Treasure Contents Table</a>
@@ -711,54 +720,11 @@ D2     *
   <center><img src="../Images/traps.png" height="300" alt="Various traps super impossed, from poison spikes to deadly gas to a pit opening."></center>
   <i><center><figcaption>Traps can be sprung at any time for every reason. One can't lower their guard within the dungeon.</figcaption></center></i>
 </figure>
-<p>You'll find many perilous traps underground.</p>
-<h3 id="traps-table">Traps Table</h3>
-<p>Roll a <em>d6</em> to determine which trap you ran into:</p>
-<table>
-<thead>
-<tr>
-<th><strong>Roll</strong></th>
-<th><strong>Trap</strong></th>
-<th><strong>Description</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><center> 1 </center></td>
-<td><em>Pit Trap</em></td>
-<td>A pit opens below you, roll a <em>dex save</em> to avoid the trap or receive <em>(dungeon_level)+d6</em> HP damage also your character is <em>sprained</em>.</td>
-</tr>
-<tr>
-<td><center> 2 </center></td>
-<td><em>Poison Darts</em></td>
-<td>Poison darts shoot out of the walls, roll a <em>dex save</em> or be <em>poisoned</em>.</td>
-</tr>
-<tr>
-<td><center> 3 </center></td>
-<td><em>Toungues of Flame</em></td>
-<td>You hear a click and tongues of flames shoot out in your direction, roll a <em>dex save</em> or receive <em>(dungeon_level+1)d6</em> HP damage and loose one of your torches.</td>
-</tr>
-<tr>
-<td><center> 4 </center></td>
-<td><em>Spikes</em></td>
-<td>A weighted plate is pressed and spikes shoot forth, roll a <em>dex save</em> or receive <em>(dungeon_level)d6+(dungeon_level)</em> HP damage.</td>
-</tr>
-<tr>
-<td><center> 5 </center></td>
-<td><em>Toxic Gas</em></td>
-<td>Noxious gas floods the room, roll a <em>body save</em> or take <em>(dungeon_level+1)</em> HP damage and become <em>diseased</em>.</td>
-</tr>
-<tr>
-<td><center> 6 </center></td>
-<td><em>Lightning Rune</em></td>
-<td>You hear a hum then lightning is unleashed, roll a <em>magic save</em> or take <em>(dungeon_level)d6+2</em> HP damage.</td>
-</tr>
-</tbody>
-</table>
+<p>You'll find many perilous traps underground. Whenever you do find a trap you must first attempt to deactivate it. Should that fail, then the party must deal with the aftermath.</p>
 <h3 id="trap-deactivation">Trap Deactivation</h3>
 <p>In <strong>The Hunt For The Treasure Of Aural Hall</strong>, the <em>player who entered the room or rolled hazard die</em> has a chance to deactivate the trap so long as it has a set of thief's tools in its possession (it must already be in its inventory). To successfully disable a trap, you must throw a <em>1d6</em> and roll greater than <em>(3+dungeon_level/2)</em>  <a href="#trap-deactivation-table">see the Trap Deactivation Table</a>.</p>
 <p>If you succeed you deactivated the trap, if you fail the trap is sprung. Failure to deactivate the trap means all characters must save against the trap to avoid its effects.</p>
-<p>An attempt at trap deactivation will consume a set of thieves tools regardless of outcome. The character must already have the set of thief's tools in its possession, there is just not enough time to borrow the tools from another player. Rogues get a <em>+1</em> to trap deactivation rolls.</p>
+<p>An attempt at trap deactivation will consume a set of thieves tools regardless of outcome. The character must already have the set of thief's tools in its possession, there is just not enough time to borrow the tools from another player. Rangers get a <em>+1</em> and Rogues get a <em>+2</em> to trap deactivation rolls.</p>
 <h4 id="trap-deactivation-table">Trap Deactivation Table</h4>
 <table>
 <thead>
@@ -794,13 +760,225 @@ D2     *
 </tr>
 </tbody>
 </table>
+<h3 id="traps-table">Traps Table</h3>
+<p>If the player was unable to deactivate the trap, then you first figure out the nature of this trap. Then, every character in your party must attempt to overcome the trap's perils by rolling a successful save.</p>
+<p>Roll a <em>d6</em> to determine which trap you ran into:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Roll</strong></th>
+<th><strong>Trap</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><center> 1 </center></td>
+<td><em>Magic Trap</em></td>
+</tr>
+<tr>
+<td><center> 2 </center></td>
+<td><em>Gas Trap</em></td>
+</tr>
+<tr>
+<td><center> 3 </center></td>
+<td><em>Edged Trap</em></td>
+</tr>
+<tr>
+<td><center> 4 </center></td>
+<td><em>Pressure Plate Trap</em></td>
+</tr>
+<tr>
+<td><center> 5 </center></td>
+<td><em>Dart Trap</em></td>
+</tr>
+<tr>
+<td><center> 6 </center></td>
+<td><em>Pit Trap</em></td>
+</tr>
+</tbody>
+</table>
+<p>Some Traps are too deadly or bulky or make drastic changes to the room. In such cases, the room can no longer be traversed. The party will need to find another route to leave the dungeon. These perilous traps must be recorded on your maps.</p>
+<h4 id="magic-trap">Magic Trap</h4>
+<p>You hear a hum seems like a triggering device has been activated.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Level</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>The tip of your hair seems to be standing up, when an electric spark flashes, roll a <em>magic save</em> or take <em>1d6+2</em> HP damage.</td>
+</tr>
+<tr>
+<td>1</td>
+<td>You smell a strange odor and feel a tingle all over your body when a bolt of lightning is unleashed toward your party, roll a <em>magic save</em> or take <em>1d6+2</em> HP damage, and <em>-1</em> on your next <em>Dex save</em> roll.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>You feel a draft, roll a successful magic save to escape a magic whirlwind. On each failed save you receive <em>2d6+5</em> HP damage as it slams you into the walls, floor and ceiling.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>A series of portals open around you, out of them a double of your likeness emerges and starts pulling you inward. Roll a successful <em>magic save</em> and <em>body save</em>, each failed <em>magic save</em> the creature drains <em>2d6</em> HP, and each failed body save you gain a round of fatigue.</td>
+</tr>
+</tbody>
+</table>
+<p>From Level 2 onwards, a sprung Magic Trap makes the room inaccessible.</p>
+<h4 id="gas-trap">Gas Trap</h4>
+<p>The entrance and one of the doors slam shut, then you hear a loud whistle. Noxious gas floods the room, escape via another open door, locate a secret door or disable the trap. Each round you spend in this room...</p>
+<table>
+<thead>
+<tr>
+<th><strong>Level</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Roll a <em>body save</em> or take <em>2</em> HP damage.</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Roll a <em>body save</em> or take <em>1d6+1</em> HP damage.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Roll a <em>body save</em> or take <em>1d6+6</em> HP damage, become <em>diseased</em> and gain one round of fatigue.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Roll a <em>body save</em> or take <em>2d6+6</em> HP damage, become <em>diseased</em> and gain one round of fatigue.</td>
+</tr>
+</tbody>
+</table>
+<p>All sprung Gas Traps, make the room inaccessible (it becomes deadly as gases accumulate).</p>
+<h4 id="edged-trap">Edged Trap</h4>
+<p>A weighted plate is pressed and you hear a scraping sound...</p>
+<table>
+<thead>
+<tr>
+<th><strong>Level</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Caltrops fall from the ceiling littering the floor, roll a <em>dex save</em> or receive <em>4</em> HP damage.</td>
+</tr>
+<tr>
+<td>1</td>
+<td>A large Spiked structure drops from the ceiling, roll a <em>dex save</em> or receive <em>1d6+4</em> HP damage.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Spikes shoot forth from the ground, roll two <em>dex saves</em>, receive <em>1d6</em> HP damage each failure.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>A large blade swings towards your party, roll a <em>dex save</em> or receive <em>2d6+10</em> HP damage.</td>
+</tr>
+</tbody>
+</table>
+<p>While not inaccessible, a room with a sprung Edged Trap remains dangerous. Adventurers will face the same risk as when the trap initially sprung.</p>
+<h4 id="pressure-plate-trap">Pressure Plate Trap</h4>
+<p>You hear a click... And know a trap has been sprung.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Level</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>A burst of flame shoots forward in your direction, roll a <em>dex save</em> or be singed and receive <em>3</em> HP of damage.</td>
+</tr>
+<tr>
+<td>1</td>
+<td>A tongue of flame shoots forward in your direction, roll a <em>dex save</em> or be singed and receive <em>6</em> HP of damage.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>A column of flame sprung on top of you, roll a <em>dex save</em>, if failed you receive <em>12</em> HP of damage and your torches are consumed.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>A circle of fire threatens to swallow you, roll a two <em>dex saves</em>, receive <em>12</em> HP of damage each failure and your torches are consumed.</td>
+</tr>
+</tbody>
+</table>
+<p>A level 4 pressure plate permanently makes a room deadly, otherwise discerning adventurers simply avoid stepping on the plate.</p>
+<h4 id="dart-trap">Dart Trap</h4>
+<p>Darts shoot out of the walls, roll a <em>dex save</em> or suffer their effects.                             |</p>
+<table>
+<thead>
+<tr>
+<th><strong>Level</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Roll a <em>dex save</em> or receive <em>2</em> HP damage.</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Roll a <em>dex save</em> or receive <em>1d6</em> HP damage.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Roll a <em>dex save</em> or receive <em>1d6</em>+3 HP damage, and then roll a <em>body save</em> or be <em>poisoned</em>.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Roll a <em>dex save</em> or receive <em>2d6</em>+3 HP damage, and you're <em>poisoned</em>.</td>
+</tr>
+</tbody>
+</table>
+<p>Once the darts have been deployed they are no longer a threat.</p>
+<h4 id="pit-trap">Pit Trap</h4>
+<p>A pit opens below you, check the table below to learn more:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Level</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Roll a <em>dex save</em> to avoid the trap or receive <em>2</em> HP damage.</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Roll a <em>dex save</em> to avoid the trap or receive <em>1d6+1</em> HP damage</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Roll a <em>dex save</em> to avoid the trap or receive <em>2d6+3</em> HP damage also your character is <em>sprained</em>.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Roll a <em>dex save</em> to avoid the trap or receive <em>3d6+3</em> HP damage, your character is <em>sprained</em> and you expend 1 non combat event escaping.</td>
+</tr>
+</tbody>
+</table>
+<p>Once the pit is revealed, players can safely avoid the peril.</p>
 <h2 id="finding-secret-doors">Finding Secret Doors</h2>
 <p>To find a secret door, you must roll a magic save. Elven keen senses give them an additional advantage gaining <em>+2</em> on detection of secret doors; if the elf has no status ailments, it can ignore the <em>+2</em> and choose to roll an additional d6 instead.</p>
 <h2 id="searching--secret-door-detection">Searching &amp; Secret Door Detection</h2>
 <ul>
-<li><strong>Searching</strong>: Characters detect secrets based on a die roll that must be greater than <em>(dungeon_level+1)</em>. Elves get a re-roll when detecting secrets, while Rogues have a <em>+1</em> to their role.</li>
+<li><strong>Searching</strong>: Characters detect secrets based on a die roll that must be greater than <em>(dungeon_level+1)</em>. Elves get a re-roll when detecting secrets, Rangers and Rogues get a <em>+1</em> to their role.</li>
 </ul>
-<p>Searching is performed when attempting to Detect a Secret Doors. This is done in a similar manner to disabling a trap, a player must roll a d6 roll greater than <em>(dungeon_level+1)</em> with 1 always being failure and 6 always being a success. Elves and Rogues gain a <em>+1</em> to search; these two bonuses are cumulative (an Elf Rogue gets a <em>+2</em>).</p>
+<p>Searching is performed when attempting to Detect a Secret Doors. This is done in a similar manner to disabling a trap, a player must roll a d6 roll greater than <em>(dungeon_level+1)</em> with 1 always being failure and 6 always being a success. Elves and Ranger/Rogues bonuses are cumulative (an Elf Rogue gets a <em>+2</em>).</p>
 <p>The process of searching is slow and counts as traversing a room for the purposes of hazard dice rolls.</p>
 <h2 id="locks">Locks</h2>
 <p>To pick a lock a player must roll a d6 roll greater than <em>(dungeon_level+1)</em> with 1 always being failure and 6 always being a success. Rogues and Brownies gain a <em>+1</em> to lock picking rolls. A Brownie Rogue gets a <em>+2</em> to lock picking rolls.</p>
@@ -813,7 +991,7 @@ D2     *
   <i><center><figcaption>Seems you found a treasure chest, this is a joyous occasion... Or is it?</figcaption></center></i>
 </figure>
 <p>However things are not always what they seem when finding treasure  you must roll to see what kind of treasure  you found. Then, depending on the contents, refer to the proper table:</p>
-<h3 id="treasure-table">Treasure  Table</h3>
+<h3 id="treasure-table">Treasure Table</h3>
 <table>
 <thead>
 <tr>
